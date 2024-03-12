@@ -78,6 +78,17 @@ print(tokenizer.decode(output[0]))
 ## Limitations
 The model shows lower performance as the input sentence gets longer, mostly because the dataset used to train the model consists of source sentences with short sequences. To apply the model on longer sequences try [amphora/FinABSA-Longer](https://huggingface.co/amphora/FinABSA-Longer).
 
+## Citation
+If you use this work, please consider citing:
+```
+@article{son2023removing,
+  title={Removing non-stationary knowledge from pre-trained language models for entity-level sentiment classification in finance},
+  author={Son, Guijin and Lee, Hanwool and Kang, Nahyeon and Hahm, Moonjeong},
+  journal={arXiv preprint arXiv:2301.03136},
+  year={2023}
+}
+```
+
 ## Contact
 
 Feel free to reach me at spthsrbwls123@yonsei.ac.kr
