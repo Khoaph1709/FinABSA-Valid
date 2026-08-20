@@ -21,6 +21,15 @@ class ABSA():
         output = {e : self.run_single_absa(input_str,e) for e in tgt_entities}
         return output
 
+    def run_on_target(self, input_str, target):
+        """Run sentiment for an explicitly supplied entity/ticker.
+
+        Entity linking is intentionally handled outside FinABSA. This method
+        makes that contract explicit and avoids relying on generic NER to
+        discover Vietnamese stock tickers.
+        """
+        return self.run_single_absa(input_str, target)
+
     def run_single_absa(self,input_str,tgt):
         input_str = input_str.replace(tgt, '[TGT]')
         input = self.tokenizer(input_str,return_tensors='pt')

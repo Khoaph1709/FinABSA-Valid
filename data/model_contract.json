@@ -1,0 +1,39 @@
+{
+  "name": "FinABSA CafeF target-masked headline contract v1",
+  "input_file": "data/cafef_oct2022/model_inputs.csv",
+  "one_row_means": "one article-ticker target pair",
+  "primary_input_column": "input_text",
+  "input_mask": "Target for selected target, Other for other detected entities",
+  "input_domain": "Vietnamese financial headline",
+  "required_input_columns": [
+    "sample_id",
+    "article_id",
+    "url",
+    "published_at",
+    "ticker",
+    "target_surface",
+    "raw_title",
+    "input_text"
+  ],
+  "output_file": "data/cafef_oct2022/model_predictions.csv",
+  "required_output_columns": [
+    "sample_id",
+    "raw_model_output",
+    "classification_output"
+  ],
+  "allowed_labels": ["positive", "neutral", "negative"],
+  "optional_output_columns": [
+    "positive_prob",
+    "neutral_prob",
+    "negative_prob",
+    "sentiment_score",
+    "model_name",
+    "inference_status"
+  ],
+  "sentiment_score_mapping": {
+    "positive": 1.0,
+    "neutral": 0.0,
+    "negative": -1.0
+  },
+  "downstream_target": "next tradable session return and abnormal return"
+}

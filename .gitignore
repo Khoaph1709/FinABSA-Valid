@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.log
+*.tmp
+cafef_*_report*.txt
+market_*report*.txt
+*_report.txt
+terminal_full_output/
+AGENTS.md
+
+# Raw crawl artifacts are reproducible from the sitemap and can be large.
+data/cafef_oct2022/raw_html/
+data/cafef_oct2022/market_cache/
+
+# Model checkpoints and runtime outputs are local artifacts.
+finabsa-*/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Keep normalized analysis tables and input manifests under data/.

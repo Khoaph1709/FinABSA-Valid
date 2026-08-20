@@ -1,0 +1,2 @@
+sample_id,raw_model_output,classification_output,positive_prob,neutral_prob,negative_prob,sentiment_score,model_name,inference_status
+example_sample_id,The sentiment for Target in the given sentence is NEGATIVE.,negative,,,,-1.0,your_model,ok
