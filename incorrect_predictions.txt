@@ -1,0 +1,428 @@
+Opec reduces estimate on [TGT] demand growth	true=negative	pred=neutral
+[TGT] ups marketing efforts with CMO appointment	true=neutral	pred=positive
+Cover up all positions for [TGT]: Mitesh Thacker	true=neutral	pred=positive
+[TGT], bourses weigh dollar delivery in futures trade	true=neutral	pred=negative
+[TGT] for short term: Deepak Mohoni	true=neutral	pred=positive
+Upside capped at 90 for [TGT]: Siddth Capital	true=neutral	pred=positive
+[TGT]: Asset quality improves but payout cut disturbing	true=neutral	pred=positive
+Britain [TGT] regains traction as oil steadies	true=neutral	pred=positive
+[TGT] spot turnover may reach Rs 7,000 crore	true=neutral	pred=positive
+[TGT] mixed, underpinned by solid 5-year auction results	true=neutral	pred=negative
+Why long-term investors should stay invested in [TGT]	true=neutral	pred=positive
+[TGT] is not too strong: Luc Coene	true=neutral	pred=negative
+Despite discount, [TGT] staff cool to IPO	true=neutral	pred=negative
+[TGT] IPO looks costlier than peers:Nirmal Bang	true=neutral	pred=positive
+Get ready to test 8,650-8,700 on [TGT]: Sandeep Wagle	true=neutral	pred=positive
+[TGT] ex-MD Nikhil Vora fund gets first mega investor	true=neutral	pred=positive
+[TGT] set to smoke out olive oil	true=positive	pred=negative
+[TGT] snaps two-day fall as exporters, corporates sell dollars	true=positive	pred=negative
+[TGT] is fairly valued at 71: Sudhir Nair	true=neutral	pred=positive
+CERC gives [TGT] more time for IEX stake sale	true=neutral	pred=positive
+[TGT]: Focus on exports critical to swing in future surprises	true=neutral	pred=negative
+[TGT] lists at 34% premium at Rs 1387 on BSE	true=neutral	pred=positive
+Near term outlook remains muted for [TGT]: Amit Khurana	true=neutral	pred=negative
+[TGT]: Iron ore policy, demand from China hold key	true=neutral	pred=positive
+Target of Rs 268 for [TGT]: Rajat Bose	true=neutral	pred=positive
+Currency Corner: [TGT] snaps 3-day gain as funds reduce equity exposure	true=neutral	pred=positive
+[TGT] gets NSE nod to merge Wadala Commodities with itself	true=neutral	pred=positive
+[TGT] levels of Rs 1000 look rich to me: Sudip Bandyopadhyay	true=neutral	pred=positive
+[TGT] levels beyond 7250 possible in next few days: Mitesh Thacker	true=neutral	pred=positive
+[TGT] will move sideways before next upside starts:  Ashwani Gujral	true=negative	pred=neutral
+Midcap mantra: [TGT] on a roll, to post solid earnings	true=neutral	pred=positive
+[TGT] may have to shell out more on perpetual bonds	true=neutral	pred=negative
+Expect [TGT] to be in 7350-7500 band on the upside: Mitesh Thacker	true=neutral	pred=positive
+Less than 50% chance of [TGT] falling below $20 a barrel: Goldman	true=neutral	pred=negative
+[TGT] is a 'BT/ST' call with a target of Rs 300: Mitesh Thacker	true=positive	pred=neutral
+Take to [TGT] only with a long term view : Sonam Udasi	true=neutral	pred=positive
+Looking at a target price of Rs 2080 for [TGT] over one-year perspective: Ajay Bodke	true=neutral	pred=positive
+Government will have to do a lot more to make new investors put money in [TGT] and not gold	true=neutral	pred=positive
+4,600 [TGT] investors claim refund from Sebi	true=negative	pred=neutral
+[TGT] are very capital intensive: Ajay Bagga	true=neutral	pred=positive
+[TGT] story is really intriguing: Deven Choksey	true=positive	pred=neutral
+TCS overtakes [TGT] as India's most valued firm	true=neutral	pred=negative
+Maran makes open offer for [TGT]	true=positive	pred=neutral
+[TGT] bracing for better nos in March quarter	true=positive	pred=negative
+Target of 1200-1255 possible for [TGT]: Rohit Shinde	true=positive	pred=neutral
+[TGT] clocks record profit in Q1	true=positive	pred=neutral
+PE entry to help [TGT] fund expansion	true=positive	pred=neutral
+[TGT] prices rise on fresh buying	true=positive	pred=negative
+Bullion dominates futures market, [TGT] at 10%	true=positive	pred=neutral
+[TGT] yields inch lower to 7.96%; seen range-bound	true=positive	pred=negative
+Take long trades over [TGT]: Mitesh Thacker	true=positive	pred=negative
+[TGT] might breakout above 8300: Mitesh Thacker	true=neutral	pred=positive
+Reforms bring investors back to [TGT]	true=positive	pred=neutral
+[TGT]: Good show in FY13, but far from best	true=neutral	pred=negative
+BSE to include [TGT] in S&P BSE 200	true=positive	pred=neutral
+FIIs returning to [TGT] as yields turn attractive	true=neutral	pred=positive
+Forex gains during August on hopes of [TGT] easing	true=neutral	pred=positive
+Global, local bidders bet on FTIL's purchase in [TGT]	true=neutral	pred=positive
+[TGT] to boost Tech Mahindra's global presence	true=neutral	pred=positive
+Tantis may hike stake in [TGT] via rights issue	true=neutral	pred=positive
+Tax free bonds outperform [TGT], strong performance to continue	true=neutral	pred=negative
+[TGT] hold at all-hit time after bumper week	true=positive	pred=neutral
+Credit Suisse raises target prices of [TGT], ACC upgraded	true=positive	pred=neutral
+[TGT] to raise over Rs 1,160 cr through rights issue	true=neutral	pred=positive
+Greece hopes keep euro near 3-week high vs stalling [TGT]	true=negative	pred=neutral
+[TGT]'s net loss shrinks to Rs 45 crore in Q3	true=positive	pred=negative
+[TGT] sees Sensex gains from H2 of 2012	true=neutral	pred=positive
+It is 'wait n watch' for [TGT]: IDBI Capital	true=positive	pred=neutral
+LIC likely to pick 5 per cent stake in [TGT]	true=positive	pred=neutral
+[TGT] axes 15,000 jobs, raises $5.1 billion in capital	true=positive	pred=negative
+A soaring [TGT] could set off a currency war with China	true=positive	pred=neutral
+Buying conviction will come at 4525-4540 levels on [TGT]: Vijay Bhambwani	true=positive	pred=neutral
+Competition Commission of India rules out allegations against [TGT]	true=positive	pred=neutral
+Danone deal expected to act as a trigger for 'troubled' [TGT]	true=positive	pred=neutral
+FII exit will not hurt [TGT] as retail investors take charge	true=positive	pred=negative
+Looking at target of 545-550 on [TGT]: Ambareesh Baliga, Karvy	true=positive	pred=neutral
+Looking forward to a target of 700 for [TGT]: Ashwani Gujral	true=positive	pred=neutral
+Markets make merry on Narendra Modi magic; [TGT] tops 25,000 mark	true=positive	pred=neutral
+[TGT] back in profit; posts Rs 23.02 crore net for Q3	true=positive	pred=neutral
+Nikkei rises after [TGT] gains; market awaits US jobs data	true=positive	pred=neutral
+[TGT]'s retreat lifts Asia FX; yuan up on central bank stabilisation moves	true=negative	pred=positive
+[TGT] upgrades Titan to Overweight, sees over 14% upside in 12 months	true=neutral	pred=positive
+Russia adds to [TGT] holdings for 5th month in a row: IMF	true=positive	pred=neutral
+Waiting for levels of around 310 to buy [TGT]: Ambareesh Baliga, Karvy	true=positive	pred=neutral
+[TGT] outclasses gold, realty; 10 stocks where MFs raised stake in June quarter	true=positive	pred=neutral
+Hindi daily [TGT] plans to raise Rs 300 via IPO next month	true=positive	pred=neutral
+Huge demand-supply gap in [TGT]; constraints in projects taking shape: K Ravi Kumar	true=neutral	pred=negative
+NBFCs rally as [TGT] likely to give bank licences in next 10-15 days	true=neutral	pred=positive
+CLSA cuts target price for [TGT] to Rs 1,150, but retains a 'buy' call	true=positive	pred=neutral
+Diageo makes $1.9 bn second open offer, [TGT] surges 15%: Should investors tender shares	true=positive	pred=neutral
+[TGT], RSWM top two stocks ideas for next 3 months: G Chokkalingam, Equinomics	true=positive	pred=neutral
+Heritage Food, [TGT] top two stocks ideas for next 3 months: G Chokkalingam, Equinomics	true=positive	pred=neutral
+Seeing a large delta swing favouring [TGT] in FY 2012: Avinash Gorakshekar, Anagram Capital	true=positive	pred=negative
+Relaxo more attractive than [TGT]: Amit Khurana, Co-Head Equites & Head of Research, Dolat Capital	true=neutral	pred=negative
+Cognizant posts its best figures in its 21 year history; shares surge over 8% on [TGT]	true=positive	pred=neutral
+FIPB approval would be a key trigger for [TGT]'s stock: Mayuresh Joshi of Angel Broking	true=positive	pred=neutral
+Tobacco companies bolster a bruised [TGT]	true=neutral	pred=negative
+Police probe allegation about [TGT]'s threat to investors	true=positive	pred=negative
+NRI company files criminal complaint against [TGT]	true=positive	pred=negative
+Import duty on [TGT] likely	true=negative	pred=neutral
+[TGT] will start falling slowly: Ashwani Gujral	true=negative	pred=neutral
+[TGT] imports to jump 10-15% on falling prices	true=negative	pred=positive
+Investors take cover amid [TGT] crisis, oil slide	true=negative	pred=positive
+Miners tumble as Citigroup sees bigger [TGT] losses	true=negative	pred=neutral
+[TGT] weighs on European shares after Jazztel deal	true=negative	pred=neutral
+Dr Reddy extends falls; [TGT], BofA downgrade	true=neutral	pred=negative
+Cairn India falls on [TGT] deal delay	true=negative	pred=neutral
+Senior [TGT] veterans head for exit	true=negative	pred=neutral
+Crunch time in [TGT] market this week	true=negative	pred=neutral
+3 [TGT] staff being probed in bribery, other cases	true=negative	pred=neutral
+Banks reduce lending to [TGT] as sugar prices fall	true=negative	pred=neutral
+Decline in China currency [TGT] could fan trade tensions	true=negative	pred=neutral
+Downside of 105-110 levels possible for [TGT]: Ashwani Gujral	true=negative	pred=positive
+Europe's low-rated bonds stutter on [TGT] nerves	true=negative	pred=neutral
+Overweight on [TGT] at current juncture: BP Singh	true=positive	pred=neutral
+Pulse prices dip by 4% -5% but [TGT] defiant	true=positive	pred=neutral
+[TGT] chairman Vladimir Yevtushenkov's house arrest sends stocks crashing	true=negative	pred=neutral
+[TGT]'s track record comes under review, Cairn India falls	true=negative	pred=neutral
+Yield of [TGT] plunges to a 9-year low	true=positive	pred=negative
+F&O Tracker: [TGT] likely to shift to a lower range	true=negative	pred=neutral
+Indonesian stock index falls 2 per cent as [TGT] depreciates	true=negative	pred=positive
+[TGT]' Q2 profit nearly halved at Rs 68 crore	true=negative	pred=neutral
+[TGT] Sept quarter net loss at Rs 528.79 cr	true=neutral	pred=negative
+[TGT] reports Rs 11.72 crore loss in December quarter	true=neutral	pred=negative
+Regulatory uncertainties holding the rally in [TGT]: BP Singh	true=positive	pred=negative
+[TGT] sees big sell-off post plans to merge Grindwell Norton	true=negative	pred=neutral
+[TGT] extends closure of IPO amid bank strike	true=negative	pred=neutral
+[TGT] David Bonderman says 'Narendra Modi euphoria' makes India overpriced	true=neutral	pred=negative
+Use rallies in [TGT] to book profits: Gaurang Shah	true=negative	pred=positive
+Yellow Fever: Up to 15-tonne [TGT] gone in three days	true=negative	pred=neutral
+[TGT] sells $1 billion debut "green bond" in London	true=negative	pred=neutral
+Citigroup sells shares worth Rs 480 cr of 35 [TGT]	true=negative	pred=neutral
+[TGT], bond yields dip as looser European Central Bank policy eyed	true=negative	pred=positive
+F & O Tracker: Short [TGT] around 6300, buy ATM Calls	true=negative	pred=neutral
+FIIs withdraw Rs 2,000 crore from [TGT] in a fortnight	true=negative	pred=neutral
+Hedge fund big bets on [TGT] pummeled in third quarter	true=negative	pred=positive
+Mexico "very unlikely" to reopen $1.1 billion [TGT] hedge program: Source	true=negative	pred=neutral
+[TGT] in a no-trade zone due to holiday-truncated week: Sandeep Wagle	true=negative	pred=neutral
+Q1 earnings: [TGT] net loss seen at Rs 65 cr	true=neutral	pred=negative
+[TGT] holds near $102, heads for weekly drop as firm dollar hurts	true=positive	pred=negative
+[TGT] a case of over-expectation, stock doesn't look cheap: Kunj Bansal	true=negative	pred=positive
+[TGT] sells nearly 7 pc stake in IEX for Rs 21.45 cr	true=negative	pred=neutral
+[TGT] posts Q3 net loss of Rs 22.25 cr; stock up	true=negative	pred=positive
+Is the damage over on [TGT]? Strategies to tide over weakness	true=negative	pred=neutral
+[TGT] is still to make a comeback: Deepak Mohoni, trendwatchindia.com	true=negative	pred=positive
+Market can see a fall post [TGT] IPO: Ambareesh Baliga, Karvy	true=negative	pred=neutral
+Minority shareholders challenge Bombay High Court order on [TGT]'s buyback offer	true=negative	pred=neutral
+[TGT] to brief on abnormal deployment of Takata air bag, shares sink	true=negative	pred=neutral
+[TGT] likely to witness profit booking in short term: Deven Choksey	true=negative	pred=positive
+Can't pay Rs 580 crore due to financial crunch: [TGT] to Supreme Court	true=negative	pred=neutral
+HC refuses to stay FMC order asking [TGT] to cut stake in MCX	true=negative	pred=neutral
+I would not like to participate low-volume stock like [TGT]: Ashwani Gujral	true=negative	pred=neutral
+[TGT] Q2 results cast shadow on D-St; top 10 stocks to bet on	true=negative	pred=neutral
+Over 1,000 entities under scanner as [TGT] widens tax evasion, money laundering probe	true=neutral	pred=negative
+Spike in [TGT] prices may cause sell off in oil stocks: Mayuresh Joshi	true=positive	pred=negative
+[TGT] outflows at 15-week high as investors seek bond safety: Bank of America Merrill Lynch	true=negative	pred=positive
+[TGT] may sell 91-day  treasury bills at 8.60 per cent: poll	true=negative	pred=neutral
+Diwali only hope for [TGT] traders as demand at two-decade low after yellow metal hits record prices	true=negative	pred=positive
+CARE 'A+' to [TGT] perpetual bonds	true=positive	pred=neutral
+Difficult for Bank Nifty to get past 15,300; action seen in [TGT], small cap stocks: Ashwani Gujral	true=positive	pred=neutral
+Difficult for Bank Nifty to get past 15,300; action seen in midcap, [TGT]: Ashwani Gujral	true=positive	pred=neutral
+IPOs fail to live up to their price; power, realty fare badly and [TGT] the best	true=positive	pred=negative
+Q1 earnings take a toll on Street: Biocon down 8%; Indian Bank slips 8%; [TGT] 2%	true=negative	pred=neutral
+Investor should focus on [TGT] rather than telecom players: Avinash Gorakshekar, Anagram Capital Ltd	true=positive	pred=neutral
+HPCL, BPCL, IOC rally even as [TGT] prices on the boil, rupee declines	true=positive	pred=negative
+Coalgate verdict: [TGT], Hindalco lose big; Tata Steel, SAIL unlikely to be hit	true=negative	pred=neutral
+[TGT] may do well, sell on PSU banks: Centrum Wealth Management	true=positive	pred=negative
+China stocks drop as yuan falls further; [TGT], property in the crosshairs	true=negative	pred=neutral
+Diageo Plc, United Spirits open offer for [TGT] from August 28	true=positive	pred=neutral
+Lok Sabha elections 2014: [TGT] closes at 24,121.74, Nifty ends at 7,203	true=neutral	pred=positive
+Bearish on United Phosphorous and [TGT]: Seshadri Bharathan, KSEMA Fincon Ltd.	true=positive	pred=negative
+S.Korean shares up as [TGT] counters rally on oil rebound; won slips	true=positive	pred=neutral
+[TGT], JSPL top Nifty losers, sink over Goa mining ban uncertainty	true=negative	pred=neutral
+Tata Steel, [TGT] top Nifty losers, sink over Goa mining ban uncertainty	true=negative	pred=neutral
+[TGT], four banks likely to invest Rs 161 cr in Videocon	true=neutral	pred=positive
+Pound hits 4-month low after BoE's dovish shift, [TGT] eyes GDP	true=neutral	pred=negative
+Do not prefer [TGT], Idea; exit at current levels: Ambareesh Baliga	true=positive	pred=negative
+Do not prefer Bharti, [TGT]; exit at current levels: Ambareesh Baliga	true=positive	pred=negative
+Neutral on [TGT] space, prefer ITC within the pack: Pankaj Pandey	true=neutral	pred=positive
+Watch out for ICICI Bank, [TGT] next week : Technical Trends	true=negative	pred=positive
+[TGT] on defensive after ECB bond buying report, yen soft	true=neutral	pred=positive
+[TGT] wobbles on chance of more ECB action, Aussie perkier	true=neutral	pred=negative
+[TGT] stall after Wall Street slips, dollar holds gains	true=neutral	pred=negative
+Valentine Day lifts stocks of Hanung Toys, Archies on [TGT]	true=neutral	pred=positive
+Yen rises after Japan PM comments, German data hurts [TGT]	true=neutral	pred=negative
+Irda stops IGE, J&K Bank from subscribing to [TGT] issue	true=negative	pred=neutral
+Euro shaky on ECB and Greece, [TGT] keeps edge	true=neutral	pred=positive
+MMTC-PAMP [TGT], silver coins stock sold out on Dhanteras	true=positive	pred=negative
+MMTC-PAMP gold, [TGT] coins stock sold out on Dhanteras	true=positive	pred=negative
+[TGT], Nasdaq break 3-day slide but Dow dips	true=positive	pred=negative
+S&P 500, [TGT] break 3-day slide but Dow dips	true=positive	pred=negative
+Sensex rangebound, [TGT] holds 8500 levels; Infosys top loser	true=neutral	pred=negative
+Tech leads [TGT], S&P 500; Disney sparks media selloff	true=neutral	pred=positive
+PSU banks join party; [TGT] hits all-time high	true=neutral	pred=positive
+[TGT] debt restructuring positive for financial, power sectors: Analysts	true=neutral	pred=positive
+[TGT] sees copper, aluminum sliding amid 'cost deflation'	true=neutral	pred=negative
+Profit-booking hits auto stocks, M&M top [TGT] loser	true=neutral	pred=negative
+Russia's rouble weaker on Monday, [TGT] outweighs taxes	true=negative	pred=positive
+Sensex rangebound; L&T, ICICI Bank, [TGT] top losers	true=neutral	pred=negative
+Sensex turns choppy, [TGT] trades near 7950 levels	true=neutral	pred=negative
+Wall Street climbs on Procter & Gamble, [TGT]	true=positive	pred=neutral
+European shares steady, pegged back by [TGT]	true=negative	pred=neutral
+Indians prefer [TGT], mutual funds for investments	true=neutral	pred=positive
+Indians prefer gold, [TGT] for investments	true=neutral	pred=positive
+Copper, [TGT] rise on global cues	true=positive	pred=negative
+[TGT] hold near record levels	true=neutral	pred=positive
+[TGT] head steps down	true=neutral	pred=negative
+[TGT] revive expansion plans	true=neutral	pred=positive
+[TGT] investors renew interest in emerging markets	true=neutral	pred=positive
+[TGT] IPO: What experts say	true=neutral	pred=positive
+[TGT] agility helps tame money market volatility	true=neutral	pred=positive
+[TGT] IPO subscribed by 2.24 times	true=neutral	pred=positive
+Are firms with high [TGT] exposure in trouble?	true=neutral	pred=negative
+[TGT] stake sale subscribed 30% till afternoon trade	true=neutral	pred=positive
+Five reasons why [TGT] may not appreciate much	true=neutral	pred=negative
+[TGT] 1-gram gold jewellery is to go places	true=neutral	pred=positive
+No curbs, but [TGT] royalty payouts under scanner	true=neutral	pred=negative
+NSE takes Renuka Sugars' 5% stake in [TGT]	true=neutral	pred=positive
+Yogesh Munjal to quit Hero stake for [TGT]	true=positive	pred=negative
+[TGT] tread water ahead of US jobs data	true=neutral	pred=negative
+Central Bank sells entire stake in [TGT] to Transunion	true=negative	pred=neutral
+[TGT] gets Board approval for raising Rs 500 crore	true=neutral	pred=positive
+[TGT] eye dollar bond market for capital boost	true=neutral	pred=positive
+Europeans banks eye [TGT] bond market for capital boost	true=neutral	pred=positive
+[TGT] dips but Malaysian plane downing seen aiding sentiment	true=neutral	pred=negative
+Kenneth Andrade exits [TGT] leaving investors jittery	true=neutral	pred=negative
+[TGT] gets Sebi approval for IRF; launch this month	true=neutral	pred=positive
+[TGT] to reach 8600-8700 at some point: Ashwani Gujral	true=neutral	pred=positive
+[TGT] investors forum to appeal against High Court Order	true=neutral	pred=negative
+[TGT] languishing in valuations, but offer pockets of hope	true=neutral	pred=negative
+[TGT] gets shareholder nod for Rs 11,500 crore QIP	true=neutral	pred=positive
+2010 could well be the year of midcaps: [TGT]	true=neutral	pred=positive
+Carl Icahn says his firm sold remainder of [TGT] stake	true=neutral	pred=negative
+[TGT] snaps 6-day gaining streak on weak PMI, midpoint	true=neutral	pred=negative
+Continue to buy till [TGT] breaks 8090-8100 levels: Mitesh Thacker	true=neutral	pred=positive
+Dollar holds firm as markets sniff risks of [TGT] hawkishness	true=neutral	pred=negative
+[TGT]: Transfer of pricing pressure is the key	true=neutral	pred=negative
+[TGT]: High costs mar show, but future prospects bright	true=neutral	pred=positive
+[TGT] an interesing prospect in the coming days: Ajay Bagga	true=neutral	pred=positive
+Bengaluru-based builder [TGT] raises Rs 126 crore through issue of NCDs	true=neutral	pred=positive
+Cheaper inputs help, but weak demand a drag on [TGT]	true=neutral	pred=negative
+[TGT] too boards infra bond wagon, to raise Rs 1,200 cr	true=neutral	pred=positive
+[TGT] overbought, hence there could be momentum loss: Mitesh Thacker, miteshthacker.com	true=neutral	pred=negative
+[TGT] rally on petrol price hike, but end day in red	true=neutral	pred=positive
+Reduction in [TGT] prices will not be taken negatively: Ajay Bodke	true=neutral	pred=negative
+[TGT] most higher; Philippines retreats after May export drop	true=neutral	pred=positive
+[TGT] holds steady above $105 on geopolitical tension ahead of inventory data	true=neutral	pred=positive
+[TGT] net profit for 2012-13 stands at Rs 82 crore	true=neutral	pred=positive
+Grey IPO market shows signs of revival with [TGT] scaling new peaks	true=neutral	pred=positive
+[TGT] looks set to touch 6420 in next few days: Mitesh Thacker	true=neutral	pred=positive
+[TGT] posts marginal growth in Q1 net profit at Rs 14.81 crore	true=neutral	pred=positive
+Bharti Airtel plans to sell [TGT] shares; to raise over Rs 2,500 crore	true=neutral	pred=negative
+Once 955 is broken off, [TGT] may head towards 920: Amit Harchekar, IIFL	true=neutral	pred=positive
+Difficult decision for [TGT]: What should it do with proceeds from Alibaba share sale?	true=neutral	pred=negative
+FIIs Rs 6,000 crore [TGT] shorts may fire up markets again after dousing it	true=neutral	pred=positive
+Reforms planned by the government will have a strong bearing on the [TGT]: Vinay Khattar	true=neutral	pred=positive
+7800 is the worst we can see on [TGT] at this stage: Sudip Bandyopadhyay President, Destimoney Securities Pvt Ltd	true=neutral	pred=negative
+[TGT] attachment proceedings cross 1,500-mark	true=positive	pred=neutral
+[TGT] bond sees record subscription	true=positive	pred=neutral
+4900-4930 support level for [TGT]: Devang Visaria	true=positive	pred=neutral
+Earnings preview: [TGT] biggies earnings belies expectations	true=positive	pred=neutral
+[TGT] pain has an upside for India	true=neutral	pred=positive
+Futures segment of [TGT] witnessing steady growth	true=positive	pred=neutral
+Hold [TGT] in current scenario: Deepak Mohoni	true=positive	pred=neutral
+[TGT] Rs 2,500-crore IPO gets Sebi nod	true=positive	pred=neutral
+Overall [TGT] remains compelling: Taher Badshah	true=positive	pred=neutral
+[TGT] plans China's first Green bond	true=positive	pred=neutral
+[TGT] IPO subscribed 47% on Day 2	true=positive	pred=neutral
+[TGT] to invest in Ace Tours, Liverpool	true=neutral	pred=positive
+[TGT] picks up minority stake in Dee Development	true=positive	pred=neutral
+[TGT] upgrades Glenmark to 'buy'; ends up nearly 2%	true=neutral	pred=positive
+Dollar gains on uptick in [TGT], euro banking concerns	true=positive	pred=negative
+FCCBs weigh on [TGT] as new orders raise hopes	true=positive	pred=negative
+[TGT] has held on: Ashwani Gujral, Market Strategist	true=positive	pred=neutral
+LIC stake in [TGT] crosses 10 per cent	true=neutral	pred=positive
+[TGT] increases stake in BHEL to 9%	true=positive	pred=neutral
+Miners help [TGT] bounce, but weak results cap gains	true=positive	pred=negative
+[TGT] to operate GAILs nine LNG ships; stock rallies	true=positive	pred=neutral
+Short term upside likely: Sandeep J Shah, [TGT]	true=neutral	pred=positive
+[TGT]: Input costs, TN show key to profitability	true=positive	pred=neutral
+Best performing stocks of 2015: [TGT] shone through pharma headwinds	true=positive	pred=negative
+BNP Paribas to buy [TGT] stake in Fortis unit	true=neutral	pred=positive
+[TGT] recovers above $85 after biggest fall in three years	true=positive	pred=negative
+BT/ST [TGT] with a target of Rs 2560: Mitesh Thacker	true=positive	pred=neutral
+[TGT], Reliance Group stocks in focus ahead of UP results	true=positive	pred=neutral
+Jaypee, [TGT] in focus ahead of UP results	true=positive	pred=neutral
+[TGT] buys 4.66% stake in BHEL for Rs 1,889 crore	true=positive	pred=neutral
+Local cos eye [TGT] listing to gain from India craze	true=positive	pred=neutral
+[TGT] net profit at Rs 138 crore in Q1	true=positive	pred=neutral
+Reforms push will hold good for the [TGT]: Dhiraj Sachdev	true=neutral	pred=positive
+[TGT] may raise upto Rs 350-cr through QIP route	true=positive	pred=neutral
+[TGT] is heading to levels closer to 1595: Prakash Gaba	true=positive	pred=neutral
+[TGT] bullish on energy sector as oil price steadies	true=neutral	pred=positive
+[TGT]: Shares up after report it will split in two	true=positive	pred=neutral
+Large move is on way for [TGT]: CK Narayan, Sharyans Resources	true=positive	pred=neutral
+[TGT] order booking is picking up substantially:  Sandip Sabharwal	true=positive	pred=neutral
+[TGT] heading to 200, JP stuck at 90: Ashwani Gujral	true=positive	pred=neutral
+[TGT]'s interest in markets leads to rise in midcap stocks: David Pezarkar	true=neutral	pred=positive
+Inox raises stake in [TGT] to 68.35% for Rs 89 cr	true=neutral	pred=positive
+[TGT] seeks shareholder permission to allow lenders convert debt into equity	true=positive	pred=neutral
+[TGT] Housing raises Rs 810 cr by issuing preference shares to LIC	true=neutral	pred=positive
+OIJIF ups stake in [TGT], buys more shares from Jaypee Capital Services	true=positive	pred=neutral
+[TGT] price plan may be the first step towards $70 oil floor	true=positive	pred=neutral
+[TGT] launches open offer to buy up to 25% in Cimmco	true=positive	pred=neutral
+Worst seems to be over for [TGT]: Jagdish Malkani, Member, NSE	true=positive	pred=neutral
+NMDC shares up over 4 per cent on hike in [TGT] prices	true=positive	pred=neutral
+Worst is behind for [TGT]; all eyes on management activity: Deven Choksey	true=positive	pred=neutral
+Acceleration in [TGT], fall in interest rates to boost CV space: Deven Choksey	true=positive	pred=negative
+Ajay Piramal to strengthen role in [TGT], takes over as Chairman of Shriram Capital	true=positive	pred=neutral
+[TGT]'s attractive valuation post 8% fall in a month makes it a good long-term buy	true=positive	pred=negative
+Spike in [TGT] price may be result of Burger King tie up talks: Dipan Mehta	true=positive	pred=neutral
+[TGT]: Implied volatilty hits 5-year high as buyers queue up to puchase options ahead of results	true=positive	pred=neutral
+[TGT] and mining companies will now have to operate more efficiently to generate profits: Pramod Gubbi	true=positive	pred=neutral
+Metals and [TGT] will now have to operate more efficiently to generate profits: Pramod Gubbi	true=positive	pred=negative
+[TGT] believes in India blockbuster, to invest over $2 billion in India over the next 5-6 years	true=positive	pred=neutral
+Singapore-based hedge fund Tree Line Asia Master Fund sells [TGT] shares worth Rs 20 crore	true=neutral	pred=negative
+[TGT] mis-stated facts in Sebi filings	true=negative	pred=neutral
+Trade [TGT] today: Deepak Mohoni	true=negative	pred=neutral
+CBI probes [TGT]s market debut	true=negative	pred=neutral
+Panel to monitor [TGT] futures	true=negative	pred=neutral
+BSE expels [TGT] as trading member	true=negative	pred=neutral
+[TGT] indulged in IPO irregularities: Sebi	true=negative	pred=neutral
+[TGT] face Sebi heat on public-holding norms	true=negative	pred=neutral
+[TGT] on verge of breakout: Emkay	true=negative	pred=positive
+[TGT] edges up on retailers demand	true=negative	pred=positive
+Allahabad Bank may sell stake in [TGT]	true=negative	pred=neutral
+[TGT] flat as investors digest Greek deal	true=negative	pred=neutral
+[TGT] could add to pressure on cane	true=neutral	pred=negative
+[TGT] downgrades Ipca Labs; stock plunges 15%	true=neutral	pred=negative
+[TGT]: Reviewing $8.4 million penalty slapped by SEBI	true=negative	pred=neutral
+[TGT] faces talent exodus as key officials quit	true=negative	pred=neutral
+Flat [TGT] OI data hints at trend reversal	true=negative	pred=neutral
+[TGT] good for short selling: Deepak Mohoni, trendwatchindia.com	true=negative	pred=positive
+[TGT] Land Rover CEO David Smith steps down	true=negative	pred=neutral
+[TGT] on edge ahead of Janet Yellen testimony	true=negative	pred=positive
+[TGT] climbs towards $101, pulls away from 16-month low	true=negative	pred=positive
+Call for minimum farmgate price for [TGT]	true=negative	pred=neutral
+Gains in [TGT] limited, investors weigh QE3 impact	true=negative	pred=neutral
+[TGT] withdraws IPO a day before its closing	true=negative	pred=neutral
+Investor sentiment on [TGT] goes from giddy to glum	true=negative	pred=neutral
+Mavi Investment moves [TGT] to sell shares, repatriate funds	true=neutral	pred=negative
+[TGT] Q4 net loss at Rs 311 crore	true=negative	pred=neutral
+Profit booking grips [TGT], top ten stocks in focus	true=negative	pred=neutral
+[TGT] trims initial losses, trades at 62.35 vs dlr	true=negative	pred=positive
+[TGT]: Recovery on track; costs, competition may hurt company	true=negative	pred=positive
+Tobacco stocks weigh on UK FTSE after [TGT] fine	true=negative	pred=neutral
+[TGT] suspends trading after just an year	true=negative	pred=neutral
+CBI examines ex-[TGT] chairman C B Bhave in MCX case	true=negative	pred=neutral
+Court may soon appoint liquidator in [TGT] case: Police officials	true=negative	pred=neutral
+[TGT] reports Q3 net loss at Rs 2.47 crore	true=negative	pred=neutral
+[TGT] Q1 net loss at Rs 8 crore	true=negative	pred=neutral
+[TGT] on disinvestment radar this fiscal, SAIL FPO next month	true=negative	pred=neutral
+Nikkei extends losses into fourth day on [TGT]'s sudden revival	true=positive	pred=neutral
+No relief for [TGT] in the near term: Five facts	true=negative	pred=neutral
+[TGT] gains; Q1 net profit falls 16%	true=negative	pred=positive
+[TGT] off highs on suspected Reserve Bank of India intervention	true=negative	pred=neutral
+[TGT] announces top management changes, Shiv Sethuraman moves out	true=negative	pred=neutral
+All action on 30 stocks in [TGT], small- and mid-caps ignored	true=negative	pred=neutral
+[TGT] effect: Investor confidence dampens, corporate bond yields go up	true=negative	pred=positive
+[TGT] hits 4-1/2-month high, spot rate set to cross midpoint	true=negative	pred=positive
+[TGT] banned from demanding repayment from brokerages ahead of deadline	true=negative	pred=neutral
+[TGT] nearing 9200 could put pressure on Nifty: Mitesh Thacker	true=neutral	pred=negative
+[TGT] pare $40 billion of hedge funds' wealth since 2008: Report	true=negative	pred=neutral
+[TGT] posts net loss of Rs 23 crore in Q4	true=negative	pred=neutral
+Funds in a bind as Sebi acts tough on [TGT]	true=negative	pred=neutral
+ICRA places [TGT] on ratings watch, cites management control dispute	true=negative	pred=neutral
+India love affair with [TGT] may be over, as prices slide	true=negative	pred=neutral
+[TGT]'s net profit up at Rs 228.46 cr; stock down	true=negative	pred=positive
+[TGT] in no-trade zone, be stock-specific in the market: Sandeep Wagle	true=negative	pred=neutral
+Oct jinx: [TGT] issue sucks out liquidity, sensex stays in range	true=negative	pred=neutral
+Unseasonal rains, hailstorms affect rural demand for [TGT] in wedding season	true=negative	pred=positive
+[TGT] posts Q1 net loss of Rs 281.34 crore	true=negative	pred=neutral
+Hedge funds give up betting on [TGT] as prices continue to tumble	true=negative	pred=positive
+[TGT] posts net loss of Rs 26 cr in Q1	true=negative	pred=neutral
+8,056 on [TGT] could be an invitation to initiate fresh shorts: Ashwani Gujral	true=negative	pred=neutral
+[TGT] raises $115 million through Hero share sale; exits with 2x return	true=neutral	pred=negative
+[TGT] sitting on big losses; hopefully it just a one-time loss: Hemindra Hazari	true=negative	pred=neutral
+Lot of money cannot be put in [TGT]: Rajan Malik, Philip Capital PCG	true=negative	pred=neutral
+PVR down on sale of [TGT] property for over Rs 100 crore	true=neutral	pred=negative
+Doubt on Dalal Street: [TGT] sheds 518 points as fast as a bullet train	true=negative	pred=positive
+[TGT] withdraws draft IPO prospectus; to resubmit again in next 4-6 weeks	true=negative	pred=neutral
+From 30K to 27K; top 5 reasons why there is more pain ahead for [TGT]	true=negative	pred=positive
+UBS sceptical about [TGT] Vision 2020 - companys growth plan over the next five years	true=negative	pred=neutral
+Lenders including Bank of India ask [TGT] to sell assets or equity to repay debt	true=negative	pred=neutral
+[TGT] becoming dreaded word in Dalal Street; pharma companies need to keep Street in the loop	true=neutral	pred=negative
+[TGT] takes on Pepsi, woos IPL fans outside stadium venues at Rs 10-15 per bottle	true=positive	pred=negative
+[TGT] small and midcap stocks shine; over 100 stocks hit fresh 52-week high on BSE	true=neutral	pred=positive
+Need to be patient while investing in [TGT]: IV Subramaniam, Quantum AMC	true=positive	pred=neutral
+8200 holds the key for [TGT]; Sensex likely to climb to 27,375: Mitesh Thacker	true=neutral	pred=positive
+Overweight on the [TGT] and underweight on the auto at this point: BP Singh	true=positive	pred=negative
+[TGT] hits 19-mth low as supply overwhelms, Shanghai rebar down 3rd day	true=positive	pred=negative
+Keep holding long positions; [TGT] to outperform CNX IT, CNX Bank: Ashwani Gujral	true=positive	pred=neutral
+Stay neutral to negative on [TGT] and banking stocks: Harendra Kumar, Elara Capital	true=neutral	pred=negative
+Stay neutral to negative on auto and [TGT]: Harendra Kumar, Elara Capital	true=neutral	pred=negative
+Defensives like pharma, FMCG perform better than all [TGT] stocks: Ashwani Gujral	true=neutral	pred=negative
+[TGT] reverse early gains to close flat; won edges lower	true=neutral	pred=negative
+Banking, energy and FMCG stocks may push [TGT] towards 6650-6700: Mitesh Thacker	true=neutral	pred=positive
+[TGT] eyes comeback; buy UltraTech with a target of Rs 3,282:	true=positive	pred=neutral
+M&M, Tata Group eyeing [TGT] for long-term growth opportunities: Vikas Khemani	true=positive	pred=neutral
+Orix Corp in talks to buy [TGT] stake; Shriram Transport up	true=neutral	pred=positive
+Exit Ipca Labs; it's the next [TGT] in making: Dipan Mehta	true=negative	pred=neutral
+Book profits with [TGT], stay with Hindustan Zinc: Deven Choksey	true=negative	pred=positive
+China, East Asian stocks to extend rally on [TGT]'s easing: Poll	true=neutral	pred=positive
+Dollar sits tight ahead of Fed meeting and data; [TGT] sags	true=negative	pred=neutral
+[TGT] ends past 27,000-mark for first time; Nifty closes at 8,083	true=positive	pred=neutral
+Sensex ends past 27,000-mark for first time; [TGT] closes at 8,083	true=neutral	pred=positive
+Sensex under pressure, [TGT] holds 8500; top 20 intraday trading bets	true=neutral	pred=negative
+[TGT] rebounds with small-caps; Dow, S&P 500 dip for week	true=positive	pred=negative
+China Yuan edges lower on [TGT] demand for dividend payments	true=positive	pred=neutral
+[TGT] out of PSU ETF; FinMin files offer document	true=negative	pred=neutral
+[TGT], Markit finalists for $1 billion-plus Barclays index unit: Sources	true=positive	pred=neutral
+S&P, [TGT] finalists for $1 billion-plus Barclays index unit: Sources	true=positive	pred=neutral
+South Korea stocks reach fresh 3-year high, [TGT] trads water	true=negative	pred=positive
+Citi downgrades Reliance Industries to neutral; prefers [TGT]	true=positive	pred=neutral
+European stock slip at open; [TGT] down 0.21%	true=positive	pred=negative
+Fitch ratings raise outlook on [TGT]; ringgit, stocks jump	true=positive	pred=neutral
+Gold climbs to fresh two-week high on softer [TGT]	true=negative	pred=neutral
+MphasiS, ACC, [TGT]- trades for the week: Deepak Mohoni	true=positive	pred=neutral
+NSE, BSE to exclude [TGT] from F&O segment	true=negative	pred=neutral
+Prefer HDFC Bank over ICICI, [TGT]: Sonam Udasi	true=negative	pred=positive
+Prefer Infosys over [TGT] in IT sector: Prashastha Seth	true=negative	pred=neutral
+Prefer LIC Housing Finance from [TGT]: Gaurav Mehta	true=neutral	pred=negative
+[TGT]@1,00,000 by 2020, says Karvy; but is it possible?	true=positive	pred=neutral
+Maruti, BoB may be among [TGT] index picks	true=neutral	pred=positive
+[TGT] slip at open; FTSE down 0.12%	true=negative	pred=positive
+Vedanta, Hindalco to exit [TGT] on December 21	true=neutral	pred=negative
+[TGT] steady, Vodafone down after results	true=neutral	pred=negative
+Southeast Asia stocks-mostly weak; [TGT] bucks trend	true=positive	pred=negative
