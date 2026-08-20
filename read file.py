@@ -7,7 +7,8 @@ def fix_apostrophes(s):
 
 df = pd.read_csv("SEntFiN.csv")
 
-rows = []
+input_rows = []
+output_rows = []
 skipped_rows = []
 skipped_entities = []
 fixed_count = 0
@@ -26,16 +27,36 @@ for _, row in df.iterrows():
             skipped_rows.append((row["S No."], title, raw))
             continue
 
-    for entity, sentiment in decisions.items():
-        entity_clean = entity.replace("’", "'")
-        if entity_clean not in title:
-            skipped_entities.append((row["S No."], title, entity_clean))
-            continue
-        tgt_sentence = title.replace(entity_clean, "[TGT]", 1)
-        rows.append({"sentence": tgt_sentence, "sentiment": sentiment})
+    entities_clean = {e.replace("’", "'"): s for e, s in decisions.items()}
 
-out_df = pd.DataFrame(rows)
-out_df.to_csv("SEntFiN_tgt.csv", index=False)
+    # verify all entities exist in title before processing this row
+    if any(e not in title for e in entities_clean):
+        for e in entities_clean:
+            if e not in title:
+                skipped_entities.append((row["S No."], title, e))
+        continue
 
-print(f"Wrote {len(out_df)} rows")
+    for target_entity, sentiment in entities_clean.items():
+        masked_title = title
+        # mask the target entity
+        masked_title = masked_title.replace(target_entity, "Target", 1)
+        # mask all other entities as "Other"
+        for other_entity in entities_clean:
+            if other_entity != target_entity:
+                masked_title = masked_title.replace(other_entity, "Other", 1)
+
+        input_rows.append({"sentence": masked_title})
+        output_rows.append({
+            "sentence": f"The sentiment for Target in the given sentence is {sentiment.upper()}."
+        })
+
+input_df = pd.DataFrame(input_rows)
+output_df = pd.DataFrame(output_rows)
+
+input_df.to_csv("SEntFiN_input.csv", index=False)
+output_df.to_csv("SEntFiN_output.csv", index=False)
+
+print(f"Wrote {len(input_df)} input rows and {len(output_df)} output rows")
 print(f"Fixed {fixed_count} rows via apostrophe repair")
+print(f"Skipped {len(skipped_rows)} rows with unparseable Decisions")
+print(f"Skipped {len(skipped_entities)} entity mentions not found verbatim in title")
