@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT))
 
 from normalize_model_output import parse_label  # noqa: E402
 from run_experiments import attach_day_aggregates, next_trading_day  # noqa: E402
+from run_finabsa_on_cafef import parse_label as parse_inference_label  # noqa: E402
 from run_robustness import attach_lag_returns  # noqa: E402
 
 
@@ -33,6 +34,12 @@ class ContractTests(unittest.TestCase):
         for raw, expected in cases.items():
             with self.subTest(raw=raw):
                 self.assertEqual(parse_label(raw), expected)
+
+    def test_inference_runner_accepts_compact_labels(self):
+        cases = {"POS": "positive", "neg": "negative", "NEU": "neutral", "The model says POS.": "positive", "unknown output": "unknown"}
+        for raw, expected in cases.items():
+            with self.subTest(raw=raw):
+                self.assertEqual(parse_inference_label(raw), expected)
 
     def test_aggregate_join_uses_keys_not_row_order(self):
         sentiment = pd.DataFrame(
