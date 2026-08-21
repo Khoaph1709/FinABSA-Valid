@@ -135,19 +135,42 @@ def main() -> None:
         mean_article_count=("article_count", "mean"),
     ).reset_index()
     summary.to_csv(outdir / "tables/event_summary_by_label.csv", index=False)
-    crisis.groupby("target_date").agg(
-        articles=("sample_id", "count"), sentiment=("sentiment_score", "mean"),
-        abnormal_return=("abnormal_return", "mean"), market_return=("market_return", "mean"),
-    ).reset_index().to_csv(outdir / "tables/daily_market_sentiment.csv", index=False)
+    # Build a genuine ticker-day panel before regression. The event table can
+    # contain multiple articles for the same ticker-day, but the market outcome
+    # is one return per ticker-day and must not be repeated in the regression.
+    panel = (
+        crisis.groupby(["ticker", "target_date"], as_index=False)
+        .agg(
+            sentiment_score=("sentiment_score", "mean"),
+            negative_share=("negative_share", "first"),
+            positive_share=("positive_share", "first"),
+            neutral_share=("neutral_share", "first"),
+            article_count=("article_id", "nunique"),
+            **{"return": ("return", "first")},
+            market_return=("market_return", "first"),
+            expected_return=("expected_return", "first"),
+            abnormal_return=("abnormal_return", "first"),
+            event_rows=("sample_id", "count"),
+        )
+    )
+    panel["log_article_count"] = np.log1p(panel["article_count"])
+    panel.to_csv(outdir / "tables/panel_regression_data.csv", index=False)
 
     # Primary panel regression with ticker and date fixed effects.
     regression_path = outdir / "tables/panel_regression.txt"
-    reg = crisis.dropna(subset=["abnormal_return", "sentiment_score"]).copy()
+    reg = panel.dropna(subset=["abnormal_return", "sentiment_score"]).copy()
     with regression_path.open("w", encoding="utf-8") as fh:
-        fh.write(f"market_ticker={market_ticker}\nobservations={len(reg)}\n")
+        fh.write(
+            f"market_ticker={market_ticker}\n"
+            f"observations={len(reg)}\n"
+            f"event_rows={len(crisis)}\n"
+            f"unique_tickers={reg['ticker'].nunique()}\n"
+            f"unique_dates={reg['target_date'].nunique()}\n"
+            "unit=ticker-day\n"
+        )
         try:
             import statsmodels.formula.api as smf
-            if len(reg) >= 20 and reg["ticker"].nunique() >= 2:
+            if len(reg) >= 20 and reg["ticker"].nunique() >= 2 and reg["target_date"].nunique() >= 2:
                 model = smf.ols(
                     "abnormal_return ~ sentiment_score + negative_share + positive_share + log_article_count + C(ticker) + C(target_date)",
                     data=reg,
@@ -162,12 +185,15 @@ def main() -> None:
         except Exception as exc:
             fh.write(f"Regression failed: {type(exc).__name__}: {exc}\n")
 
-    # Descriptive figures for the report.
+    # Descriptive daily figure uses the ticker-day panel, so a ticker with many
+    # articles does not receive extra weight in the market-return bars.
     sns.set_theme(style="whitegrid")
-    daily = crisis.groupby("target_date", as_index=False).agg(
+    daily = panel.groupby("target_date", as_index=False).agg(
         sentiment=("sentiment_score", "mean"), abnormal_return=("abnormal_return", "mean"),
-        articles=("sample_id", "count"),
+        market_return=("market_return", "mean"), articles=("article_count", "sum"),
+        tickers=("ticker", "nunique"),
     )
+    daily.to_csv(outdir / "tables/daily_market_sentiment.csv", index=False)
     if not daily.empty:
         fig, ax1 = plt.subplots(figsize=(11, 5.5))
         ax1.plot(daily["target_date"], daily["sentiment"], marker="o", label="Mean sentiment score", color="#2563eb")

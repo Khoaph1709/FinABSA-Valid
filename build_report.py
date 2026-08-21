@@ -34,6 +34,18 @@ def main() -> None:
     daily = pd.read_csv(daily_path) if daily_path.exists() else pd.DataFrame()
     coef_path = analysis / "tables/panel_regression_coefficients.csv"
     coef = pd.read_csv(coef_path) if coef_path.exists() else pd.DataFrame()
+    panel_meta = {}
+    panel_path = analysis / "tables/panel_regression.txt"
+    if panel_path.exists():
+        for line in panel_path.read_text(encoding="utf-8").splitlines():
+            if "=" in line and not line.startswith("="):
+                key, value = line.split("=", 1)
+                panel_meta[key.strip()] = value.strip()
+    if not coef.empty and "Unnamed: 0" in coef.columns:
+        substantive = {"Intercept", "sentiment_score", "negative_share", "positive_share", "log_article_count"}
+        coef_main = coef[coef["Unnamed: 0"].isin(substantive)].copy()
+        if not coef_main.empty:
+            coef = coef_main
     model_path = analysis / "market_models.csv"
     market_models = pd.read_csv(model_path) if model_path.exists() else pd.DataFrame()
 
@@ -42,7 +54,13 @@ def main() -> None:
     lines += ["## 1. Executive summary", "", f"Số dòng input: **{validation.get('input_rows', 'N/A')}**. Số dòng prediction: **{validation.get('prediction_rows', 'N/A')}**. Số nhãn chưa parse được: **{validation.get('unknown_labels', 'N/A')}**.", "", "Kết quả chính được thiết kế theo next-trading-day return và abnormal return dựa trên market model. Đây là kiểm định liên hệ ngoài mẫu, không phải bằng chứng nhân quả hay khuyến nghị đầu tư.", ""]
     lines += ["## 2. Prediction validation", "", "```json", json.dumps(validation, ensure_ascii=False, indent=2), "```", ""]
     lines += ["## 3. Event-study summary", "", md_table(summary), ""]
-    lines += ["## 4. Panel regression", "", md_table(coef), ""]
+    panel_note = (
+        f"Đơn vị hồi quy: **{panel_meta.get('unit', 'N/A')}**; "
+        f"số quan sát: **{panel_meta.get('observations', 'N/A')}**; "
+        f"số ticker: **{panel_meta.get('unique_tickers', 'N/A')}**; "
+        f"số ngày: **{panel_meta.get('unique_dates', 'N/A')}**."
+    )
+    lines += ["## 4. Panel regression", "", panel_note, "", md_table(coef), ""]
     lines += ["## 5. Data coverage", "", f"Số ngày aggregate: **{len(daily)}**. Số ticker có market model: **{len(market_models)}**.", "", md_table(market_models.head(30)), ""]
     lines += ["## 6. Figures", "", "![Sentiment versus abnormal return](data/cafef_oct2022/analysis/figures/sentiment_vs_abnormal_return.png)", "", "![Abnormal return by label](data/cafef_oct2022/analysis/figures/abnormal_return_by_label.png)", ""]
     lines += ["## 7. Interpretation checklist", "", "1. Kiểm tra temporal leakage: bài sau giờ đóng cửa không được gán cho cùng phiên.", "2. Kiểm tra entity linking: kết quả chính nên dùng strict/high-confidence mapping.", "3. So sánh với baseline và placebo; không chỉ nhìn p-value.", "4. Báo cáo effect size và khoảng tin cậy.", "5. Nếu intrinsic sentiment tốt nhưng extrinsic không có tín hiệu, đó vẫn là kết quả hợp lệ của môn NLP.", "", "## 8. Limitations", "", "CafeF là một nguồn tin, không đại diện toàn bộ thông tin thị trường. Timestamp, entity linking, coverage của ticker và cờ adjusted price cần được kiểm tra thủ công. Kết quả quan sát không chứng minh bài báo gây ra lợi suất.", "", "## References", "", "[1]: https://github.com/Khoaph1709/FinABSA-Valid FinABSA-Valid repository", "[2]: https://cafef.vn/ CafeF", "[3]: https://github.com/thinh-vu/vnstock vnstock", ""]
