@@ -24,7 +24,7 @@ We collected and parsed 1,472 CafeF articles published between 1 and 31 October 
 
 A single article can mention several companies. Because the ABSA model predicts sentiment toward a specified target rather than discovering all targets itself, the unit passed to the model is an article--ticker pair. The broad candidate mapping produced 512 such pairs. The primary analysis uses 208 pairs whose entity-linking confidence was at least 0.95. These 208 observations correspond to 50 distinct security tickers in the prediction file; the subsequent market panel contains 51 tickers after the available price coverage and event construction are applied.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Observed sample and prediction-contract statistics.}
 \label{tab:validation_sample}
@@ -50,7 +50,7 @@ The broad file preserves every candidate detected by the entity-linking rules. T
 
 For each target, the target surface form is replaced by \texttt{Target}, while other detected entities are replaced by \texttt{Other}. This creates one target-specific input per article--ticker pair and prevents the model from using the target's surface name as a shortcut. For example, a headline mentioning both EIB and CTG generates two distinct masked inputs, one for each target. The prediction file supplied for this analysis contains a hard classification output for every strict input and is therefore sufficient for label-based aggregation; it does not contain calibrated class probabilities.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.78\textwidth]{images/prediction_distribution.png}
 \caption{Distribution of FinABSA predictions in the strict CafeF sample. The sample is strongly imbalanced toward the neutral class: 180 of 208 predictions are neutral, compared with 18 positive and 10 negative predictions. The imbalance is considered explicitly when interpreting group-level estimates and statistical power.}
@@ -66,7 +66,7 @@ The primary market proxy is VNINDEX. Log returns are computed as
 \]
 where $P_{i,t}$ denotes the recorded closing price. The analysis uses the price series as stored in the repository. Because the source file does not provide a separate verified corporate-action audit trail, the interpretation of the magnitude of returns is conditional on the adjustment and coverage properties of the downloaded series.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Market-data coverage used in the event study.}
 \label{tab:market-coverage}
@@ -135,14 +135,14 @@ For each usable ticker--day event, cumulative abnormal returns are computed over
 \]
 with windows $[0,0]$, $[0,+1]$, and $[0,+3]$. The CAR tests use the 152 ticker--day observations for which the corresponding event-window calculation is available. For each window and sentiment group, the pipeline reports the sample mean, median, one-sample $t$-test against zero, a two-sided sign-flip permutation test, and a nonparametric bootstrap 95\% confidence interval. Both permutation and bootstrap calculations use 5,000 replications and fixed random seeds for reproducibility.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\textwidth]{images/abnormal_return_by_label.png}
 \caption{Mean same-day abnormal return by predicted sentiment. The positive group has the largest point estimate, while the negative group has a negative point estimate. However, the group sizes are small and the inferential tests and confidence intervals do not establish statistically reliable differences.}
 \label{fig:ar-by-label}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \scriptsize
 \caption{Event-study CAR tests by sentiment group and event window. The reported $p$-values are two-sided. Bootstrap intervals are percentile 95\% confidence intervals.}
@@ -169,7 +169,7 @@ $[0,+3]$ & Positive & 15 & -2.1575 & -1.9846 & -1.7703 & 0.0984 & 0.0978 & -4.46
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\textwidth]{images/car_by_window.png}
 \caption{Mean cumulative abnormal returns across the three event windows. Error bars represent bootstrap 95\% confidence intervals for the all-event sample. The intervals cross zero for all windows, indicating that the point estimates are not statistically distinguishable from zero in this sample.}
@@ -191,7 +191,7 @@ We compare the two distributions using a Welch unequal-variance test, a pooled-l
  \Delta=\overline{AR}_{\text{news}}-\overline{AR}_{\text{no-news}}.
 \]
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{News-day versus eligible no-news-day abnormal returns.}
 \label{tab:news-control}
@@ -204,7 +204,7 @@ News $-$ no-news & 152 & 934 & 0.0990 & -0.3509 & 0.4499 & 0.1074 & 0.0988 & $[-
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.78\textwidth]{images/news_day_control.png}
 \caption{Difference in mean abnormal return between news ticker--days and eligible no-news ticker--days. The point estimate is positive, but the bootstrap interval crosses zero.}
@@ -218,7 +218,7 @@ The point estimate indicates that news days have, on average, 0.4499 percentage 
 
 The next analysis compares mean abnormal returns across sentiment categories at the ticker--day level. The three pre-specified contrasts are positive versus neutral, negative versus neutral, and positive versus negative. Each contrast is evaluated with a Welch test, a permutation test, and a bootstrap interval.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \scriptsize
 \caption{Pairwise abnormal-return contrasts across predicted sentiment groups. Differences are computed as group A minus group B.}
@@ -234,7 +234,7 @@ Positive $-$ Negative & 15 & 10 & 0.9068 & -0.3665 & 1.2733 & 0.3444 & 0.3337 & 
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.86\textwidth]{images/sentiment_group_tests.png}
 \caption{Pairwise differences in mean abnormal returns between sentiment groups with bootstrap 95\% confidence intervals. All intervals include zero, and the positive and negative groups are small relative to the neutral group.}
@@ -257,7 +257,7 @@ where $\tau(i,t)$ is the first trading day strictly after the article date, $\al
 
 The intended primary covariance estimator is HC3. In this sparse two-way fixed-effects design, HC3 produces infinite standard errors for some observations because the leverage correction reaches a singular boundary. The pipeline therefore retains the same regression specification and uses HC1 as a documented finite-standard-error fallback. This fallback is reported explicitly rather than silently presenting invalid infinite standard errors. The coefficients should consequently be treated as exploratory conditional associations, not causal estimates.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Two-way fixed-effects panel regression for abnormal returns. Standard errors are HC1 because the intended HC3 correction is singular for this sparse design.}
 \label{tab:panel-regression}
@@ -288,7 +288,7 @@ The sentiment-score coefficient is positive, but its standard error is large rel
 
 The lag analysis examines whether the abnormal-return pattern persists when the evaluation date is shifted by 0, 1, 2, 3, 5, and 10 trading sessions relative to the aligned event date. These estimates are sensitivity checks rather than independent causal tests. The sample size declines with the lag because later evaluation dates require additional price observations.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Lagged abnormal-return robustness. Mean abnormal returns are reported overall and by predicted sentiment.}
 \label{tab:lag-robustness}
@@ -306,7 +306,7 @@ Lag 10 & 10 & 95 & -0.4426 & -0.4422 & -0.2016 & -4.1530 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\textwidth]{images/robustness_lags.png}
 \caption{Lagged sensitivity of mean abnormal returns. The overall estimate varies in magnitude and does not display a stable monotonic decay. Sentiment-specific means are especially unstable because the positive and negative groups are small.}
@@ -320,14 +320,14 @@ The overall mean abnormal return is close to zero at lag 0 and becomes more nega
 
 The following figures provide diagnostics for market-model coverage and the relationship between daily sentiment and abnormal return. They are descriptive and should not be read as causal identification.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\textwidth]{images/market_model_coverage.png}
 \caption{Distribution of the number of pre-event observations used in the market-model estimation. Coverage is heterogeneous across symbols, although most symbols have the full available pre-event history.}
 \label{fig:market-model-coverage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.92\textwidth]{images/sentiment_vs_abnormal_return.png}
 \caption{Daily mean sentiment and mean abnormal return in the ticker--day panel. The figure is a descriptive time-series comparison; it does not adjust for all confounding shocks and does not establish temporal causality.}
@@ -339,7 +339,7 @@ The following figures provide diagnostics for market-model coverage and the rela
 
 The original experimental plan also proposed intrinsic manual evaluation, out-of-time predictive benchmarking, probability calibration, and a qualitative error-analysis set. These experiments are not assigned numerical results in this section because the submitted artifacts do not contain the required gold labels, calibrated probabilities, or a separately trained return-prediction benchmark. In particular, the 208 CafeF predictions are model outputs, not human-annotated ground truth; using them as their own labels would create circular evaluation. Similarly, the prediction file contains blank probability columns, so Expected Calibration Error cannot be computed defensibly from the current run.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Planned analyses that require additional artifacts before valid estimation.}
 \label{tab:deferred-experiments}
@@ -376,7 +376,7 @@ Several limitations qualify this conclusion. First, the sample covers one month 
 
 The contribution of this experiment is therefore best framed as an end-to-end NLP-to-finance validation exercise. It demonstrates how target-masked ABSA predictions can be linked to Vietnamese listed securities, transformed into reproducible ticker--day features, and evaluated through multiple complementary statistical tests. It also demonstrates that a technically complete pipeline can yield a scientifically cautious conclusion: a directional descriptive pattern is not equivalent to statistically reliable predictive power.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Reproducibility checklist for the completed validation run.}
 \label{tab:reproducibility}

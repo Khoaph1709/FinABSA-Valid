@@ -4,7 +4,6 @@
 
 ```latex
 \usepackage{amsmath,amssymb,booktabs,graphicx,longtable,array,ragged2e}
-\usepackage{float}
 ```
 
 Place the figure files in a directory named `images/` relative to the main `.tex` file. The section references these filenames:
@@ -28,4 +27,4 @@ To include the section in the main report:
 \input{validation_section.tex}
 ```
 
-The current workspace did not contain a LaTeX engine, so the section was checked with static structure validation rather than PDF compilation. The checker confirmed balanced LaTeX environments, eight existing figure references, nine tables, and no placeholders.
+The section uses the portable float placement option `[htbp]`, so no `float` package is required. The current workspace did not contain a LaTeX engine, so the section was checked with static structure validation rather than PDF compilation. The checker confirmed balanced LaTeX environments, eight existing figure references, nine tables, and no placeholders.
