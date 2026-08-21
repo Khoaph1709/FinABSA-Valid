@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 LABELS = {"positive", "neutral", "negative"}
+LABEL_ALIASES = {"positive": "positive", "negative": "negative", "neutral": "neutral", "pos": "positive", "neg": "negative", "neu": "neutral"}
 
 
 def main() -> None:
@@ -36,7 +37,8 @@ def main() -> None:
         "duplicate_input_ids": int(inputs["sample_id"].duplicated().sum()),
         "duplicate_prediction_ids": int(preds["sample_id"].duplicated().sum()),
     }
-    preds["label"] = preds["classification_output"].astype(str).str.lower().str.strip()
+    preds["label"] = preds["classification_output"].astype(str).str.lower().str.strip().map(lambda x: LABEL_ALIASES.get(x, x))
+    preds["classification_output"] = preds["label"]
     report["unknown_labels"] = int((~preds["label"].isin(LABELS)).sum())
     report["label_counts"] = preds["label"].value_counts(dropna=False).to_dict()
     pd.Series(report, dtype="object").to_json(outdir / "prediction_validation.json", force_ascii=False, indent=2)

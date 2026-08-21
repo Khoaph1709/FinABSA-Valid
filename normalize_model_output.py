@@ -6,13 +6,14 @@ from pathlib import Path
 
 import pandas as pd
 
-LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
+LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL|POS|NEG|NEU)\b", re.I)
+LABEL_ALIASES = {"positive": "positive", "negative": "negative", "neutral": "neutral", "pos": "positive", "neg": "negative", "neu": "neutral"}
 SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
     matches = LABEL_RE.findall(str(text))
-    return matches[-1].lower() if matches else "unknown"
+    return LABEL_ALIASES.get(matches[-1].lower(), "unknown") if matches else "unknown"
 
 
 def main() -> None:
