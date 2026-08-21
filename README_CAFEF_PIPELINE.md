@@ -62,6 +62,16 @@ Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, `
 
 `run_experiments.py` không ghép hai file sentiment theo thứ tự dòng. Nó chuẩn hóa `published_date`, sau đó join `article_ticker_sentiment.csv` với `article_ticker_day_sentiment.csv` bằng khóa `ticker + published_date`. Vì vậy không được tự gán `sentiment["article_count"] = sentiment2["article_count"]` nếu hai file chưa được join theo khóa.
 
+## Kiểm tra trước khi chạy dữ liệu thật
+
+Chạy test suite để kiểm tra label parser, alignment theo `sample_id`, aggregate theo `ticker + published_date`, next-trading-day mapping, panel uniqueness và việc sinh biểu đồ:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Test suite không tạo prediction giả cho nghiên cứu; các fixture nhỏ chỉ dùng để kiểm tra logic phần mềm. Khi chạy dữ liệu thật, output model vẫn phải được đưa vào `normalize_model_output.py` hoặc có đủ `sample_id` và label hợp lệ.
+
 ## Thiết kế kiểm định được tự động hóa
 
 Pipeline tính next-trading-day return, market return, expected return và abnormal return. Estimation window mặc định bắt đầu từ ngày đầu dữ liệu giá đến trước `2022-10-01`, còn crisis window là tháng 10/2022. Nếu đổi crisis month, truyền `--crisis-start` và `--crisis-end` cho `run_experiments.py`.
