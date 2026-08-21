@@ -73,6 +73,45 @@ def attach_day_aggregates(sentiment: pd.DataFrame, sentiment_path: str) -> pd.Da
     return s.drop(columns=["published_date_key"])
 
 
+def welch_permutation_bootstrap(panel: pd.DataFrame, outdir: Path) -> pd.DataFrame:
+    """Compare panel abnormal returns across sentiment groups.
+
+    The unit is one ticker-day, matching the market outcome. Permutation and
+    bootstrap use a fixed RNG seed for reproducibility.
+    """
+    from scipy import stats
+
+    rows = []
+    comparisons = [("positive", "neutral"), ("negative", "neutral"), ("positive", "negative")]
+    rng = np.random.default_rng(2026)
+    for label_a, label_b in comparisons:
+        a = panel.loc[panel["label"] == label_a, "abnormal_return"].dropna().to_numpy(dtype=float)
+        b = panel.loc[panel["label"] == label_b, "abnormal_return"].dropna().to_numpy(dtype=float)
+        row = {"comparison": f"{label_a}_minus_{label_b}", "group_a": label_a, "group_b": label_b, "n_a": len(a), "n_b": len(b)}
+        if len(a) < 2 or len(b) < 2:
+            row.update({"mean_a": np.nan, "mean_b": np.nan, "difference": np.nan, "welch_t": np.nan, "welch_p": np.nan, "permutation_p": np.nan, "bootstrap_ci_low": np.nan, "bootstrap_ci_high": np.nan})
+            rows.append(row)
+            continue
+        observed = float(a.mean() - b.mean())
+        welch = stats.ttest_ind(a, b, equal_var=False, nan_policy="omit")
+        pooled = np.concatenate([a, b])
+        n_a = len(a)
+        perm_diffs = np.empty(5000, dtype=float)
+        for i in range(len(perm_diffs)):
+            shuffled = rng.permutation(pooled)
+            perm_diffs[i] = shuffled[:n_a].mean() - shuffled[n_a:].mean()
+        permutation_p = float((np.sum(np.abs(perm_diffs) >= abs(observed)) + 1) / (len(perm_diffs) + 1))
+        boot_diffs = np.empty(5000, dtype=float)
+        for i in range(len(boot_diffs)):
+            boot_diffs[i] = rng.choice(a, len(a), replace=True).mean() - rng.choice(b, len(b), replace=True).mean()
+        ci_low, ci_high = np.percentile(boot_diffs, [2.5, 97.5])
+        row.update({"mean_a": float(a.mean()), "mean_b": float(b.mean()), "difference": observed, "welch_t": float(welch.statistic), "welch_p": float(welch.pvalue), "permutation_p": permutation_p, "bootstrap_ci_low": float(ci_low), "bootstrap_ci_high": float(ci_high)})
+        rows.append(row)
+    result = pd.DataFrame(rows)
+    result.to_csv(outdir / "tables/sentiment_group_tests.csv", index=False)
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sentiment", default="data/cafef_oct2022/analysis/article_ticker_sentiment.csv")
@@ -141,6 +180,7 @@ def main() -> None:
     panel = (
         crisis.groupby(["ticker", "target_date"], as_index=False)
         .agg(
+            label=("label", lambda x: x.value_counts().index[0] if len(x) else "unknown"),
             sentiment_score=("sentiment_score", "mean"),
             negative_share=("negative_share", "first"),
             positive_share=("positive_share", "first"),
@@ -155,6 +195,16 @@ def main() -> None:
     )
     panel["log_article_count"] = np.log1p(panel["article_count"])
     panel.to_csv(outdir / "tables/panel_regression_data.csv", index=False)
+    panel_summary = panel.groupby("label", dropna=False).agg(
+        panel_events=("sample_id", "count") if "sample_id" in panel.columns else ("ticker", "count"),
+        mean_sentiment=("sentiment_score", "mean"),
+        mean_abnormal_return=("abnormal_return", "mean"),
+        median_abnormal_return=("abnormal_return", "median"),
+        mean_article_count=("article_count", "mean"),
+        mean_event_rows=("event_rows", "mean"),
+    ).reset_index()
+    panel_summary.to_csv(outdir / "tables/panel_summary_by_label.csv", index=False)
+    welch_permutation_bootstrap(panel, outdir)
 
     # Primary panel regression with ticker and date fixed effects.
     regression_path = outdir / "tables/panel_regression.txt"
