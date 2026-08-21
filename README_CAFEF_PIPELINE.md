@@ -31,7 +31,7 @@ python3 run_finabsa_on_cafef.py \
   --output data/cafef_oct2022/model_predictions.csv
 ```
 
-Đường chạy chính dùng `model_inputs_strict.csv`; `model_inputs.csv` là bộ full để chạy robustness sau. Nếu bạn có script model riêng, yêu cầu tối thiểu là output phải giữ `sample_id` và một cột chứa raw output. Nếu output chỉ có một prediction trên mỗi dòng theo đúng thứ tự input, adapter vẫn hỗ trợ:
+Đường chạy chính dùng `model_inputs_strict.csv`; `model_inputs.csv` là bộ full để chạy robustness sau. Format input có thể khác nhau tùy model/script, nhưng output đưa vào pipeline chỉ cần một prediction cho mỗi input. Adapter chấp nhận `positive/negative/neutral` hoặc viết tắt `pos/neg/neu`, rồi canonicalize về ba nhãn chuẩn. Nếu bạn có script model riêng, yêu cầu tối thiểu là output phải giữ `sample_id` và một cột chứa raw output. Nếu output chỉ có một prediction trên mỗi dòng theo đúng thứ tự input, adapter vẫn hỗ trợ:
 
 ```bash
 python3 normalize_model_output.py \
