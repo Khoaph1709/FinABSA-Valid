@@ -13,7 +13,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 # ============================================================
 
 MODEL_PATH = (
-    "/home/huylkq/repos/nlp/FinABSA-Valid/MODEL/finabsa-other-masked-final_3epoch"
+    "/run/user/1008/huylkq/MODEL/finabsa-other-masked/checkpoint-510"
 )
 
 # MODEL_PATH = (

@@ -13,10 +13,24 @@ LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
 LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
-def parse_label(text: str) -> str:
-    matches = LABEL_RE.findall(text or "")
+def extract_sentiment(text: str) -> str:
+    """
+    Trích xuất nhãn sentiment (POSITIVE/NEGATIVE/NEUTRAL) từ câu văn bản.
+    Tìm kiếm không phân biệt hoa/thường, hỗ trợ nhiều định dạng.
+    """
+    # Chuyển về chữ thường để so sánh dễ dàng
+    text_lower = text.lower()
     
-    return matches[-1].lower() if matches else "unknown"
+    # Tìm từ khóa sentiment
+    if 'positive' in text_lower:
+        return "POSITIVE"
+    elif 'negative' in text_lower:
+        return "NEGATIVE"
+    elif 'neutral' in text_lower:
+        return "NEUTRAL"
+    else:
+        # Nếu không tìm thấy, trả về NEUTRAL
+        return "UNKNOWN"
 
 
 def main() -> None:
