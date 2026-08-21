@@ -94,6 +94,26 @@ class ContractTests(unittest.TestCase):
 
 
 class CliContractTests(unittest.TestCase):
+    def test_normalizer_accepts_label_column(self):
+        inputs_path = ROOT / "data/cafef_oct2022/model_inputs_strict.csv"
+        inputs = pd.read_csv(inputs_path)
+        with tempfile.TemporaryDirectory() as td:
+            td = Path(td)
+            raw_path = td / "raw.csv"
+            out_path = td / "normalized.csv"
+            compact = (["pos", "neg", "neu"] * ((len(inputs) + 2) // 3))[: len(inputs)]
+            pd.DataFrame({"sample_id": inputs["sample_id"], "label": compact}).to_csv(raw_path, index=False)
+            completed = subprocess.run(
+                [sys.executable, str(ROOT / "normalize_model_output.py"), "--raw", str(raw_path), "--inputs", str(inputs_path), "--out", str(out_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn("unparsed= 0", completed.stdout)
+            normalized = pd.read_csv(out_path)
+            self.assertEqual(normalized["classification_output"].tolist()[:3], ["positive", "negative", "neutral"])
+            self.assertTrue((normalized["inference_status"] == "ok").all())
+
     def test_validator_accepts_compact_labels_and_preserves_alignment(self):
         inputs_path = ROOT / "data/cafef_oct2022/model_inputs_strict.csv"
         inputs = pd.read_csv(inputs_path)
