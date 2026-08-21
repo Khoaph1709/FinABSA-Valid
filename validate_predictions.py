@@ -52,21 +52,23 @@ def main() -> None:
     merged["published_date"] = merged["published_at_dt"].dt.tz_convert(None).dt.date
     merged.to_csv(outdir / "article_ticker_sentiment.csv", index=False)
 
+    valid = merged[merged["label"].isin(LABELS)].copy()
+    # This file is genuinely ticker-day aggregate data. Do not align it to
+    # article-level rows by position; downstream code joins on ticker/date.
     aggregate = (
-        merged[merged["label"].isin(LABELS)]
-        .groupby(["article_id", "url", "published_at", "published_date", "ticker"], dropna=False)
+        valid.groupby(["ticker", "published_date"], dropna=False)
         .agg(
             sentiment_score=("sentiment_score", "mean"),
-            article_count=("sample_id", "nunique"),
+            article_count=("article_id", "nunique"),
             positive_count=("label", lambda x: int((x == "positive").sum())),
             neutral_count=("label", lambda x: int((x == "neutral").sum())),
             negative_count=("label", lambda x: int((x == "negative").sum())),
-            raw_title=("raw_title", "first"),
         )
         .reset_index()
     )
     aggregate["negative_share"] = aggregate["negative_count"] / aggregate["article_count"].clip(lower=1)
     aggregate["positive_share"] = aggregate["positive_count"] / aggregate["article_count"].clip(lower=1)
+    aggregate["neutral_share"] = aggregate["neutral_count"] / aggregate["article_count"].clip(lower=1)
     aggregate.to_csv(outdir / "article_ticker_day_sentiment.csv", index=False)
     print(f"validation={outdir / 'prediction_validation.json'}")
     print(f"article_ticker_rows={len(merged)} aggregate_rows={len(aggregate)}")

@@ -58,7 +58,9 @@ python build_report.py
 
 The market downloader uses a per-ticker cache under `data/cafef_oct2022/market_cache/` and writes checkpoints after each ticker. The default delay is intentionally conservative because guest vnstock access can be rate-limited. If a request fails, it is recorded in `market_download_errors.json`; rerunning the same command resumes from cached tickers.
 
-Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, bảng sentiment cấp bài–mã–ngày, event observations, market model, event summary, regression coefficients, regression report, figures và `report_generated.md`.
+Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, `article_ticker_sentiment.csv` ở cấp article–ticker, `article_ticker_day_sentiment.csv` aggregate ở cấp ticker–ngày, event observations, market model, event summary, regression coefficients, regression report, figures và `report_generated.md`.
+
+`run_experiments.py` không ghép hai file sentiment theo thứ tự dòng. Nó chuẩn hóa `published_date`, sau đó join `article_ticker_sentiment.csv` với `article_ticker_day_sentiment.csv` bằng khóa `ticker + published_date`. Vì vậy không được tự gán `sentiment["article_count"] = sentiment2["article_count"]` nếu hai file chưa được join theo khóa.
 
 ## Thiết kế kiểm định được tự động hóa
 

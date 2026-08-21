@@ -42,6 +42,37 @@ def next_trading_day(pub_dates: pd.Series, trading_dates: np.ndarray) -> pd.Seri
     return pd.Series(result, index=pub_dates.index)
 
 
+def attach_day_aggregates(sentiment: pd.DataFrame, sentiment_path: str) -> pd.DataFrame:
+    """Attach ticker-day features by keys, never by row position."""
+    s = sentiment.copy()
+    s["ticker"] = s["ticker"].astype(str).str.upper().str.strip()
+    s["published_date_key"] = pd.to_datetime(s["published_date"], errors="coerce").dt.normalize()
+    aggregate_path = Path(sentiment_path).with_name("article_ticker_day_sentiment.csv")
+    if aggregate_path.exists():
+        day = pd.read_csv(aggregate_path).fillna("")
+        day["ticker"] = day["ticker"].astype(str).str.upper().str.strip()
+        day["published_date_key"] = pd.to_datetime(day["published_date"], errors="coerce").dt.normalize()
+        keep = ["ticker", "published_date_key", "article_count", "negative_share", "positive_share", "neutral_share"]
+        missing = [c for c in keep if c not in day.columns]
+        if missing:
+            raise ValueError(f"Aggregate file {aggregate_path} is missing columns: {missing}")
+        day = day[keep].drop_duplicates(["ticker", "published_date_key"])
+        s = s.merge(day, on=["ticker", "published_date_key"], how="left", validate="many_to_one")
+    else:
+        valid = s[s["label"].isin({"positive", "neutral", "negative"})].copy()
+        day = valid.groupby(["ticker", "published_date_key"], dropna=False).agg(
+            article_count=("article_id", "nunique"),
+            negative_share=("label", lambda x: float((x == "negative").mean())),
+            positive_share=("label", lambda x: float((x == "positive").mean())),
+            neutral_share=("label", lambda x: float((x == "neutral").mean())),
+        ).reset_index()
+        s = s.merge(day, on=["ticker", "published_date_key"], how="left", validate="many_to_one")
+    s["article_count"] = pd.to_numeric(s["article_count"], errors="coerce").fillna(1)
+    for col in ["negative_share", "positive_share", "neutral_share"]:
+        s[col] = pd.to_numeric(s[col], errors="coerce").fillna(0)
+    return s.drop(columns=["published_date_key"])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sentiment", default="data/cafef_oct2022/analysis/article_ticker_sentiment.csv")
@@ -59,6 +90,11 @@ def main() -> None:
     prices["ticker"] = prices["ticker"].astype(str).str.upper().str.strip()
     sentiment["ticker"] = sentiment["ticker"].astype(str).str.upper().str.strip()
     sentiment["published_date"] = pd.to_datetime(sentiment["published_date"], errors="coerce").dt.normalize()
+    required_sentiment = {"sample_id", "article_id", "ticker", "published_date", "label", "sentiment_score"}
+    missing_sentiment = required_sentiment - set(sentiment.columns)
+    if missing_sentiment:
+        raise ValueError(f"Sentiment file is missing columns: {sorted(missing_sentiment)}")
+    sentiment = attach_day_aggregates(sentiment, args.sentiment)
 
     market_candidates = ["VNINDEX", "VN-INDEX", "VN_INDEX", "VNINDEXHOSE"]
     market_ticker = next((x for x in market_candidates if x in set(prices["ticker"])), None)
@@ -69,12 +105,6 @@ def main() -> None:
 
     sentiment["target_date"] = next_trading_day(sentiment["published_date"], trading_dates)
     sentiment["sentiment_score"] = pd.to_numeric(sentiment["sentiment_score"], errors="coerce")
-    
-    sentiment2 = pd.read_csv("/home/huylkq/repos/nlp/FinABSA-Valid/data/cafef_oct2022/analysis/article_ticker_day_sentiment.csv").fillna("")
-    
-    sentiment["article_count"] = pd.to_numeric(sentiment2["article_count"], errors="coerce").fillna(1)
-    sentiment["negative_share"] = pd.to_numeric(sentiment2["negative_share"], errors="coerce").fillna(0)
-    sentiment["positive_share"] = pd.to_numeric(sentiment2["positive_share"], errors="coerce").fillna(0)
     sentiment = sentiment.dropna(subset=["target_date", "ticker"])
 
     ticker_prices = prices[prices["ticker"] != market_ticker].copy()
