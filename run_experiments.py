@@ -69,9 +69,12 @@ def main() -> None:
 
     sentiment["target_date"] = next_trading_day(sentiment["published_date"], trading_dates)
     sentiment["sentiment_score"] = pd.to_numeric(sentiment["sentiment_score"], errors="coerce")
-    sentiment["article_count"] = pd.to_numeric(sentiment["article_count"], errors="coerce").fillna(1)
-    sentiment["negative_share"] = pd.to_numeric(sentiment["negative_share"], errors="coerce").fillna(0)
-    sentiment["positive_share"] = pd.to_numeric(sentiment["positive_share"], errors="coerce").fillna(0)
+    
+    sentiment2 = pd.read_csv("/home/huylkq/repos/nlp/FinABSA-Valid/data/cafef_oct2022/analysis/article_ticker_day_sentiment.csv").fillna("")
+    
+    sentiment["article_count"] = pd.to_numeric(sentiment2["article_count"], errors="coerce").fillna(1)
+    sentiment["negative_share"] = pd.to_numeric(sentiment2["negative_share"], errors="coerce").fillna(0)
+    sentiment["positive_share"] = pd.to_numeric(sentiment2["positive_share"], errors="coerce").fillna(0)
     sentiment = sentiment.dropna(subset=["target_date", "ticker"])
 
     ticker_prices = prices[prices["ticker"] != market_ticker].copy()

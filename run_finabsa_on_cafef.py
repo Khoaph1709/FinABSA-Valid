@@ -8,13 +8,14 @@ import pandas as pd
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
+LABEL_RE = re.compile(r"\b(isPOSITIVE|isNEGATIVE|isNEUTRAL)\b", re.I)
 LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
     matches = LABEL_RE.findall(text or "")
-    return matches[-1].lower() if matches else "unknown"
+    
+    return matches[-1].lower()[2:] if matches else "unknown"
 
 
 def main() -> None:
@@ -25,8 +26,8 @@ def main() -> None:
     parser.add_argument("--mask-style", choices=["Target", "[TGT]"], default="Target")
     parser.add_argument("--max-input-length", type=int, default=64)
     parser.add_argument("--max-output-length", type=int, default=20)
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
+    parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--device", default="cuda", choices=["auto", "cpu", "cuda"])
     args = parser.parse_args()
 
     device = "cuda" if args.device == "auto" and torch.cuda.is_available() else args.device
@@ -38,6 +39,7 @@ def main() -> None:
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     model = AutoModelForSeq2SeqLM.from_pretrained(args.model).to(device)
+    # print(model)
     model.eval()
 
     records = []
@@ -55,9 +57,12 @@ def main() -> None:
         ).to(device)
         with torch.no_grad():
             generated = model.generate(**inputs, max_length=args.max_output_length)
-        decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            # print(f"Generated: {generated}")
+            decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            print(f"decoded: {decoded}")
         for (_, row), raw in zip(batch.iterrows(), decoded):
             label = parse_label(raw)
+            print(f"Parsed label: {label}")
             records.append({
                 "sample_id": row.get("sample_id", ""),
                 "article_id": row.get("article_id", ""),
