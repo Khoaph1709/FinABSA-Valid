@@ -193,6 +193,19 @@ class CliContractTests(unittest.TestCase):
             self.assertTrue((analysis / "event_observations.csv").exists())
             self.assertTrue((analysis / "figures/sentiment_vs_abnormal_return.png").exists())
             self.assertTrue((analysis / "figures/abnormal_return_by_label.png").exists())
+            report_md = td / "report_generated.md"
+            report_pdf = td / "report_generated.pdf"
+            subprocess.run(
+                [sys.executable, str(ROOT / "build_report.py"), "--analysis", str(analysis), "--out", str(report_md), "--pdf", str(report_pdf)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertTrue(report_md.exists() and report_md.stat().st_size > 0)
+            self.assertTrue(report_pdf.exists() and report_pdf.stat().st_size > 0)
+            report_text = report_md.read_text(encoding="utf-8")
+            self.assertIn("## 5. Statistical tests", report_text)
+            self.assertIn("## 7. Robustness and sensitivity", report_text)
 
 
 if __name__ == "__main__":

@@ -62,6 +62,16 @@ Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, `
 
 `run_experiments.py` không ghép hai file sentiment theo thứ tự dòng. Nó chuẩn hóa `published_date`, sau đó join `article_ticker_sentiment.csv` với `article_ticker_day_sentiment.csv` bằng khóa `ticker + published_date`. Vì vậy không được tự gán `sentiment["article_count"] = sentiment2["article_count"]` nếu hai file chưa được join theo khóa.
 
+## Sinh report duy nhất
+
+Sau khi có model output, có thể chạy toàn bộ pipeline bằng một lệnh. Lệnh này sẽ tạo các bảng/biểu đồ trong `data/cafef_oct2022/analysis/`, sau đó tự sinh cả `report_generated.md` và `report_generated.pdf` ở thư mục repository:
+
+```bash
+python3 run_pipeline.py --raw-output your_model_output.csv
+```
+
+Markdown là nguồn có thể chỉnh sửa; PDF là bản xuất để đọc hoặc nộp sau khi kiểm tra font và bố cục.
+
 ## Kiểm tra trước khi chạy dữ liệu thật
 
 Chạy test suite để kiểm tra label parser, alignment theo `sample_id`, aggregate theo `ticker + published_date`, next-trading-day mapping, panel uniqueness và việc sinh biểu đồ:
