@@ -1,208 +1,182 @@
-article_id,url,published_at,published_date,ticker,sentiment_score,article_count,positive_count,neutral_count,negative_count,raw_title,negative_share,positive_share
-0010ae71f397c89c,https://cafef.vn/novagroup-nhan-chuyen-nhuong-gan-95-trieu-co-phieu-novaland-nvl-tri-gia-hon-7700-ty-dong-20221006162913265.chn,2022-10-06T17:41:29,2022-10-06,NVL,0.0,1,0,1,0,Novagroup nhận chuyển nhượng gần 95 triệu cổ phiếu Novaland (NVL) trị giá hơn 7.700 tỷ đồng,0.0,0.0
-0089279298d464b4,https://cafef.vn/flc-stone-amd-da-tim-duoc-don-vi-kiem-toan-bctc-sau-khi-co-phieu-bi-han-che-giao-dich-20221022112200343.chn,2022-10-23T00:05:00,2022-10-23,FLC,0.0,1,0,1,0,FLC Stone (AMD) đã tìm được đơn vị kiểm toán BCTC sau khi cổ phiếu bị hạn chế giao dịch,0.0,0.0
-00cdcb85fabb807c,https://cafef.vn/ssi-research-hon-80-doanh-thu-va-loi-nhuan-cua-vinhomes-se-roi-vao-6-thang-cuoi-nam-20221018095138679.chn,2022-10-18T09:51:45,2022-10-18,SSI,0.0,1,0,1,0,SSI Research: Hơn 80% doanh thu và lợi nhuận của Vinhomes sẽ rơi vào 6 tháng cuối năm,0.0,0.0
-02bd80ee2b412e7f,https://cafef.vn/chu-tich-powell-lai-bi-chi-trich-vi-tang-lai-suat-lan-truoc-la-ong-trump-lan-nay-do-dang-dan-chu-20221027105013064.chn,2022-10-27T10:50:25,2022-10-27,POW,0.0,1,0,1,0,"Chủ tịch Powell lại bị chỉ trích vì tăng lãi suất, lần trước là ông Trump, lần này do đảng Dân chủ",0.0,0.0
-03c76301d65a04fe,https://cafef.vn/chung-khoan-vix-pho-chu-tich-hdqt-tiep-nhan-chuc-vu-chu-tich-hdqt-20221019123737402.chn,2022-10-19T13:30:00,2022-10-19,VIX,0.0,1,0,1,0,Chứng khoán VIX: Phó chủ tịch HĐQT tiếp nhận chức vụ Chủ tịch HĐQT,0.0,0.0
-08848f339a0d0496,https://cafef.vn/thi-truong-ngay-21-10-gia-ca-phe-cham-day-13-thang-khi-gas-thap-nhat-7-thang-quang-sat-cao-su-cung-giam-2022102108352072.chn,2022-10-21T08:35:37,2022-10-21,GAS,0.0,1,0,1,0,"Thị trường ngày 21/10: Giá cà phê chạm đáy 13 tháng, khí gas thấp nhất 7 tháng, quặng sắt, cao su cũng giảm",0.0,0.0
-08e95de6f499771f,https://cafef.vn/lo-gia-khoi-diem-va-noi-that-du-thuyen-trieu-do-cua-flc-20221020165239921.chn,2022-10-20T16:52:54,2022-10-20,FLC,0.0,1,0,1,0,Lộ giá khởi điểm và nội thất du thuyền triệu đô của FLC,0.0,0.0
-0a03e79b9c9905f5,https://cafef.vn/quy-dau-tu-cua-sgi-capital-bat-truot-day-gan-nua-trieu-co-phieu-hoa-phat-hpg-20221006114422429.chn,2022-10-06T11:44:00,2022-10-06,ITA,0.0,1,0,1,0,Quỹ đầu tư của SGI Capital bắt đầu giải ngân mua cổ phiếu trong tháng 9,0.0,0.0
-0a60846ceceeedff,https://cafef.vn/phu-nhan-nen-kinh-te-suy-thoai-bo-truong-tai-chinh-my-ke-ve-no-luc-to-lon-cua-tt-biden-20221031155737127.chn,2022-10-31T15:57:38,2022-10-31,BID,0.0,1,0,1,0,"Phủ nhận nền kinh tế suy thoái, Bộ trưởng Tài chính Mỹ kể về nỗ lực "" to lớn"" của TT Biden",0.0,0.0
-0cd31c366d79eda7,https://cafef.vn/vdsc-co-phieu-vao-dien-canh-bao-long-hau-lhg-doi-dien-rui-ro-do-khoan-no-phai-tra-cho-co-dong-lon-ipc-20221003071438288.chn,2022-10-03T07:44:22,2022-10-03,LHG,0.0,1,0,1,0,"VDSC: Cổ phiếu vào diện cảnh báo, Long Hậu (LHG) đối diện rủi ro do khoản nợ phải trả cho cổ đông lớn IPC",0.0,0.0
-101c0444b8e09a4e,https://cafef.vn/vincom-retail-vre-dat-794-ty-dong-loi-nhuan-trong-quy-3-2022-20221026214835337.chn,2022-10-26T21:54:00,2022-10-26,VRE,0.0,1,0,1,0,Vincom Retail (VRE) đạt 794 tỷ đồng lợi nhuận trong quý 3/2022,0.0,0.0
-13216ff3b5b31500,https://cafef.vn/dragon-capital-rui-ro-da-phan-anh-vao-gia-co-phieu-ngan-hang-nha-nuoc-co-kha-nang-tang-lai-suat-vao-quy-4-va-dau-nam-sau-20221013234831923.chn,2022-10-14T00:05:46,2022-10-14,ITA,0.0,1,0,1,0,"Dragon Capital: Rủi ro đã phản ánh vào giá cổ phiếu, Ngân hàng Nhà nước có khả năng tăng lãi suất vào quý 4 và đầu năm sau",0.0,0.0
-14410591380ca71c,https://cafef.vn/khoi-ngoai-ban-rong-dot-bien-gan-3600-ty-dong-trong-tuan-cuoi-thang-10-tam-diem-thoa-thuan-co-phieu-ngan-hang-eib-20221029111531178.chn,2022-10-29T11:15:51,2022-10-29,EIB,0.0,1,0,1,0,"Khối ngoại bán ròng đột biến gần 3.600 tỷ đồng trong tuần cuối tháng 10, tâm điểm thỏa thuận cổ phiếu ngân hàng EIB",0.0,0.0
-14a69a2130c0c489,https://cafef.vn/chuyen-gia-mbs-chung-khoan-viet-nam-xung-dang-co-muc-dinh-gia-cao-hon-nhieu-nhom-co-phieu-ve-muc-hap-dan-de-dau-tu-20221029220010437.chn,2022-10-30T07:06:22,2022-10-30,MBS,0.0,1,0,1,0,"Chuyên gia MBS: Chứng khoán Việt Nam xứng đáng có mức định giá cao hơn, nhiều nhóm cổ phiếu về mức hấp dẫn để đầu tư",0.0,0.0
-173cfe41ef451ed8,https://cafef.vn/hose-cat-margin-voi-62-ma-chung-khoan-trong-quy-4-2022-bao-gom-flc-hag-hvn-lhg-tgg-tdh-ita-20221004182026565.chn,2022-10-04T18:20:00,2022-10-04,VIC,0.0,1,0,1,0,"HoSE cắt margin với 62 mã chứng khoán trong quý 4/2022, VIC không có tên trong danh sách",0.0,0.0
-17ee021b664d02e0,https://cafef.vn/chi-58-ty-dong-mua-co-phieu-cre-so-tai-san-cua-shark-hung-lon-co-nao-20221013205822953.chn,2022-10-13T20:58:00,2022-10-13,CEN,0.0,1,0,1,0,"Chi 58 tỷ đồng mua cổ phiếu Cen Land, số tài sản của Shark Hưng lớn cỡ nào?",0.0,0.0
-194e321410728efb,https://cafef.vn/ban-rong-hon-1-trieu-co-phieu-tu-dau-thang-10-dragon-capital-khong-con-la-co-dong-lon-cua-fpt-20221026101448122.chn,2022-10-26T10:17:00,2022-10-26,ITA,0.0,1,0,1,0,"Bán ròng hơn 1 triệu cổ phiếu từ đầu tháng 10, Dragon Capital không còn là cổ đông lớn của FPT",0.0,0.0
-1b0cd6d22b3a15aa,https://cafef.vn/giam-lien-tiep-loi-nhuan-the-gioi-di-dong-mwg-quy-3-dat-hon-900-ty-dong-nhan-manh-da-chuan-bi-san-tien-tra-no-den-han-20221028202725454.chn,2022-10-28T20:29:32,2022-10-28,MWG,0.0,1,0,1,0,"Giảm liên tiếp, lợi nhuận Thế giới Di động (MWG) quý 3 đạt hơn 900 tỷ đồng, nhấn mạnh đã chuẩn bị sẵn tiền trả nợ đến hạn",0.0,0.0
-1b387dbee32c882c,https://cafef.vn/vcbs-uoc-tinh-co-790-nghin-ty-trai-phieu-doanh-nghiep-dao-han-trong-giai-doan-2023-2024-2022101409241826.chn,2022-10-14T09:26:32,2022-10-14,VCB,0.0,1,0,1,0,VCBS: Ước tính có 790 nghìn tỷ trái phiếu doanh nghiệp đáo hạn trong giai đoạn 2023 - 2024,0.0,0.0
-1bb342a7430f9d11,https://cafef.vn/tap-doan-flc-thong-bao-ngay-chot-danh-sach-co-dong-tham-du-dhdcd-thuong-nien-2022-20221015202056085.chn,2022-10-15T20:21:20,2022-10-15,FLC,0.0,1,0,1,0,Tập đoàn FLC thông báo ngày chốt danh sách cổ đông tham dự ĐHĐCĐ thường niên 2022,0.0,0.0
-1c8aa1c0a54de9c8,https://cafef.vn/coteccons-lai-gan-2-ty-trong-9t2022-dong-tien-kinh-doanh-am-2000-ty-dau-tu-co-phieu-tcb-fpt-20221029205416736.chn,2022-10-29T20:54:38,2022-10-29,TCB,0.0,1,0,1,0,"Coteccons lãi gần 2 tỷ trong 9T2022, dòng tiền kinh doanh âm 2.000 tỷ, đầu tư cổ phiếu TCB, FPT",0.0,0.0
-1d614b79f7d4d3a9,https://cafef.vn/mbs-nam-2022-doanh-thu-cua-petrolimex-plx-co-the-dat-291000-ty-tang-72-chuan-bi-thoai-von-pg-bank-vao-quy-4-20221009143140504.chn,2022-10-09T14:32:06,2022-10-09,MBS,1.0,1,1,0,0,"MBS: Năm 2022, doanh thu của Petrolimex (PLX) có thể đạt 291.000 tỷ - tăng 72%, chuẩn bị thoái vốn PG Bank vào quý 4",0.0,1.0
-1d82470cd42659c7,https://cafef.vn/vinacapital-dinh-gia-co-phieu-ngan-hang-viet-nam-dang-re-20221021083953162.chn,2022-10-21T08:40:10,2022-10-21,ITA,0.0,1,0,1,0,VinaCapital: Định giá cổ phiếu ngân hàng Việt Nam đang rẻ,0.0,0.0
-1f169782abebdcb0,https://cafef.vn/hose-co-phieu-lhg-chi-duoc-giao-dich-trong-phien-chieu-tu-ngay-24-10-20221018095316504.chn,2022-10-18T09:55:15,2022-10-18,LHG,0.0,1,0,1,0,HoSE: Cổ phiếu LHG chỉ được giao dịch trong phiên chiều từ ngày 24/10,0.0,0.0
-212dd0cf59ea212b,https://cafef.vn/om-hang-trieu-co-phieu-hpg-mot-doanh-nghiep-bao-lai-9-thang-giam-29-do-trich-lap-du-phong-20221021111108067.chn,2022-10-21T13:58:59,2022-10-21,HPG,0.0,1,0,1,0,"Ôm hàng triệu cổ phiếu HPG, một doanh nghiệp báo lãi 9 tháng giảm 29% do trích lập dự phòng",0.0,0.0
-22e8b8b2ee0eac43,https://cafef.vn/mot-doanh-nghiep-vui-choi-giai-tri-bao-lai-quy-3-tang-truong-242-dem-21-ty-dong-dau-tu-co-phieu-dnp-20221028100108099.chn,2022-10-28T10:13:01,2022-10-28,DNP,1.0,1,1,0,0,"Một doanh nghiệp vui chơi giải trí báo lãi quý 3 tăng trưởng 242%, đem 21 tỷ đồng đầu tư cổ phiếu DNP",0.0,1.0
-23296b2f311c5e2c,https://cafef.vn/chuyen-gia-hsc-bat-mi-nguyen-nhan-nha-dau-tu-cang-cham-chi-cang-lo-trong-boi-canh-thi-truong-di-xuong-20221003094102123.chn,2022-10-03T09:42:17,2022-10-03,HCM,0.0,1,0,1,0,Chuyên gia HSC bật mí nguyên nhân nhà đầu tư càng chăm chỉ càng lỗ trong bối cảnh thị trường đi xuống,0.0,0.0
-259e0c0a07c493a9,https://cafef.vn/vinacapital-bi-ubcknn-xu-phat-do-khong-bao-cao-giao-dich-chung-khoan-cua-nguoi-noi-bo-20221015133648463.chn,2022-10-15T13:37:11,2022-10-15,ITA,0.0,1,0,1,0,VinaCapital bị UBCKNN xử phạt do không báo cáo giao dịch chứng khoán của người nội bộ,0.0,0.0
-2810b9f50e6ee55d,https://cafef.vn/lienvietpostbank-nhan-giai-thuong-doanh-nghiep-xuat-sac-chau-a-2022-20221010163508264.chn,2022-10-10T17:30:00,2022-10-10,STB,0.0,1,0,1,0,"LienVietPostBank nhận giải thưởng ""Doanh nghiệp xuất sắc Châu Á 2022""",0.0,0.0
-2cfc5d65a9eca91d,https://cafef.vn/sau-gan-30-thang-co-phieu-quoc-dan-hoa-phat-hpg-lai-co-gia-1x-20221004012804809.chn,2022-10-04T01:29:32,2022-10-04,HPG,0.0,1,0,1,0,"Sau gần 30 tháng, cổ phiếu “quốc dân” Hòa Phát (HPG) lại có giá 1x",0.0,0.0
-2d7c00ba44af9c65,https://cafef.vn/duoc-ty-phu-thai-goi-la-vien-ngoc-quy-bien-loi-nhuan-gop-cua-sabeco-sab-tang-len-31-9t2022-dat-4424-ty-dong-lnst-20221020173249571.chn,2022-10-20T17:35:05,2022-10-20,SAB,0.0,1,0,1,0,"Được tỷ phú Thái gọi là “viên ngọc quý”, biên lợi nhuận gộp của Sabeco (SAB) tăng lên 31%, 9T2022 đạt 4.424 tỷ đồng LNST",0.0,0.0
-2f056b2b482254d9,https://cafef.vn/louis-holdings-bi-xu-phat-do-giao-dich-chui-co-phieu-tgg-20221007232741466.chn,2022-10-08T05:00:00,2022-10-08,TGG,0.0,1,0,1,0,"Louis Holdings bị xử phạt do giao dịch ""chui"" cổ phiếu TGG",0.0,0.0
-2f37d56c464d8c66,https://cafef.vn/doanh-thu-tu-cho-vay-margin-la-diem-sang-trong-kqkd-q3-cua-acbs-2022102410085312.chn,2022-10-24T15:30:00,2022-10-24,ACB,-1.0,1,0,0,1,Doanh thu từ cho vay margin là điểm sáng trong KQKD Q3 của ACBS,1.0,0.0
-30f4ef599340c5f6,https://cafef.vn/ssi-research-diamond-etf-co-the-them-moi-nlg-va-loai-tcm-du-kien-ban-ban-manh-co-phieu-vpb-20221003094222619.chn,2022-10-03T09:43:11,2022-10-03,SSI,0.0,1,0,1,0,"SSI Research: Diamond ETF có thể thêm mới NLG và loại TCM, dự kiến bán bán mạnh cổ phiếu VPB",0.0,0.0
-30f4ef599340c5f6,https://cafef.vn/ssi-research-diamond-etf-co-the-them-moi-nlg-va-loai-tcm-du-kien-ban-ban-manh-co-phieu-vpb-20221003094222619.chn,2022-10-03T09:43:11,2022-10-03,VPB,0.0,1,0,1,0,"SSI Research: Diamond ETF có thể thêm mới NLG và loại TCM, dự kiến bán bán mạnh cổ phiếu VPB",0.0,0.0
-318c1ee4ac7e6050,https://cafef.vn/quang-binh-nang-so-tien-cuong-che-thue-tai-flc-len-gan-458-ty-dong-20221005003709751.chn,2022-10-05T00:39:04,2022-10-05,FLC,0.0,1,0,1,0,Quảng Bình nâng số tiền cưỡng chế thuế tại FLC lên gần 458 tỷ đồng,0.0,0.0
-329ae0103c096ce4,https://cafef.vn/vndirect-ra-mat-ung-dung-dau-tu-chung-khoan-chuyen-biet-moi-dstock-20221013084549005.chn,2022-10-13T08:00:00,2022-10-13,VND,0.0,1,0,1,0,VNDIRECT ra mắt ứng dụng đầu tư chứng khoán chuyên biệt mới: DStock,0.0,0.0
-3443eab37aa7a1f1,https://cafef.vn/lanh-dao-xay-dung-hoa-binh-bi-chung-khoan-vps-ban-giai-chap-co-phieu-hbc-20221027103116279.chn,2022-10-27T10:31:36,2022-10-27,HBC,0.0,1,0,1,0,Lãnh đạo Xây dựng Hòa Bình bị Chứng khoán VPS bán giải chấp cổ phiếu HBC,0.0,0.0
-3443eab37aa7a1f1,https://cafef.vn/lanh-dao-xay-dung-hoa-binh-bi-chung-khoan-vps-ban-giai-chap-co-phieu-hbc-20221027103116279.chn,2022-10-27T10:31:36,2022-10-27,VPS,0.0,1,0,1,0,Lãnh đạo Xây dựng Hòa Bình bị Chứng khoán VPS bán giải chấp cổ phiếu HBC,0.0,0.0
-3696289160cb1e58,https://cafef.vn/trai-nguoc-voi-noi-that-vong-cua-cac-quy-dau-tu-lon-passion-investment-cua-ong-la-giang-trung-van-song-khoe-nho-om-tien-20221004103404682.chn,2022-10-04T10:34:00,2022-10-04,SSI,1.0,1,1,0,0,"Trái ngược với nỗi thất vọng của các quỹ đầu tư lớn, Passion Investment của ông Lã Giang Trung vẫn sống khỏe nhờ “ôm” tiền",0.0,1.0
-36faf18948ce1fbc,https://cafef.vn/chung-khoan-vps-bao-lai-9-thang-tang-21-tien-nam-cho-giam-hon-3200-ty-dong-trong-quy-3-2022102109264107.chn,2022-10-21T10:25:38,2022-10-21,VPS,1.0,1,1,0,0,"Chứng khoán VPS báo lãi 9 tháng tăng 21%, tiền ""nằm chờ"" giảm hơn 3.200 tỷ đồng trong quý 3",0.0,1.0
-376ea8fcae7e31d9,https://cafef.vn/co-phieu-ngan-hang-tran-ngap-trong-sac-xanh-eib-tang-tran-khoi-ngoai-gom-manh-ctg-20221005171016497.chn,2022-10-05T17:10:00,2022-10-05,CTG,0.0,1,0,1,0,"Cổ phiếu ngân hàng tràn ngập trong sắc xanh: EIB tăng trần, khối ngoại gom mạnh CTG",0.0,0.0
-376ea8fcae7e31d9,https://cafef.vn/co-phieu-ngan-hang-tran-ngap-trong-sac-xanh-eib-tang-tran-khoi-ngoai-gom-manh-ctg-20221005171016497.chn,2022-10-05T17:10:00,2022-10-05,EIB,0.0,1,0,1,0,"Cổ phiếu ngân hàng tràn ngập trong sắc xanh: EIB tăng trần, khối ngoại gom mạnh CTG",0.0,0.0
-384c14104b04db10,https://cafef.vn/nhom-tap-doan-thanh-cong-se-ban-hon-117-trieu-co-phieu-eib-20221004184601894.chn,2022-10-04T18:46:09,2022-10-04,EIB,0.0,1,0,1,0,Nhóm Tập đoàn Thành Công sẽ bán hơn 117 triệu cổ phiếu EIB,0.0,0.0
-3a8bee923c43e477,https://cafef.vn/co-phieu-ngan-hang-20-10-shb-tcb-dan-dau-giam-gia-khoi-ngoai-gom-manh-co-phieu-big4-20221020183623623.chn,2022-10-20T18:36:38,2022-10-20,SHB,0.0,1,0,1,0,"Cổ phiếu ngân hàng 20/10: SHB, TCB dẫn đầu giảm giá, khối ngoại gom mạnh cổ phiếu Big4",0.0,0.0
-3a8bee923c43e477,https://cafef.vn/co-phieu-ngan-hang-20-10-shb-tcb-dan-dau-giam-gia-khoi-ngoai-gom-manh-co-phieu-big4-20221020183623623.chn,2022-10-20T18:36:38,2022-10-20,TCB,0.0,1,0,1,0,"Cổ phiếu ngân hàng 20/10: SHB, TCB dẫn đầu giảm giá, khối ngoại gom mạnh cổ phiếu Big4",0.0,0.0
-3cd934e7f963059d,https://cafef.vn/vi-sao-ty-phu-pham-nhat-vuong-co-the-gop-von-bang-co-phieu-vic-vao-cong-ty-mua-chung-bat-dong-san-vmi-20221007122434141.chn,2022-10-07T12:24:00,2022-10-07,VIC,0.0,1,0,1,0,"Vì sao tỷ phú Phạm Nhật Vượng có thể góp vốn bằng cổ phiếu VIC vào công ty ""mua chung"" bất động sản VMI?",0.0,0.0
-3e6bbb9bf5019dc7,https://cafef.vn/hoa-chat-duc-giang-dgc-du-kien-loi-nhuan-quy-4-dat-1100-ty-dong-giam-21-so-voi-cung-ky-20221025101332103.chn,2022-10-25T10:15:00,2022-10-25,DGC,1.0,1,1,0,0,"Hóa chất Đức Giang (DGC) đặt kế hoạch lợi nhuận quý 4 đạt 1.100 tỷ đồng, giảm 21% so với cùng kỳ",0.0,1.0
-3fdd87ffa5adf6b9,https://cafef.vn/agribank-vietinbank-bidv-tang-lai-suat-huy-dong-them-hon-1-tu-27-10-20221027121804553.chn,2022-10-27T12:18:17,2022-10-27,BID,0.0,1,0,1,0,"Agribank, VietinBank, BIDV tăng lãi suất huy động thêm hơn 1% từ 27/10",0.0,0.0
-408f8c45538b5bce,https://cafef.vn/tung-ho-thi-truong-co-the-len-1832-diem-acbs-ha-du-bao-vn-index-xuong-1351-diem-vao-cuoi-nam-20221015203243371.chn,2022-10-15T20:33:07,2022-10-15,ACB,0.0,1,0,1,0,"Từng ""hô"" thị trường có thể lên 1.832 điểm, ACBS hạ dự báo VN-Index xuống 1.351 điểm vào cuối năm",0.0,0.0
-4295a2def0cb7e9e,https://cafef.vn/chuyen-gia-hsc-lua-chon-doanh-nghiep-dau-tu-giong-nhu-di-tim-vo-dung-dua-ra-nguyen-tac-va-roi-pha-vo-no-20221030173955975.chn,2022-10-30T21:52:37,2022-10-30,HCM,0.0,1,0,1,0,"Chuyên gia HSC: ""Lựa chọn doanh nghiệp đầu tư giống như đi tìm vợ, đừng đưa ra nguyên tắc và rồi phá vỡ nó""",0.0,0.0
-42b52515946044fb,https://cafef.vn/ocb-duoc-vinh-danh-trong-top-thuong-hieu-tai-chinh-dan-dau-viet-nam-20221027163324053.chn,2022-10-27T16:33:38,2022-10-27,OCB,0.0,1,0,1,0,OCB được vinh danh trong Top thương hiệu tài chính dẫn đầu Việt Nam,0.0,0.0
-43730913eea2c4c3,https://cafef.vn/ty-gia-usd-vnd-tiep-tuc-giao-dich-o-muc-cao-20221031192317563.chn,2022-10-31T19:23:20,2022-10-31,VND,0.0,1,0,1,0,Tỷ giá USD/VND tiếp tục giao dịch ở mức cao,0.0,0.0
-446a208de176eedb,https://cafef.vn/thi-phan-moi-gioi-hnx-quy-3-vps-cung-co-vi-tri-so-1-hsc-va-shs-bat-ngo-bi-loai-khoi-top-10-20221005152910454.chn,2022-10-05T15:29:22,2022-10-05,HCM,0.0,1,0,1,0,"Thị phần môi giới HNX quý 3: VPS củng cố vị trí số 1, HSC và SHS bất ngờ bị loại khỏi top 10",0.0,0.0
-446a208de176eedb,https://cafef.vn/thi-phan-moi-gioi-hnx-quy-3-vps-cung-co-vi-tri-so-1-hsc-va-shs-bat-ngo-bi-loai-khoi-top-10-20221005152910454.chn,2022-10-05T15:29:22,2022-10-05,VPS,0.0,1,0,1,0,"Thị phần môi giới HNX quý 3: VPS củng cố vị trí số 1, HSC và SHS bất ngờ bị loại khỏi top 10",0.0,0.0
-45ee2cd1a41cfbba,https://cafef.vn/green-daily-doanh-nghiep-lam-nong-va-hanh-trinh-theo-duoi-su-nguyen-ban-20221008084454977.chn,2022-10-08T10:00:00,2022-10-08,REE,0.0,1,0,1,0,"Green Daily: Doanh nghiệp ""làm nông"" và hành trình theo đuổi sự nguyên bản",0.0,0.0
-47689916af0bba6e,https://cafef.vn/co-phieu-giam-san-5-phien-lien-tuc-gia-tri-bay-gan-3000-ty-dat-xanh-services-dxs-noi-gi-20221003194942525.chn,2022-10-03T19:55:21,2022-10-03,VIC,0.0,1,0,1,0,"Cổ phiếu giảm sàn 5 phiên liên tục, giá trị ""bay"" gần 3.000 tỷ, Đất Xanh Services (DXS) nói gì?",0.0,0.0
-4c971b6c5ccb9df2,https://cafef.vn/co-phieu-ngan-hang-28-10-tcb-tim-tran-hai-phien-lien-tiep-mot-ma-tang-135-20221028183847778.chn,2022-10-28T18:39:03,2022-10-28,TCB,1.0,1,1,0,0,"Cổ phiếu ngân hàng 28/10: TCB tím trần hai phiên liên tiếp, một mã tăng 13,5%",0.0,1.0
-4ff9bd70d63ff8c5,https://cafef.vn/them-1-pho-tong-giam-doc-cua-flc-tu-chuc-trong-vong-3-thang-cong-ty-mat-3-pho-tong-20221002131827305.chn,2022-10-02T13:18:59,2022-10-02,FLC,0.0,1,0,1,0,"Thêm 1 Phó Tổng giám đốc của FLC từ chức, trong vòng 3 tháng công ty mất 3 phó Tổng",0.0,0.0
-519649c002d64841,https://cafef.vn/nhom-dragon-capital-lien-tuc-ban-ra-hang-trieu-co-phieu-gex-va-dxg-20221014091724922.chn,2022-10-14T09:17:42,2022-10-14,DXG,0.0,1,0,1,0,Nhóm Dragon Capital liên tục bán ra hàng triệu cổ phiếu GEX và DXG,0.0,0.0
-519649c002d64841,https://cafef.vn/nhom-dragon-capital-lien-tuc-ban-ra-hang-trieu-co-phieu-gex-va-dxg-20221014091724922.chn,2022-10-14T09:17:42,2022-10-14,GEX,0.0,1,0,1,0,Nhóm Dragon Capital liên tục bán ra hàng triệu cổ phiếu GEX và DXG,0.0,0.0
-519649c002d64841,https://cafef.vn/nhom-dragon-capital-lien-tuc-ban-ra-hang-trieu-co-phieu-gex-va-dxg-20221014091724922.chn,2022-10-14T09:17:42,2022-10-14,ITA,0.0,1,0,1,0,Nhóm Dragon Capital liên tục bán ra hàng triệu cổ phiếu GEX và DXG,0.0,0.0
-525b2f94fa2edcd0,https://cafef.vn/co-phieu-ngan-hang-dao-chieu-ngoan-muc-shb-ctg-lpb-tang-kich-tran-20221025153021208.chn,2022-10-25T15:30:27,2022-10-25,CTG,0.0,1,0,1,0,"Cổ phiếu ngân hàng đảo chiều ngoạn mục, SHB, CTG, LPB tăng kịch trần",0.0,0.0
-525b2f94fa2edcd0,https://cafef.vn/co-phieu-ngan-hang-dao-chieu-ngoan-muc-shb-ctg-lpb-tang-kich-tran-20221025153021208.chn,2022-10-25T15:30:27,2022-10-25,LPB,0.0,1,0,1,0,"Cổ phiếu ngân hàng đảo chiều ngoạn mục, SHB, CTG, LPB tăng kịch trần",0.0,0.0
-525b2f94fa2edcd0,https://cafef.vn/co-phieu-ngan-hang-dao-chieu-ngoan-muc-shb-ctg-lpb-tang-kich-tran-20221025153021208.chn,2022-10-25T15:30:27,2022-10-25,SHB,0.0,1,0,1,0,"Cổ phiếu ngân hàng đảo chiều ngoạn mục, SHB, CTG, LPB tăng kịch trần",0.0,0.0
-53c8baec97ea4583,https://cafef.vn/thong-doc-ngan-hang-nha-nuoc-neu-ly-do-ty-gia-usd-vnd-tang-cao-20221028184517483.chn,2022-10-28T18:45:00,2022-10-28,VND,0.0,1,0,1,0,Thống đốc Ngân hàng Nhà nước nêu lý do tỷ giá USD/VND tăng cao,0.0,0.0
-53d43c6231cb6a82,https://cafef.vn/vnd-mat-gia-86-tu-dau-nam-doanh-nghiep-nao-huong-loi-nhat-20221028010306486.chn,2022-10-28T06:10:54,2022-10-28,VND,0.0,1,0,1,0,"VND mất giá 8,6% từ đầu năm, doanh nghiệp nào hưởng lợi nhất?",0.0,0.0
-57cb249105aeaf01,https://cafef.vn/hose-tiep-tuc-yeu-cau-ita-giai-trinh-chi-tiet-vu-uy-thac-cho-chu-tich-20221001101028178.chn,2022-10-01T10:17:31,2022-10-01,ITA,0.0,1,0,1,0,HoSE tiếp tục yêu cầu ITA giải trình chi tiết vụ uỷ thác cho Chủ tịch,0.0,0.0
-588ada0672dc3afa,https://cafef.vn/cap-nhat-bctc-ngay-30-10-them-mot-doanh-nghiep-nganh-thep-bao-lo-hang-tram-ty-dong-baf-idico-bao-lai-quy-3-tang-3-chu-so-20221030100847101.chn,2022-10-30T18:47:00,2022-10-30,FLC,0.0,1,0,1,0,"Cập nhật BCTC đến tối 30/10: ""Heo ăn chay"" tăng lãi 252%, FLC lỗ 785 tỷ đồng,  Vingroup và một loạt DN BĐS báo lãi, thêm DN thép lỗ trăm tỷ",0.0,0.0
-5912d8961ae34e33,https://cafef.vn/ssi-khong-loai-tru-kha-nang-nhnn-tiep-tuc-tang-lai-suat-dieu-hanh-de-giam-ap-luc-ty-gia-2022100409190087.chn,2022-10-04T09:19:06,2022-10-04,SSI,0.0,1,0,1,0,SSI: Không loại trừ khả năng NHNN tiếp tục tăng lãi suất điều hành để giảm áp lực tỷ giá,0.0,0.0
-5af925867c5cb61e,https://cafef.vn/tcbs-cung-chien-luoc-wealthtech-9-thang-2022-loi-nhuan-vuot-2700-ty-dong-dat-81-ke-hoach-nam-20221021145842669.chn,2022-10-21T19:30:00,2022-10-21,TCB,1.0,1,1,0,0,"TCBS cùng chiến lược Wealthtech: 9 tháng 2022 lợi nhuận vượt 2.700 tỷ đồng, đạt 81% kế hoạch năm",0.0,1.0
-5ccc1086c10162cd,https://cafef.vn/thi-gia-miet-mai-do-day-chu-tich-tap-doan-dat-xanh-dxg-dang-ky-mua-10-trieu-co-phieu-20221024144416376.chn,2022-10-24T14:46:05,2022-10-24,DXG,0.0,1,0,1,0,"Thị giá miệt mài ""dò đáy"", chủ tịch Tập đoàn Đất Xanh (DXG) đăng ký mua 10 triệu cổ phiếu",0.0,0.0
-5d2b367e0b2c984a,https://cafef.vn/pv-power-pow-uoc-dat-tong-doanh-thu-gan-21-nghin-ty-dong-trong-9-thang-dau-nam-20221010150808129.chn,2022-10-10T15:08:11,2022-10-10,POW,0.0,1,0,1,0,PV Power (POW) ước đạt tổng doanh thu gần 21 nghìn tỷ đồng trong 9 tháng đầu năm,0.0,0.0
-60f485c00df4b254,https://cafef.vn/dragon-capital-ban-manh-hah-khong-con-la-co-dong-lon-tai-hai-an-khi-thi-gia-giam-gan-55-20221007220203758.chn,2022-10-08T00:10:00,2022-10-08,ITA,0.0,1,0,1,0,"Dragon Capital bán mạnh HAH, không còn là cổ đông lớn tại Hải An khi thị giá giảm gần 55%",0.0,0.0
-61862c762fe24720,https://cafef.vn/ha-gia-chao-ban-50-co-phieu-dig-se-ngon-bo-re-20221017083848129.chn,2022-10-17T08:38:49,2022-10-17,DIG,0.0,1,0,1,0,"Hạ giá chào bán 50%, cổ phiếu DIG sẽ ""ngon, bổ, rẻ""?",0.0,0.0
-63a6d47273dda667,https://cafef.vn/hoa-hau-do-my-linh-chuan-bi-ket-hon-cung-con-trai-thu-2-cua-bau-hien-co-phieu-shb-tang-tran-tai-san-gia-dinh-tang-tram-ty-20221014134332575.chn,2022-10-14T13:44:00,2022-10-14,SHB,0.0,1,0,1,0,"Hoa hậu Đỗ Mỹ Linh chuẩn bị kết hôn cùng con trai thứ 2 của bầu Hiển, cổ phiếu SHB tăng trần, tài sản gia đình tăng trăm tỷ",0.0,0.0
-65b547ac41dc46c6,https://cafef.vn/hagl-agrico-hng-cong-bo-lo-trinh-khac-phuc-chung-khoan-bi-canh-bao-chuyen-hach-toan-cong-ty-con-sang-tien-lao-20221027165923448.chn,2022-10-27T16:59:37,2022-10-27,HAG,0.0,1,0,1,0,"HAGL Agrico (HNG) công bố lộ trình khắc phục chứng khoán bị cảnh báo, chuyển hạch toán công ty con sang tiền Lào",0.0,0.0
-67847e06b0a5ff1a,https://cafef.vn/ocb-trien-khai-phat-hanh-co-phieu-thuong-cho-co-dong-hien-huu-20221001082759755.chn,2022-10-01T08:49:36,2022-10-01,OCB,-1.0,1,0,0,1,OCB triển khai phát hành cổ phiếu thưởng cho cổ đông hiện hữu,1.0,0.0
-68d26578b12077a0,https://cafef.vn/chung-khoan-tri-viet-tvb-gong-lo-gan-tram-ty-dong-co-phieu-hpg-nhung-chua-ghi-nhan-vao-kqkd-20221021085819237.chn,2022-10-21T08:59:33,2022-10-21,HPG,0.0,1,0,1,0,Chứng khoán Trí Việt (TVB) “gồng lỗ” gần trăm tỷ đồng cổ phiếu HPG nhưng chưa ghi nhận vào KQKD,0.0,0.0
-69072f7be50de6a4,https://cafef.vn/nhung-loi-the-dau-tu-hap-dan-tai-shophouse-dic-victory-city-hau-giang-20221011203724111.chn,2022-10-12T08:00:00,2022-10-12,VIC,0.0,1,0,1,0,Những lợi thế đầu tư hấp dẫn tại Shophouse DIC Victory City Hậu Giang,0.0,0.0
-6a7e5a319e176cd5,https://cafef.vn/thi-gia-phuc-hoi-tu-day-8-thang-dragon-capital-vua-chi-hang-chuc-ty-mua-vao-co-phieu-dgc-20221014160013641.chn,2022-10-14T16:00:33,2022-10-14,DGC,0.0,1,0,1,0,"Thị giá phục hồi từ đáy 8 tháng, Dragon Capital vừa chi hàng chục tỷ mua vào cổ phiếu DGC",0.0,0.0
-6a7e5a319e176cd5,https://cafef.vn/thi-gia-phuc-hoi-tu-day-8-thang-dragon-capital-vua-chi-hang-chuc-ty-mua-vao-co-phieu-dgc-20221014160013641.chn,2022-10-14T16:00:33,2022-10-14,ITA,0.0,1,0,1,0,"Thị giá phục hồi từ đáy 8 tháng, Dragon Capital vừa chi hàng chục tỷ mua vào cổ phiếu DGC",0.0,0.0
-6cd1591e6a67c77c,https://cafef.vn/cap-nhat-bctc-ngay-22-10-them-nhieu-ngan-hang-cong-bo-ket-qua-kinh-doanh-shb-acb-tang-hon-50-so-voi-cung-ky-202210221019435.chn,2022-10-22T10:28:21,2022-10-22,ACB,0.0,1,0,1,0,"Cập nhật BCTC ngày 22/10: Thêm nhiều ngân hàng công bố kết quả kinh doanh, SHB, ACB tăng hơn 50% so với cùng kỳ",0.0,0.0
-6cd1591e6a67c77c,https://cafef.vn/cap-nhat-bctc-ngay-22-10-them-nhieu-ngan-hang-cong-bo-ket-qua-kinh-doanh-shb-acb-tang-hon-50-so-voi-cung-ky-202210221019435.chn,2022-10-22T10:28:21,2022-10-22,SHB,0.0,1,0,1,0,"Cập nhật BCTC ngày 22/10: Thêm nhiều ngân hàng công bố kết quả kinh doanh, SHB, ACB tăng hơn 50% so với cùng kỳ",0.0,0.0
-6dba9f209979bde5,https://cafef.vn/ssi-du-bao-loi-nhuan-ngan-hang-tang-manh-trong-quy-iii-co-nha-bang-lai-gap-doi-cung-ky-20221011215841985.chn,2022-10-11T21:58:00,2022-10-11,SSI,0.0,1,0,1,0,"SSI dự báo lợi nhuận nhiều ngân hàng tăng mạnh trong quý III, có nhà băng lãi gấp đôi cùng kỳ",0.0,0.0
-6df6d30a56a75af2,https://cafef.vn/ty-gia-tiep-tuc-tang-manh-vnd-da-giam-bao-nhieu-so-voi-usd-ke-tu-dau-thang-10-toi-nay-20221014113710027.chn,2022-10-14T13:18:37,2022-10-14,VND,-1.0,1,0,0,1,"Tỷ giá tiếp tục tăng mạnh, VND đã giảm bao nhiêu so với USD kể từ đầu tháng 10 tới nay?",1.0,0.0
-6eb44ff8eb1a02ed,https://cafef.vn/con-gai-chu-tich-tap-doan-thanh-cong-muon-ban-het-co-phieu-eib-gia-tri-hon-380-ty-dong-20221006140458579.chn,2022-10-06T14:05:12,2022-10-06,EIB,0.0,1,0,1,0,"Con gái Chủ tịch Tập đoàn Thành Công muốn bán hết cổ phiếu EIB, giá trị hơn 380 tỷ đồng",0.0,0.0
-6f035ce706692975,https://cafef.vn/nhom-dragon-capital-khong-con-la-co-dong-lon-tai-fpt-20221006161900606.chn,2022-10-06T16:20:58,2022-10-06,ITA,0.0,1,0,1,0,Nhóm Dragon Capital không còn là cổ đông lớn tại FPT,0.0,0.0
-70779cad196dd97b,https://cafef.vn/doanh-nghiep-dau-tien-ho-flc-bao-lo-trong-mua-bctc-quy-3-20221021102723558.chn,2022-10-21T10:28:02,2022-10-21,FLC,0.0,1,0,1,0,"Doanh nghiệp đầu tiên ""họ FLC"" báo lỗ trong mùa BCTC quý 3",0.0,0.0
-70e3a7e965017df4,https://cafef.vn/cap-nhat-bctc-quy-3-sang-29-10-ocb-pv-power-gelex-giam-lai-2-con-so-ky-lan-vng-lo-hon-180-ty-dong-20221029114616419.chn,2022-10-29T11:48:46,2022-10-29,GEX,0.0,1,0,1,0,"Cập nhật BCTC quý 3 sáng 29/10: OCB, PV Power, Gelex giảm lãi 2 con số, ""kỳ lân"" VNG lỗ hơn 180 tỷ đồng",0.0,0.0
-70e3a7e965017df4,https://cafef.vn/cap-nhat-bctc-quy-3-sang-29-10-ocb-pv-power-gelex-giam-lai-2-con-so-ky-lan-vng-lo-hon-180-ty-dong-20221029114616419.chn,2022-10-29T11:48:46,2022-10-29,OCB,0.0,1,0,1,0,"Cập nhật BCTC quý 3 sáng 29/10: OCB, PV Power, Gelex giảm lãi 2 con số, ""kỳ lân"" VNG lỗ hơn 180 tỷ đồng",0.0,0.0
-70e3a7e965017df4,https://cafef.vn/cap-nhat-bctc-quy-3-sang-29-10-ocb-pv-power-gelex-giam-lai-2-con-so-ky-lan-vng-lo-hon-180-ty-dong-20221029114616419.chn,2022-10-29T11:48:46,2022-10-29,POW,0.0,1,0,1,0,"Cập nhật BCTC quý 3 sáng 29/10: OCB, PV Power, Gelex giảm lãi 2 con số, ""kỳ lân"" VNG lỗ hơn 180 tỷ đồng",0.0,0.0
-74675620a9a3c7fc,https://cafef.vn/neu-chon-big4-de-gui-tiet-kiem-thi-vietinbank-vietcombank-bidv-hay-agribank-co-lai-suat-cao-nhat-20221024111300238.chn,2022-10-24T11:13:02,2022-10-24,BID,0.0,1,0,1,0,"Nếu chọn Big4 để gửi tiết kiệm thì VietinBank, Vietcombank, BIDV hay Agribank có lãi suất cao nhất?",0.0,0.0
-75749f7fa8a8ef81,https://cafef.vn/vndirect-heo-an-chuoi-khong-co-qua-nhieu-khac-biet-so-voi-nhung-san-pham-thit-sach-dang-co-tren-thi-truong-20221001123906336.chn,2022-10-01T12:41:44,2022-10-01,VND,0.0,1,0,1,0,Vndirect: “Heo ăn chuối” không có quá nhiều khác biệt so với những sản phẩm thịt sạch đang có trên thị trường,0.0,0.0
-770a9e719328eb55,https://cafef.vn/thi-truong-dieu-chinh-manh-trong-tuan-17-21-10-khoi-ngoai-thu-hep-dang-ke-da-mua-rong-tap-trung-ban-manh-hpg-20221022110555375.chn,2022-10-22T11:06:16,2022-10-22,HPG,0.0,1,0,1,0,"Thị trường điều chỉnh mạnh trong tuần 17-21/10, khối ngoại thu hẹp đáng kể đà mua ròng, tập trung bán mạnh HPG",0.0,0.0
-7786c856c02df086,https://cafef.vn/thien-tan-ban-ra-hon-3-trieu-co-phieu-dig-ngay-truoc-khi-chu-tich-dic-corp-tuyen-bo-mua-vao-co-phieu-neu-gia-duoi-30000-dong-20221015162913771.chn,2022-10-15T16:39:24,2022-10-15,DIG,0.0,1,0,1,0,Thiên Tân bán ra hơn 3 triệu cổ phiếu DIG ngay trước khi Chủ tịch DIC Corp tuyên bố mua vào cổ phiếu nếu giá dưới 30.000 đồng,0.0,0.0
-785428cffa8c8c8d,https://cafef.vn/bamboo-capital-bcg-sap-phat-hanh-co-phieu-gia-10000-dong-cp-bom-von-cho-cong-ty-bao-hiem-20221001074522138.chn,2022-10-01T07:45:00,2022-10-01,ITA,0.0,1,0,1,0,"Bamboo Capital sắp phát hành gần 520 triệu cổ phiếu, trong vòng 3 năm huy động gần 10.000 tỷ từ TTCK",0.0,0.0
-789286c8f37f24e5,https://cafef.vn/hoang-anh-gia-lai-hagl-dung-2505-trieu-co-phieu-gia-suc-lo-pang-bao-lanh-cho-khoan-vay-moi-tai-tpbank-20221015193745313.chn,2022-10-15T19:49:08,2022-10-15,HAG,-1.0,1,0,0,1,"Hoàng Anh Gia Lai (HAGL) dùng 25,05 triệu cổ phiếu Gia súc Lơ Pang bảo lãnh cho khoản vay mới tại TPBank",1.0,0.0
-7a3057053dd0eb00,https://cafef.vn/ty-gia-vietcombank-bidv-va-vietinbank-tiep-tuc-neo-kich-tran-gia-usd-tu-do-len-25300-dong-20221025103121528.chn,2022-10-25T10:31:27,2022-10-25,BID,0.0,1,0,1,0,"Tỷ giá Vietcombank, BIDV và VietinBank tiếp tục neo kịch trần, giá USD tự do lên 25.300 đồng",0.0,0.0
-7a41b5c9b9d23b3f,https://cafef.vn/iphone-14-chinh-thuc-ve-viet-nam-fpt-retail-the-gioi-di-dong-24hstore-pha-ky-luc-doanh-so-ngay-dau-mo-ban-20221014103615135.chn,2022-10-14T15:21:00,2022-10-14,ICT,0.0,1,0,1,0,"iPhone 14 phá kỷ lục trong đêm đầu tiên bàn giao, cổ phiếu ICT gồm MWG, FRT, PET... đồng loạt kịch trần",0.0,0.0
-7a41b5c9b9d23b3f,https://cafef.vn/iphone-14-chinh-thuc-ve-viet-nam-fpt-retail-the-gioi-di-dong-24hstore-pha-ky-luc-doanh-so-ngay-dau-mo-ban-20221014103615135.chn,2022-10-14T15:21:00,2022-10-14,MWG,0.0,1,0,1,0,"iPhone 14 phá kỷ lục trong đêm đầu tiên bàn giao, cổ phiếu ICT gồm MWG, FRT, PET... đồng loạt kịch trần",0.0,0.0
-7b0719ad0019f328,https://cafef.vn/dragon-capital-gom-them-gan-3-trieu-co-phieu-pv-drilling-pvd-20221014173635945.chn,2022-10-14T17:36:57,2022-10-14,ITA,1.0,1,1,0,0,Dragon Capital gom thêm gần 3 triệu cổ phiếu PV Drilling (PVD),0.0,1.0
-7b0719ad0019f328,https://cafef.vn/dragon-capital-gom-them-gan-3-trieu-co-phieu-pv-drilling-pvd-20221014173635945.chn,2022-10-14T17:36:57,2022-10-14,PVD,1.0,1,1,0,0,Dragon Capital gom thêm gần 3 triệu cổ phiếu PV Drilling (PVD),0.0,1.0
-7b83f1fe0e1615c6,https://cafef.vn/von-hoa-boc-hoi-4300-ty-dong-sau-5-phien-giam-san-chu-tich-vndirect-noi-gi-ve-tin-don-lien-quan-den-trai-phieu-trung-nam-20221026205827457.chn,2022-10-26T20:58:38,2022-10-26,VND,0.0,1,0,1,0,"Vốn hoá “bốc hơi” 4.300 tỷ đồng sau 5 phiên giảm sàn, Chủ tịch VNDirect nói gì về “tin đồn” liên quan đến trái phiếu Trung Nam?",0.0,0.0
-7e510d526b866b49,https://cafef.vn/co-phieu-kbc-giam-40-trong-gan-2-thang-het-quy-ngoai-lai-den-co-dong-lien-quan-ong-dang-thanh-tam-muon-bat-day-20221015194001771.chn,2022-10-16T00:02:00,2022-10-16,KBC,0.0,1,0,1,0,"Cổ phiếu KBC giảm 40% trong gần 2 tháng, hết quỹ ngoại lại đến cổ đông liên quan ông Đặng Thành Tâm muốn “bắt đáy”",0.0,0.0
-7e5e10af9b83cfe6,https://cafef.vn/co-phieu-ngan-hang-chim-trong-sac-do-lpb-va-tcb-nam-san-hai-phien-lien-tiep-2022102418141302.chn,2022-10-24T18:14:16,2022-10-24,LPB,0.0,1,0,1,0,"Cổ phiếu ngân hàng chìm trong sắc đỏ, LPB và TCB nằm sàn hai phiên liên tiếp",0.0,0.0
-7e5e10af9b83cfe6,https://cafef.vn/co-phieu-ngan-hang-chim-trong-sac-do-lpb-va-tcb-nam-san-hai-phien-lien-tiep-2022102418141302.chn,2022-10-24T18:14:16,2022-10-24,TCB,0.0,1,0,1,0,"Cổ phiếu ngân hàng chìm trong sắc đỏ, LPB và TCB nằm sàn hai phiên liên tiếp",0.0,0.0
-803e957754372112,https://cafef.vn/evnfinance-hop-tac-voi-quy-responsability-nham-muc-tieu-thuc-day-tai-chinh-xanh-20221024115528665.chn,2022-10-24T13:30:00,2022-10-24,SAB,-1.0,1,0,0,1,EVNFinance hợp tác với Quỹ responsAbility nhằm mục tiêu thúc đẩy tài chính xanh,1.0,0.0
-811ff35e950af972,https://cafef.vn/ty-gia-ngay-3-10-tiep-tuc-tang-vnd-da-mat-gia-bao-nhieu-so-voi-usd-tu-dau-nam-den-nay-20221003140449373.chn,2022-10-03T14:04:51,2022-10-03,VND,-1.0,1,0,0,1,"Tỷ giá ngày 3/10 tiếp tục tăng, VND đã mất giá bao nhiêu so với USD từ đầu năm đến nay?",1.0,0.0
-823eb438bb6f3ff3,https://cafef.vn/ba-nguyen-phuong-hang-va-cac-cong-ty-thanh-vien-dai-nam-the-chap-hon-2000-lo-dat-de-vay-no-tai-ngan-hang-ocb-20221016175114631.chn,2022-10-16T17:51:00,2022-10-16,OCB,0.0,1,0,1,0,Bà Nguyễn Phương Hằng và các công ty thành viên Đại Nam dùng hơn 2.000 lô đất để thay thế nghĩa vụ trả nợ tại Ngân hàng OCB,0.0,0.0
-83b8341984e44a69,https://cafef.vn/apax-holdings-hop-tac-voi-aci-capital-tong-muc-dau-tu-150-trieu-usd-20221017175400192.chn,2022-10-17T19:30:00,2022-10-17,ITA,0.0,1,0,1,0,"Apax Holdings hợp tác với ACI Capital, tổng mức đầu tư 150 triệu USD",0.0,0.0
-858a3b0a4303bd91,https://cafef.vn/shb-chuan-bi-chia-co-tuc-va-chao-ban-co-phieu-voi-gia-12500-dong-cp-20221001102723379.chn,2022-10-01T10:27:45,2022-10-01,SHB,0.0,1,0,1,0,SHB chuẩn bị chia cổ tức và chào bán cổ phiếu với giá 12.500 đồng/cp,0.0,0.0
-861dea9a130dc608,https://cafef.vn/co-phieu-quoc-dan-hpg-xuong-day-2-nam-ca-nhan-ngam-ngui-om-lo-ca-map-cung-danh-mac-can-20221024214734759.chn,2022-10-25T00:10:36,2022-10-25,HPG,0.0,1,0,1,0,"“Cổ phiếu quốc dân” HPG xuống đáy 2 năm, cá nhân ngậm ngùi ôm lỗ, cá mập cũng đành mắc cạn",0.0,0.0
-8df684ae5dbb93ad,https://cafef.vn/hoa-chat-duc-giang-dgc-lai-hon-4900-ty-dong-sau-9-thang-gap-4-lan-cung-ky-vuot-50-ke-hoach-loi-nhuan-ca-nam-20221019162721917.chn,2022-10-19T16:27:34,2022-10-19,DGC,1.0,1,1,0,0,"Hoá chất Đức Giang (DGC) lãi hơn 4.900 tỷ đồng sau 9 tháng, gấp 4 lần cùng kỳ, vượt 50% kế hoạch lợi nhuận cả năm",0.0,1.0
-8e47ef867a1ac9aa,https://cafef.vn/thi-gia-gex-mat-76-ke-tu-dinh-dragon-capital-ban-rong-gan-12-trieu-co-phieu-gelex-trong-vong-chua-day-1-thang-khong-con-la-co-dong-lon-20221026195125343.chn,2022-10-26T21:05:00,2022-10-26,GEX,0.0,2,0,2,0,"Thị giá GEX mất 76% kể từ đỉnh, Dragon Capital bán ròng gần 12 triệu cổ phiếu Gelex trong vòng chưa đầy 1 tháng, không còn là cổ đông lớn",0.0,0.0
-8e47ef867a1ac9aa,https://cafef.vn/thi-gia-gex-mat-76-ke-tu-dinh-dragon-capital-ban-rong-gan-12-trieu-co-phieu-gelex-trong-vong-chua-day-1-thang-khong-con-la-co-dong-lon-20221026195125343.chn,2022-10-26T21:05:00,2022-10-26,ITA,1.0,1,1,0,0,"Thị giá GEX mất 76% kể từ đỉnh, Dragon Capital bán ròng gần 12 triệu cổ phiếu Gelex trong vòng chưa đầy 1 tháng, không còn là cổ đông lớn",0.0,1.0
-8efce4128c5ab573,https://cafef.vn/nhung-doanh-nghiep-lo-cang-them-lo-vi-bat-day-co-phieu-hpg-20221031204322548.chn,2022-10-31T20:43:25,2022-10-31,HPG,0.0,1,0,1,0,"Những doanh nghiệp ""lỗ càng thêm lỗ"" vì ""bắt đáy"" cổ phiếu HPG",0.0,0.0
-90504e187f50abbf,https://cafef.vn/chu-nhiem-uy-ban-kiem-tra-tu-xu-ly-nghiem-dang-vien-vi-pham-trong-vu-an-viet-a-flc-aic-20221012202305858.chn,2022-10-12T20:23:17,2022-10-12,FLC,0.0,1,0,1,0,"Chủ nhiệm Ủy ban Kiểm tra TƯ: Xử lý nghiêm đảng viên vi phạm trong vụ án Việt Á, FLC, AIC",0.0,0.0
-90ad76aec6160a67,https://cafef.vn/ssi-research-tang-truong-loi-nhuan-co-the-dat-dinh-trong-quy-3-ap-luc-len-thi-truong-se-tang-dan-20221008094006745.chn,2022-10-08T09:40:30,2022-10-08,SSI,0.0,1,0,1,0,"SSI Research: Tăng trưởng lợi nhuận có thể đạt đỉnh trong quý 3, áp lực lên thị trường sẽ tăng dần",0.0,0.0
-90e22c8eb2b5c529,https://cafef.vn/wego-uniform-tung-bst-ao-gio-cozyfree-tinh-than-doanh-nghiep-hoa-nhip-song-2022102716194144.chn,2022-10-28T08:00:00,2022-10-28,REE,0.0,1,0,1,0,Wego Uniform tung BST áo gió Cozyfree - tinh thần doanh nghiệp hoà nhịp sống,0.0,0.0
-92c3efdfbb6bba55,https://cafef.vn/bat-chap-su-so-hai-bao-trum-thi-truong-ong-biden-van-khong-tin-suy-thoai-xay-ra-noi-nguoi-dan-my-khong-can-chuan-bi-20221012113521195.chn,2022-10-12T11:35:32,2022-10-12,BID,-1.0,1,0,0,1,"Bất chấp sự sợ hãi bao trùm thị trường, ông Biden vẫn không tin suy thoái xảy ra, nói người dân Mỹ không cần chuẩn bị",1.0,0.0
-9379baaf85c4a3be,https://cafef.vn/lai-suat-vnd-giam-manh-tren-thi-truong-lien-ngan-hang-20221017191752404.chn,2022-10-17T19:17:56,2022-10-17,VND,0.0,1,0,1,0,Lãi suất VND giảm mạnh trên thị trường liên ngân hàng,0.0,0.0
-9684ae2b3fa1c918,https://cafef.vn/thi-gia-kbc-troi-ve-day-23-thang-dragon-capital-lap-tuc-ban-ra-hon-14-trieu-co-phieu-chi-sau-it-ngay-mua-vao-2022102514422981.chn,2022-10-25T14:43:49,2022-10-25,ITA,0.0,1,0,1,0,"Thị giá KBC trôi về đáy 23 tháng, Dragon Capital lập tức bán ra hơn 1,4 triệu cổ phiếu chỉ sau ít ngày mua vào",0.0,0.0
-96dc1f40976ee1e1,https://cafef.vn/flchomes-lo-sau-thue-63-ty-dong-trong-quy-3-con-phai-thu-flc-hon-2000-ty-tra-het-no-ocb-ncb-va-sacombank-20221030095204287.chn,2022-10-30T09:52:27,2022-10-30,FLC,0.0,1,0,1,0,"FLCHomes lỗ sau thuế 63 tỷ đồng trong quý 3, còn phải thu FLC hơn 2.000 tỷ, trả hết nợ OCB, NCB và Sacombank",0.0,0.0
-96dc1f40976ee1e1,https://cafef.vn/flchomes-lo-sau-thue-63-ty-dong-trong-quy-3-con-phai-thu-flc-hon-2000-ty-tra-het-no-ocb-ncb-va-sacombank-20221030095204287.chn,2022-10-30T09:52:27,2022-10-30,OCB,0.0,1,0,1,0,"FLCHomes lỗ sau thuế 63 tỷ đồng trong quý 3, còn phải thu FLC hơn 2.000 tỷ, trả hết nợ OCB, NCB và Sacombank",0.0,0.0
-9726cce44e71a042,https://cafef.vn/ocb-lot-top-10-thuong-hieu-manh-nganh-ngan-hang-2022-do-vneconomy-binh-chon-20221014090146844.chn,2022-10-14T09:02:32,2022-10-14,OCB,0.0,1,0,1,0,OCB lọt top 10 thương hiệu mạnh ngành ngân hàng 2022 do VnEconomy bình chọn,0.0,0.0
-9744a90bfa691a74,https://cafef.vn/cho-vay-margin-tang-gan-1000-ty-dong-mbs-bao-lai-quy-3-2022-giam-34-20221020162358898.chn,2022-10-20T17:00:00,2022-10-20,MBS,1.0,1,1,0,0,"Cho vay margin tăng gần 1.000 tỷ đồng, MBS báo lãi quý 3/2022 giảm 34%",0.0,1.0
-98d32a5cc65418cd,https://cafef.vn/ban-chuoi-ban-heo-nhung-khong-du-bu-chi-phi-tai-chinh-vi-sao-hoang-anh-gia-lai-hagl-van-lai-lon-2022102808301702.chn,2022-10-28T08:34:17,2022-10-28,HAG,0.0,1,0,1,0,"Bán chuối, bán heo nhưng không đủ bù chi phí tài chính, vì sao Hoàng Anh Gia Lai (HAGL) vẫn lãi lớn?",0.0,0.0
-991a3caa2223cb9c,https://cafef.vn/vinacapital-loi-nhuan-dn-viet-nam-vuot-troi-so-voi-khu-vuc-sap-co-mot-so-thuong-vu-lon-20221011215542943.chn,2022-10-12T00:02:00,2022-10-12,ITA,0.0,1,0,1,0,"VinaCapital: Lợi nhuận DN Việt Nam vượt trội so với khu vực, sắp có một số thương vụ lớn",0.0,0.0
-99597cb9ad60c55f,https://cafef.vn/ssi-du-bao-kqkd-quy-3-2022-hau-het-dn-tang-truong-manh-tu-muc-nen-thap-rieng-hoa-phat-du-giam-80-va-cham-day-loi-nhuan-20221011090446526.chn,2022-10-11T09:05:40,2022-10-11,SSI,0.0,1,0,1,0,"SSI dự báo KQKD quý 3/2022: Hầu hết DN tăng trưởng mạnh từ mức nền thấp, riêng Hoà Phát dự giảm 80% và chạm đáy lợi nhuận",0.0,0.0
-99e41addf23d5438,https://cafef.vn/shb-trien-khai-chuong-trinh-khuyen-mai-hap-dan-danh-cho-khach-hang-doanh-nghiep-20221027072709042.chn,2022-10-27T08:00:00,2022-10-27,SHB,-1.0,1,0,0,1,SHB triển khai chương trình khuyến mãi hấp dẫn dành cho khách hàng doanh nghiệp,1.0,0.0
-9af7c7afd06a468c,https://cafef.vn/ngan-hang-nha-nuoc-noi-rong-bien-do-ty-gia-giao-ngay-usd-vnd-20221017102825735.chn,2022-10-17T10:28:29,2022-10-17,VND,0.0,1,0,1,0,Ngân hàng Nhà nước nới rộng biên độ tỷ giá giao ngay USD/VND,0.0,0.0
-9c4d0f671eacd607,https://cafef.vn/cap-nhat-bctc-quy-3-chieu-20-10-techcombank-vpbank-tiep-tuc-lai-lon-nhieu-dn-sut-giam-sau-so-voi-quy-2-them-ctck-bao-giam-lai-20221020203823049.chn,2022-10-20T20:38:00,2022-10-20,LPB,0.0,1,0,1,0,"Hàng chục doanh nghiệp ồ ạt công bố BCTC chiều ngày 20/10: Loạt doanh nghiệp lớn TPB, LPB, Sabeco, hầu hết các công ty chứng khoán…",0.0,0.0
-9c4d0f671eacd607,https://cafef.vn/cap-nhat-bctc-quy-3-chieu-20-10-techcombank-vpbank-tiep-tuc-lai-lon-nhieu-dn-sut-giam-sau-so-voi-quy-2-them-ctck-bao-giam-lai-20221020203823049.chn,2022-10-20T20:38:00,2022-10-20,SAB,0.0,1,0,1,0,"Hàng chục doanh nghiệp ồ ạt công bố BCTC chiều ngày 20/10: Loạt doanh nghiệp lớn TPB, LPB, Sabeco, hầu hết các công ty chứng khoán…",0.0,0.0
-9ed923ac23f4593b,https://cafef.vn/vcbs-vn-index-se-kho-roi-xuong-duoi-vung-1000-diem-trong-quy-4-20221012214529323.chn,2022-10-13T05:02:00,2022-10-13,VCB,0.0,1,0,1,0,VCBS: VN-Index sẽ khó rơi xuống dưới vùng 1.000 điểm trong quý 4,0.0,0.0
-9f258f3850050ae9,https://cafef.vn/quy-ngoai-singapore-muon-gom-them-gan-5-trieu-co-phieu-ree-20221016084948516.chn,2022-10-16T11:00:36,2022-10-16,REE,1.0,1,1,0,0,Quỹ ngoại Singapore muốn gom thêm gần 5 triệu cổ phiếu REE,0.0,1.0
-a0dc68d496d8f697,https://cafef.vn/messi-choi-lon-dau-tu-vao-thung-lung-silicon-20221021103409909.chn,2022-10-21T10:55:00,2022-10-21,SSI,0.0,1,0,1,0,"Messi chơi lớn, đầu tư vào thung lũng Silicon",0.0,0.0
-a155d645d55045d0,https://cafef.vn/su-dung-54-tai-khoan-de-thao-tung-co-phieu-tni-mot-ca-nhan-bi-ubcknn-xu-phat-hon-nua-ty-dong-20221025205725.chn,2022-10-25T20:57:00,2022-10-25,TNI,0.0,1,0,1,0,"Sử dụng 54 tài khoản để thao túng cổ phiếu TNI, một cá nhân bị UBCKNN xử phạt hơn nửa tỷ đồng",0.0,0.0
-a1f1f5575046fa1c,https://cafef.vn/du-bao-moi-nhat-cua-iea-ve-thi-truong-khi-dot-the-gioi-anh-huong-nhu-the-nao-den-gia-gas-trong-nuoc-20221004133833796.chn,2022-10-04T14:09:29,2022-10-04,GAS,0.0,1,0,1,0,Dự báo mới nhất của IEA về thị trường khí đốt thế giới ảnh hưởng như thế nào đến giá gas trong nước?,0.0,0.0
-a2e7f601551d76d3,https://cafef.vn/doanh-thu-ban-thit-heo-tang-200-hoang-anh-gia-lai-hag-bao-lai-quy-3-2022-gap-17-lan-so-voi-cung-ky-20221026190701892.chn,2022-10-26T19:07:36,2022-10-26,HAG,1.0,1,1,0,0,"Doanh thu bán thịt heo tăng 200%, Hoàng Anh Gia Lai (HAG) báo lãi quý 3/2022 gấp 17 lần so với cùng kỳ",0.0,1.0
-a40a207ddee08df1,https://cafef.vn/co-phieu-hoa-phat-hpg-troi-xuong-day-2-nam-thi-gia-ve-vung-16x-20221023093207103.chn,2022-10-23T09:32:32,2022-10-23,HPG,0.0,1,0,1,0,"Cổ phiếu Hoà Phát (HPG) ""trôi"" xuống đáy 2 năm, thị giá về vùng 16.x",0.0,0.0
-a431e11a134aa5f2,https://cafef.vn/chung-khoan-vndirect-bi-xu-phat-do-cho-vay-margin-co-phieu-thaiholdings-thd-20221008225459612.chn,2022-10-09T06:02:00,2022-10-09,VND,0.0,1,0,1,0,Chứng khoán VNDIRECT bị xử phạt do cho vay margin cổ phiếu Thaiholdings (THD),0.0,0.0
-a46048f0a984fad8,https://cafef.vn/co-phieu-bi-han-che-giao-dich-quan-ly-tai-san-flc-noi-gi-20221005231835903.chn,2022-10-05T23:18:47,2022-10-05,FLC,0.0,1,0,1,0,"Cổ phiếu bị hạn chế giao dịch, Quản lý Tài sản FLC nói gì?",0.0,0.0
-a96346ccf4edd45c,https://cafef.vn/hsg-loi-nhuan-sau-thue-hop-nhat-ndtc-2021-2022-dat-251-ty-dong-20221029091807759.chn,2022-10-29T10:00:00,2022-10-29,HSG,0.0,1,0,1,0,HSG: Lợi nhuận sau thuế hợp nhất NĐTC 2021-2022 đạt 251 tỷ đồng,0.0,0.0
-ae2678252c5051e8,https://cafef.vn/halloween-cua-co-dong-thep-co-phieu-hoa-sen-hsg-hoa-phat-hpg-bi-ban-thao-sau-khi-doanh-nghiep-dong-loat-bao-lo-ly-luc-20221031165425985.chn,2022-10-31T16:55:06,2022-10-31,HPG,0.0,1,0,1,0,"Halloween của cổ đông thép: cổ phiếu Hoa Sen (HSG), Hoà Phát (HPG)… bị bán tháo sau khi doanh nghiệp đồng loạt báo lỗ lỷ lục",0.0,0.0
-ae2678252c5051e8,https://cafef.vn/halloween-cua-co-dong-thep-co-phieu-hoa-sen-hsg-hoa-phat-hpg-bi-ban-thao-sau-khi-doanh-nghiep-dong-loat-bao-lo-ly-luc-20221031165425985.chn,2022-10-31T16:55:06,2022-10-31,HSG,0.0,1,0,1,0,"Halloween của cổ đông thép: cổ phiếu Hoa Sen (HSG), Hoà Phát (HPG)… bị bán tháo sau khi doanh nghiệp đồng loạt báo lỗ lỷ lục",0.0,0.0
-aebeb7895513f87b,https://cafef.vn/flc-va-flchomes-da-mua-lai-toa-bamboo-airways-va-du-kien-ban-cho-mot-ben-khac-voi-gia-2000-ty-dong-20221024100637469.chn,2022-10-24T10:08:53,2022-10-24,FLC,0.0,1,0,1,0,FLC và FLCHomes đã mua lại toà Bamboo Airways và dự kiến bán cho một bên khác với giá 2.000 tỷ đồng,0.0,0.0
-aec4ff6f8d9c3c1e,https://cafef.vn/ty-gia-usd-vnd-vua-giam-manh-tren-thi-truong-tu-do-20221006134645189.chn,2022-10-06T13:46:59,2022-10-06,VND,0.0,1,0,1,0,Tỷ giá USD/VND vừa giảm mạnh trên thị trường tự do,0.0,0.0
-b065e2aa5227fc34,https://cafef.vn/hose-co-phieu-amd-cua-dau-tu-va-khoang-san-flc-stone-chi-duoc-giao-dich-phien-chieu-tu-ngay-24-10-20221018153948069.chn,2022-10-18T15:39:54,2022-10-18,AMD,0.0,1,0,1,0,HoSE: Cổ phiếu AMD của Đầu tư và Khoáng sản FLC Stone chỉ được giao dịch phiên chiều từ ngày 24/10,0.0,0.0
-b065e2aa5227fc34,https://cafef.vn/hose-co-phieu-amd-cua-dau-tu-va-khoang-san-flc-stone-chi-duoc-giao-dich-phien-chieu-tu-ngay-24-10-20221018153948069.chn,2022-10-18T15:39:54,2022-10-18,FLC,0.0,1,0,1,0,HoSE: Cổ phiếu AMD của Đầu tư và Khoáng sản FLC Stone chỉ được giao dịch phiên chiều từ ngày 24/10,0.0,0.0
-b1c7b33c8ac65fad,https://cafef.vn/cap-nhat-bctc-chieu-ngay-26-10-hagl-lai-gap-16-lan-cung-ky-them-bsr-cii-habeco-cong-bo-20221026175520795.chn,2022-10-26T17:55:32,2022-10-26,HAG,0.0,1,0,1,0,"Cập nhật BCTC chiều ngày 26/10: HAGL lãi gấp 16 lần cùng kỳ, thêm BSR, CII, Habeco công bố",0.0,0.0
-b2868097b7e87c3d,https://cafef.vn/hose-niem-yet-bo-sung-200000-chung-chi-quy-etf-dcvfm-vnmidcap-fuedcmid-ke-tu-10-10-20221009133709684.chn,2022-10-09T13:37:36,2022-10-09,VNM,0.0,1,0,1,0,HoSE niêm yết bổ sung 200.000 chứng chỉ quỹ ETF DCVFM VNMIDCAP (FUEDCMID) kể từ 10/10,0.0,0.0
-b5132d975d74df60,https://cafef.vn/nhin-tu-cau-chuyen-dau-gia-lan-2-rolls-royce-cua-flchomes-nhan-the-chap-sieu-xe-du-thuyen-co-gi-dang-vui-20221026151443425.chn,2022-10-26T15:20:00,2022-10-26,FLC,0.0,1,0,1,0,"Nhìn từ câu chuyện đấu giá lần 2 Rolls-Royce của FLCHomes: Nhận thế chấp siêu xe, du thuyền có gì đáng vui?",0.0,0.0
-b5de4cb3293fb5c5,https://cafef.vn/luy-ke-9-thang-doanh-thu-tu-mang-ban-le-pnj-tang-1133-20221024115259553.chn,2022-10-24T13:30:00,2022-10-24,PNJ,0.0,1,0,1,0,"Lũy kế 9 tháng, doanh thu từ mảng bán lẻ PNJ tăng 113,3%",0.0,0.0
-b70d536a955edb03,https://cafef.vn/flc-lo-785-ty-dong-trong-quy-3-20221031082821057.chn,2022-10-31T08:28:23,2022-10-31,FLC,0.0,1,0,1,0,FLC lỗ 785 tỷ đồng trong quý 3,0.0,0.0
-b7c4ef2ba79daf11,https://cafef.vn/tang-ty-gia-usd-vnd-han-che-den-nhap-khau-tich-cuc-cho-xuat-khau-20221019093903303.chn,2022-10-19T13:31:00,2022-10-19,VND,-1.0,1,0,0,1,"Tăng tỷ giá USD/VND hạn chế đến nhập khẩu, tích cực cho xuất khẩu",1.0,0.0
-babed8c5ca0e0e2d,https://cafef.vn/thep-nam-kim-nkg-lo-ky-luc-hon-400-ty-dong-quy-3-2022-co-phieu-giam-san-20221028150414262.chn,2022-10-28T15:05:22,2022-10-28,NKG,0.0,1,0,1,0,"Thép Nam Kim (NKG) lỗ kỷ lục hơn 400 tỷ đồng quý 3/2022, cổ phiếu giảm sàn",0.0,0.0
-bb09795ff00f202e,https://cafef.vn/co-phieu-troi-ve-day-23-thang-hoa-phat-hpg-roi-khoi-top-10-doanh-nghiep-von-hoa-lon-nhat-san-chung-khoan-20221005155851256.chn,2022-10-05T15:59:02,2022-10-05,HPG,0.0,1,0,1,0,"Cổ phiếu “trôi” về đáy 23 tháng, Hòa Phát (HPG) rời khỏi top 10 doanh nghiệp vốn hóa lớn nhất sàn chứng khoán",0.0,0.0
-bbf5359c102ba8e4,https://cafef.vn/chung-khoan-vps-tu-nhiem-vai-tro-dai-ly-mot-loat-lo-trai-phieu-doanh-nghiep-20221027180126317.chn,2022-10-27T18:26:00,2022-10-27,VPS,0.0,1,0,1,0,Chứng khoán VPS từ nhiệm vai trò đại lý một loạt lô trái phiếu doanh nghiệp,0.0,0.0
-bd64b119ca450bc7,https://cafef.vn/flc-se-phat-hanh-bao-cao-tai-chinh-kiem-toan-nam-2021-vao-cuoi-thang-10-2022-20221012141613927.chn,2022-10-12T14:16:59,2022-10-12,FLC,0.0,1,0,1,0,FLC sẽ phát hành báo cáo tài chính kiểm toán năm 2021 vào cuối tháng 10/2022,0.0,0.0
-bfc7b463d9d6708c,https://cafef.vn/kinh-te-truong-mbs-nha-dau-tu-khong-nen-qua-hoang-loan-va-quan-sat-ky-vung-1000-diem-20221022202002765.chn,2022-10-23T09:05:25,2022-10-23,MBS,0.0,1,0,1,0,Kinh tế trưởng MBS: Nhà đầu tư không nên quá hoảng loạn và quan sát kỹ vùng 1.000 điểm,0.0,0.0
-c29ad333556ce4d0,https://cafef.vn/du-no-margin-tang-gap-doi-loi-nhuan-sau-thue-cua-vix-giam-40-trong-quy-3-20221021161829344.chn,2022-10-21T18:19:28,2022-10-21,VIX,1.0,1,1,0,0,"Dư nợ margin tăng gấp đôi, lợi nhuận sau thuế của VIX giảm 40% trong quý 3",0.0,1.0
-c2b3c445bf237a08,https://cafef.vn/bidv-metlife-lien-tiep-duoc-vinh-danh-doanh-nghiep-chau-a-xuat-sac-apea-20221018120658566.chn,2022-10-20T08:00:00,2022-10-20,BID,0.0,1,0,1,0,BIDV MetLife liên tiếp được vinh danh Doanh nghiệp Châu Á xuất sắc (APEA),0.0,0.0
-c9acdc31dd5f1e35,https://cafef.vn/pho-tong-giam-doc-techcombank-dang-ky-mua-co-phieu-tcb-2022102717331079.chn,2022-10-27T17:33:24,2022-10-27,TCB,0.0,1,0,1,0,Phó Tổng Giám đốc Techcombank đăng ký mua cổ phiếu TCB,0.0,0.0
-ca94de0c710e7775,https://cafef.vn/kinh-te-truong-mbs-vn-index-kho-giam-sau-tren-30-so-voi-dinh-nha-dau-tu-nen-can-nhac-ky-truoc-khi-ban-co-phieu-20221001152647858.chn,2022-10-01T16:20:09,2022-10-01,MBS,0.0,1,0,1,0,"Kinh tế trưởng MBS: VN-Index khó giảm sâu trên 30% so với đỉnh, nhà đầu tư nên cân nhắc kỹ trước khi bán cổ phiếu",0.0,0.0
-cb8b4f29b3873b8a,https://cafef.vn/acbs-nhnn-tang-lai-suat-dieu-hanh-de-doi-pho-voi-ty-gia-chu-khong-phai-lam-phat-20221001225221507.chn,2022-10-01T22:52:45,2022-10-01,ACB,0.0,1,0,1,0,"ACBS: NHNN tăng lãi suất điều hành để đối phó với tỷ giá, chứ không phải lạm phát",0.0,0.0
-cd8bf9ca9ee2e744,https://cafef.vn/kinh-te-truong-vinacapital-chi-ra-yeu-to-giup-viet-nam-tro-thanh-vung-an-toan-kinh-te-trong-cac-thi-truong-moi-noi-20221009080853705.chn,2022-10-09T08:09:19,2022-10-09,ITA,0.0,1,0,1,0,Kinh tế trưởng VinaCapital chỉ ra yếu tố giúp Việt Nam trở thành 'vùng an toàn kinh tế' trong các thị trường mới nổi,0.0,0.0
-ced259a9572f425f,https://cafef.vn/2-pho-tong-giam-doc-moi-duoc-bo-nhiem-cua-flc-la-ai-20221004143230212.chn,2022-10-04T14:33:10,2022-10-04,FLC,0.0,1,0,1,0,2 Phó Tổng giám đốc mới được bổ nhiệm của FLC là ai?,0.0,0.0
-ceedec260e0d832f,https://cafef.vn/thi-phan-moi-gioi-hose-quy-3-vps-giu-vung-vi-tri-dau-bang-bo-doi-mbs-va-fpts-tang-toc-20221005180312287.chn,2022-10-05T18:03:48,2022-10-05,FTS,0.0,1,0,1,0,"Thị phần môi giới HoSE quý 3: VPS giữ vững vị trí đầu bảng, bộ đôi MBS và FPTS tăng tốc",0.0,0.0
-ceedec260e0d832f,https://cafef.vn/thi-phan-moi-gioi-hose-quy-3-vps-giu-vung-vi-tri-dau-bang-bo-doi-mbs-va-fpts-tang-toc-20221005180312287.chn,2022-10-05T18:03:48,2022-10-05,MBS,0.0,1,0,1,0,"Thị phần môi giới HoSE quý 3: VPS giữ vững vị trí đầu bảng, bộ đôi MBS và FPTS tăng tốc",0.0,0.0
-ceedec260e0d832f,https://cafef.vn/thi-phan-moi-gioi-hose-quy-3-vps-giu-vung-vi-tri-dau-bang-bo-doi-mbs-va-fpts-tang-toc-20221005180312287.chn,2022-10-05T18:03:48,2022-10-05,VPS,0.0,1,0,1,0,"Thị phần môi giới HoSE quý 3: VPS giữ vững vị trí đầu bảng, bộ đôi MBS và FPTS tăng tốc",0.0,0.0
-cff0dcaaa91ceaa9,https://cafef.vn/hagl-bac-bo-tin-don-tieu-cuc-truoc-da-ban-thao-ai-nu-doan-hoang-anh-dang-ky-mua-1-trieu-co-phieu-20221012205345991.chn,2022-10-12T20:54:35,2022-10-12,HAG,0.0,1,0,1,0,"HAGL bác bỏ tin đồn tiêu cực trước đà bán tháo, con gái bầu Đức đăng ký mua 1 triệu cổ phiếu",0.0,0.0
-d2f2dc9233eb3308,https://cafef.vn/hag-nguoc-dong-tang-4-con-gai-bau-duc-hoan-tat-mua-vao-1-trieu-co-phieu-20221024205524133.chn,2022-10-24T20:55:00,2022-10-24,HAG,1.0,1,1,0,0,"HAG ngược dòng tăng 4%, con gái ""bầu"" Đức hoàn tất mua vào 1 triệu cổ phiếu",0.0,1.0
-d53c9b11964be563,https://cafef.vn/co-phieu-ngan-hang-phien-10-10-vpb-hoi-phuc-manh-tu-gia-san-shb-va-lpb-suyt-roi-xuong-duoi-menh-gia-20221010162547055.chn,2022-10-10T16:25:48,2022-10-10,LPB,0.0,1,0,1,0,"Cổ phiếu ngân hàng phiên 10/10: VPB hồi phục mạnh từ giá sàn, SHB và LPB suýt rơi xuống dưới mệnh giá",0.0,0.0
-d53c9b11964be563,https://cafef.vn/co-phieu-ngan-hang-phien-10-10-vpb-hoi-phuc-manh-tu-gia-san-shb-va-lpb-suyt-roi-xuong-duoi-menh-gia-20221010162547055.chn,2022-10-10T16:25:48,2022-10-10,SHB,0.0,1,0,1,0,"Cổ phiếu ngân hàng phiên 10/10: VPB hồi phục mạnh từ giá sàn, SHB và LPB suýt rơi xuống dưới mệnh giá",0.0,0.0
-d5ac313dc7e49c53,https://cafef.vn/giua-luc-co-phieu-big-tech-dang-bi-tan-sat-day-la-diem-sang-duy-nhat-20221031062000914.chn,2022-10-31T08:07:00,2022-10-31,BIG,0.0,1,0,1,0,"Giữa lúc cổ phiếu Big Tech đang bị ""tàn sát"", đây là điểm sáng duy nhất",0.0,0.0
-d74a2ca5b3a5864e,https://cafef.vn/lan-thu-ba-trong-nam-bi-ctck-ban-giai-chap-co-phieu-hdc-lanh-dao-hodeco-va-to-chuc-co-lien-quan-quyet-dinh-thoai-sach-von-20221025112910373.chn,2022-10-25T11:29:00,2022-10-25,HDC,0.0,1,0,1,0,"Lần thứ ba trong năm bị CTCK bán giải chấp cổ phiếu HDC, lãnh đạo Hodeco và tổ chức có liên quan quyết định thoái sạch vốn",0.0,0.0
-d7d25ba6cb14279c,https://cafef.vn/chung-khoan-hsc-day-manh-bat-day-loat-co-phieu-hpg-tcb-vpb-bao-lai-quy-3-sut-giam-48-20221020161508026.chn,2022-10-20T16:15:22,2022-10-20,HCM,1.0,1,1,0,0,Chứng khoán HSC báo lãi quý 3 sụt giảm 48%,0.0,1.0
-d85d7e478892d981,https://cafef.vn/co-phieu-hag-chuyen-tu-kiem-soat-sang-dien-canh-bao-tu-ngay-11-10-20221007202938756.chn,2022-10-07T20:36:26,2022-10-07,HAG,0.0,1,0,1,0,Cổ phiếu HAG chuyển từ kiểm soát sang diện cảnh báo từ ngày 11/10,0.0,0.0
-dea87d77623c1935,https://cafef.vn/novagroup-dang-ky-mua-8-trieu-co-phieu-nvl-2022101120043611.chn,2022-10-11T20:04:44,2022-10-11,NVL,0.0,1,0,1,0,NovaGroup đăng ký mua 8 triệu cổ phiếu NVL,0.0,0.0
-dec245e96c78cd06,https://cafef.vn/bamboo-capital-bcg-ma-dong-bang-khien-loi-nhuan-quy-3-2022-chi-con-39-ty-dong-du-doanh-thu-tang-vot-20221029073911679.chn,2022-10-29T07:39:30,2022-10-29,ITA,0.0,1,0,1,0,"Bamboo Capital (BCG): M&A ""đóng băng"" khiến lợi nhuận quý 3/2022 chỉ còn 39 tỷ đồng dù doanh thu tăng vọt",0.0,0.0
-df5a1f398be224e6,https://cafef.vn/sgi-capital-da-giam-cua-thi-truong-dang-mang-lai-nhieu-hon-cac-co-hoi-voi-muc-sinh-loi-tren-20-nam-cho-ky-dau-tu-1-3-nam-toi-20221006141416411.chn,2022-10-06T14:16:43,2022-10-06,ITA,0.0,1,0,1,0,SGI Capital: Đà giảm của thị trường đang mang lại nhiều hơn các cơ hội với mức sinh lời trên 20%/năm cho kỳ đầu tư 1-3 năm tới,0.0,0.0
-df981867521294e5,https://cafef.vn/tong-giam-doc-hdbank-tiep-tuc-dang-ky-mua-vao-1-trieu-co-phieu-hdb-20221005080147338.chn,2022-10-05T08:01:00,2022-10-05,HDB,0.0,1,0,1,0,Tổng Giám đốc HDBank tiếp tục đăng ký mua vào 1 triệu cổ phiếu HDB,0.0,0.0
-e008f49abd62ec43,https://cafef.vn/kinh-te-truong-ssi-nha-dau-tu-khong-nen-phan-ung-thai-qua-can-can-bang-hon-khi-nhin-nhan-cac-van-de-cua-thi-truong-20221027172451734.chn,2022-10-27T21:46:07,2022-10-27,SSI,0.0,1,0,1,0,"Kinh tế trưởng SSI: ""Nhà đầu tư không nên phản ứng thái quá, cần cân bằng hơn khi nhìn nhận các vấn đề của thị trường""",0.0,0.0
-e275fc0555fe9e51,https://cafef.vn/ssi-research-no-nuoc-ngoai-giam-nho-ty-gia-20221028100801366.chn,2022-10-28T10:08:18,2022-10-28,SSI,0.0,1,0,1,0,SSI Research: Nợ nước ngoài giảm nhờ tỷ giá,0.0,0.0
-e2d77f9d568f21a7,https://cafef.vn/doanh-nghiep-ban-gas-lai-quy-3-gap-125-lan-cung-ky-co-phieu-van-troi-ve-vung-day-14-thang-2022101111014441.chn,2022-10-11T11:03:24,2022-10-11,GAS,0.0,1,0,1,0,"Doanh nghiệp bán gas lãi quý 3 gấp 12,5 lần cùng kỳ, cổ phiếu vẫn ""trôi"" về vùng đáy 14 tháng",0.0,0.0
-e504b37018977c26,https://cafef.vn/vndirect-loi-suat-thu-nhap-chung-khoan-luc-nay-hap-dan-hon-muc-lai-suat-tien-gui-cua-cac-ngan-hang-thuong-mai-20221005224356329.chn,2022-10-06T06:06:41,2022-10-06,VND,0.0,1,0,1,0,VNDirect: Lợi suất thu nhập chứng khoán lúc này hấp dẫn hơn mức lãi suất tiền gửi của các ngân hàng thương mại,0.0,0.0
-e6fe1185c682a212,https://cafef.vn/gelex-dat-1767-ty-dong-loi-nhuan-truoc-thue-trong-9-thang-tang-25-so-voi-cung-ky-20221028114624617.chn,2022-10-28T13:30:00,2022-10-28,GEX,1.0,1,1,0,0,"GELEX đạt 1.767 tỷ đồng lợi nhuận trước thuế trong 9 tháng, tăng 25% so với cùng kỳ",0.0,1.0
-e880c996f416273b,https://cafef.vn/lanh-dao-ngan-hang-shb-duoc-enterprise-asia-vinh-danh-20221013195843269.chn,2022-10-14T08:00:00,2022-10-14,SHB,0.0,1,0,1,0,Lãnh đạo ngân hàng SHB được Enterprise Asia vinh danh,0.0,0.0
-e99f6689e2c48756,https://cafef.vn/hsc-dong-hanh-cung-nha-dau-tu-ha-canh-an-toan-trong-giong-bao-20221022123758813.chn,2022-10-24T08:00:00,2022-10-24,HCM,0.0,1,0,1,0,HSC đồng hành cùng nhà đầu tư hạ cánh an toàn trong giông bão,0.0,0.0
-f07abe7a8911e7fa,https://cafef.vn/doanh-nghiep-xuat-sac-chau-a-2022-goi-ten-nova-service-20221011111215646.chn,2022-10-11T13:30:00,2022-10-11,VIC,0.0,1,0,1,0,“Doanh nghiệp xuất sắc châu Á” 2022 gọi tên Nova Service,0.0,0.0
-f19740ba04311221,https://cafef.vn/sabeco-sab-chot-ngay-tra-co-tuc-25-bang-tien-hon-850-ty-sap-ve-tui-thaibev-20221027165452453.chn,2022-10-27T21:44:21,2022-10-27,SAB,0.0,1,0,1,0,"Sabeco (SAB) chốt ngày trả cổ tức 25% bằng tiền, hơn 850 tỷ sắp về ""túi"" ThaiBev",0.0,0.0
-f197a255de04d774,https://cafef.vn/co-phieu-vvs-chao-san-chung-khoan-doanh-nghiep-vimid-co-gi-hap-dan-20221007174422889.chn,2022-10-07T17:30:00,2022-10-07,VVS,0.0,1,0,1,0,"Cổ phiếu VVS chào sàn chứng khoán, doanh nghiệp VIMID có gì hấp dẫn?",0.0,0.0
-f2c5adae92210567,https://cafef.vn/mot-nguoi-bi-khoi-to-va-tam-giam-mot-nguoi-vua-tu-nhiem-hdqt-cua-flc-faros-chi-con-lai-chu-tich-20221031105857667.chn,2022-10-31T10:59:30,2022-10-31,FLC,0.0,1,0,1,0,"Một người bị khởi tố và tạm giam, một người vừa từ nhiệm, HĐQT của FLC Faros chỉ còn lại Chủ tịch",0.0,0.0
-f2f329a36ffd15bd,https://cafef.vn/ocb-nhan-hang-tram-codotel-can-khach-san-biet-thu-cua-flc-de-thay-the-nghia-vu-tra-no-20221018095817107.chn,2022-10-18T09:58:00,2022-10-18,FLC,0.0,1,0,1,0,"Hàng loạt căn Codotel, khách sạn, biệt thự của FLC tiếp tục được dùng làm tài sản đảm bảo tại ngân hàng OCB",0.0,0.0
-f2f329a36ffd15bd,https://cafef.vn/ocb-nhan-hang-tram-codotel-can-khach-san-biet-thu-cua-flc-de-thay-the-nghia-vu-tra-no-20221018095817107.chn,2022-10-18T09:58:00,2022-10-18,OCB,0.0,1,0,1,0,"Hàng loạt căn Codotel, khách sạn, biệt thự của FLC tiếp tục được dùng làm tài sản đảm bảo tại ngân hàng OCB",0.0,0.0
-f4067ac275e4c0bf,https://cafef.vn/cong-ty-me-chung-khoan-ssi-dat-382-ty-lai-truoc-thue-trong-quy-3-2022-du-no-cho-vay-dat-gan-15600-ty-dong-20221020162612211.chn,2022-10-20T19:28:00,2022-10-20,SSI,-1.0,1,0,0,1,"Công ty mẹ Chứng khoán SSI đạt 382 tỷ lãi trước thuế trong quý 3/2022, dư nợ cho vay đạt gần 15.600 tỷ đồng",1.0,0.0
-f4180ebfed4d1c9b,https://cafef.vn/thi-gia-truot-dai-pho-chu-tich-dic-corp-dang-ky-mua-20-trieu-co-phieu-dig-20221004142724033.chn,2022-10-04T14:30:01,2022-10-04,DIG,0.0,1,0,1,0,"Thị giá trượt dài, Phó Chủ tịch DIC Corp đăng ký mua 20 triệu cổ phiếu DIG",0.0,0.0
-f4d6194c92c4f709,https://cafef.vn/cap-nhat-kqkd-ngan-hang-quy-3-mb-hdbank-vietcapitalbank-namabank-vietabank-cong-bo-bctc-20221028154749579.chn,2022-10-28T15:48:06,2022-10-28,ITA,0.0,1,0,1,0,"Cập nhật KQKD ngân hàng quý 3: MB, HDBank, VietCapitalBank, NamABank, VietABank công bố BCTC",0.0,0.0
-f5e0f65cb1e2dc3e,https://cafef.vn/phu-tho-thu-hoi-du-an-quan-the-du-lich-nghi-duong-sinh-thai-do-flc-lam-chu-dau-tu-20221005200353149.chn,2022-10-05T20:04:04,2022-10-05,FLC,0.0,1,0,1,0,Phú Thọ thu hồi dự án quần thể du lịch nghỉ dưỡng sinh thái do FLC làm chủ đầu tư,0.0,0.0
-f8400441c0ae455c,https://cafef.vn/gelex-lot-top-50-doanh-nghiep-loi-nhuan-xuat-sac-nhat-viet-nam-2022-20221026173729434.chn,2022-10-26T19:30:00,2022-10-26,GEX,0.0,1,0,1,0,GELEX lọt Top 50 Doanh nghiệp lợi nhuận xuất sắc nhất Việt Nam 2022,0.0,0.0
-fae545d4f5a64c2b,https://cafef.vn/acbs-vn-index-co-the-quay-lai-muc-dinh-lich-su-vao-nam-2023-20221001153118462.chn,2022-10-02T00:02:26,2022-10-02,ACB,0.0,1,0,1,0,ACBS: VN-Index có thể quay lại mức đỉnh lịch sử vào năm 2023,0.0,0.0
-fdfe5eaebc31396e,https://cafef.vn/ngan-hang-rao-ban-du-thuyen-trieu-do-cua-flc-2022101911275202.chn,2022-10-19T11:40:29,2022-10-19,FLC,0.0,1,0,1,0,Ngân hàng rao bán du thuyền triệu đô của FLC,0.0,0.0
-fe02bc42e5dca66d,https://cafef.vn/co-phieu-msh-giam-sau-chung-khoan-fpt-fts-bao-lo-trong-quy-3-20221020155258637.chn,2022-10-20T15:53:13,2022-10-20,FTS,0.0,1,0,1,0,"Cổ phiếu MSH giảm sâu, Chứng khoán FPT (FTS) báo lỗ trong quý 3",0.0,0.0
-fe02bc42e5dca66d,https://cafef.vn/co-phieu-msh-giam-sau-chung-khoan-fpt-fts-bao-lo-trong-quy-3-20221020155258637.chn,2022-10-20T15:53:13,2022-10-20,MSH,0.0,1,0,1,0,"Cổ phiếu MSH giảm sâu, Chứng khoán FPT (FTS) báo lỗ trong quý 3",0.0,0.0
-fe0ac45a7bd9bb4c,https://cafef.vn/so-sanh-lai-suat-tiet-kiem-vietinbank-vietcombank-bidv-gui-ngan-hang-nao-loi-nhat-20221030072139215.chn,2022-10-30T07:22:01,2022-10-30,BID,0.0,1,0,1,0,"So sánh lãi suất tiết kiệm VietinBank, Vietcombank, BIDV: Gửi ngân hàng nào lợi nhất?",0.0,0.0
-fe6f6f4806cd5ebd,https://cafef.vn/vndirect-gan-60000-ty-dong-trai-phieu-doanh-nghiep-se-dao-han-trong-quy-4-nhom-bat-dong-san-chiem-hon-1-3-20221012093600298.chn,2022-10-12T09:36:00,2022-10-12,VND,0.0,1,0,1,0,"VNDIRECT: Gần 60.000 tỷ đồng trái phiếu doanh nghiệp sẽ đáo hạn trong quý 4, nhóm Bất động sản chiếm hơn 1/3",0.0,0.0
+ticker,published_date,sentiment_score,article_count,positive_count,neutral_count,negative_count,negative_share,positive_share,neutral_share
+ACB,2022-10-01,0.0,1,0,1,0,0.0,0.0,1.0
+ACB,2022-10-02,0.0,1,0,1,0,0.0,0.0,1.0
+ACB,2022-10-15,0.0,1,0,1,0,0.0,0.0,1.0
+ACB,2022-10-22,0.0,1,0,1,0,0.0,0.0,1.0
+ACB,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+AMD,2022-10-18,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-12,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-30,0.0,1,0,1,0,0.0,0.0,1.0
+BID,2022-10-31,0.0,1,0,1,0,0.0,0.0,1.0
+BIG,2022-10-31,0.0,1,0,1,0,0.0,0.0,1.0
+CEN,2022-10-13,0.0,1,0,1,0,0.0,0.0,1.0
+CTG,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+CTG,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+DGC,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+DGC,2022-10-19,0.0,1,0,1,0,0.0,0.0,1.0
+DGC,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+DIG,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+DIG,2022-10-15,0.0,1,0,1,0,0.0,0.0,1.0
+DIG,2022-10-17,0.0,1,0,1,0,0.0,0.0,1.0
+DNP,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+DXG,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+DXG,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+EIB,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+EIB,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+EIB,2022-10-06,0.0,1,0,1,0,0.0,0.0,1.0
+EIB,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-02,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-05,0.0,3,0,3,0,0.0,0.0,1.0
+FLC,2022-10-12,0.0,2,0,2,0,0.0,0.0,1.0
+FLC,2022-10-15,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-18,0.0,2,0,2,0,0.0,0.0,1.0
+FLC,2022-10-19,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-23,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-26,0.0,1,0,1,0,0.0,0.0,1.0
+FLC,2022-10-30,0.0,2,0,2,0,0.0,0.0,1.0
+FLC,2022-10-31,0.0,2,0,2,0,0.0,0.0,1.0
+FTS,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+FTS,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+GAS,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+GAS,2022-10-11,0.0,1,0,1,0,0.0,0.0,1.0
+GAS,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+GEX,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+GEX,2022-10-26,0.3333333333333333,2,1,2,0,0.0,0.5,1.0
+GEX,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+GEX,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+HAG,2022-10-07,0.0,1,0,1,0,0.0,0.0,1.0
+HAG,2022-10-12,0.0,1,0,1,0,0.0,0.0,1.0
+HAG,2022-10-15,0.0,1,0,1,0,0.0,0.0,1.0
+HAG,2022-10-24,1.0,1,1,0,0,0.0,1.0,0.0
+HAG,2022-10-26,0.0,2,0,2,0,0.0,0.0,1.0
+HAG,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+HAG,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+HBC,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+HCM,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+HCM,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+HCM,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+HCM,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+HCM,2022-10-30,0.0,1,0,1,0,0.0,0.0,1.0
+HDB,2022-10-05,-1.0,1,0,0,1,1.0,0.0,0.0
+HDC,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-21,0.0,2,0,2,0,0.0,0.0,1.0
+HPG,2022-10-22,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-23,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+HPG,2022-10-31,0.0,2,0,2,0,0.0,0.0,1.0
+HSG,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+HSG,2022-10-31,0.0,1,0,1,0,0.0,0.0,1.0
+ICT,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-01,0.0,2,0,2,0,0.0,0.0,1.0
+ITA,2022-10-06,0.0,3,0,3,0,0.0,0.0,1.0
+ITA,2022-10-08,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-09,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-12,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-14,0.0,4,0,4,0,0.0,0.0,1.0
+ITA,2022-10-15,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-17,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-26,0.0,2,0,2,0,0.0,0.0,1.0
+ITA,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+ITA,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+KBC,2022-10-16,1.0,1,1,0,0,0.0,1.0,0.0
+LHG,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+LHG,2022-10-18,0.0,1,0,1,0,0.0,0.0,1.0
+LPB,2022-10-10,0.0,1,0,1,0,0.0,0.0,1.0
+LPB,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+LPB,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+LPB,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-01,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-05,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-09,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-23,0.0,1,0,1,0,0.0,0.0,1.0
+MBS,2022-10-30,0.0,1,0,1,0,0.0,0.0,1.0
+MSH,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+MWG,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+MWG,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+NKG,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+NVL,2022-10-06,0.0,1,0,1,0,0.0,0.0,1.0
+NVL,2022-10-11,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-01,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-16,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-18,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+OCB,2022-10-30,0.0,1,0,1,0,0.0,0.0,1.0
+PNJ,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+POW,2022-10-10,0.0,1,0,1,0,0.0,0.0,1.0
+POW,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+POW,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+PVD,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+REE,2022-10-08,0.0,1,0,1,0,0.0,0.0,1.0
+REE,2022-10-16,0.0,1,0,1,0,0.0,0.0,1.0
+REE,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+SAB,2022-10-20,0.0,2,0,2,0,0.0,0.0,1.0
+SAB,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+SAB,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-01,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-10,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-14,0.0,2,0,2,0,0.0,0.0,1.0
+SHB,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-22,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+SHB,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-04,0.0,2,0,2,0,0.0,0.0,1.0
+SSI,2022-10-08,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-11,0.0,2,0,2,0,0.0,0.0,1.0
+SSI,2022-10-18,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+SSI,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+STB,2022-10-10,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-20,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-24,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-27,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-28,0.0,1,0,1,0,0.0,0.0,1.0
+TCB,2022-10-29,0.0,1,0,1,0,0.0,0.0,1.0
+TGG,2022-10-08,0.0,1,0,1,0,0.0,0.0,1.0
+TNI,2022-10-25,0.0,1,0,1,0,0.0,0.0,1.0
+VCB,2022-10-13,0.0,1,0,1,0,0.0,0.0,1.0
+VCB,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+VIC,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+VIC,2022-10-04,0.0,1,0,1,0,0.0,0.0,1.0
+VIC,2022-10-07,0.0,1,0,1,0,0.0,0.0,1.0
+VIC,2022-10-11,0.0,1,0,1,0,0.0,0.0,1.0
+VIC,2022-10-12,0.0,1,0,1,0,0.0,0.0,1.0
+VIX,2022-10-19,0.0,1,0,1,0,0.0,0.0,1.0
+VIX,2022-10-21,1.0,1,1,0,0,0.0,1.0,0.0
+VND,2022-10-01,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-06,0.0,2,0,2,0,0.0,0.0,1.0
+VND,2022-10-09,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-12,-1.0,1,0,0,1,1.0,0.0,0.0
+VND,2022-10-13,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-14,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-17,0.0,2,0,2,0,0.0,0.0,1.0
+VND,2022-10-19,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-26,0.0,1,0,1,0,0.0,0.0,1.0
+VND,2022-10-28,0.0,2,0,2,0,0.0,0.0,1.0
+VND,2022-10-31,0.0,1,0,1,0,0.0,0.0,1.0
+VNM,2022-10-09,0.0,1,0,1,0,0.0,0.0,1.0
+VPB,2022-10-03,0.0,1,0,1,0,0.0,0.0,1.0
+VPS,2022-10-05,0.0,2,0,2,0,0.0,0.0,1.0
+VPS,2022-10-21,0.0,1,0,1,0,0.0,0.0,1.0
+VPS,2022-10-27,0.0,2,0,2,0,0.0,0.0,1.0
+VRE,2022-10-26,0.0,1,0,1,0,0.0,0.0,1.0
+VVS,2022-10-07,0.0,1,0,1,0,0.0,0.0,1.0

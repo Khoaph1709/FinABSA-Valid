@@ -8,14 +8,15 @@ import pandas as pd
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-LABEL_RE = re.compile(r"\b(isPOSITIVE|isNEGATIVE|isNEUTRAL)\b", re.I)
+LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
+# LABEL_RE = re.compile(r"\b(isPOSITIVE|isNEGATIVE|isNEUTRAL)\b", re.I)
 LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
     matches = LABEL_RE.findall(text or "")
     
-    return matches[-1].lower()[2:] if matches else "unknown"
+    return matches[-1].lower() if matches else "unknown"
 
 
 def main() -> None:

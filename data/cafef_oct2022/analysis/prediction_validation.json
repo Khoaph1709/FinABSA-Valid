@@ -7,8 +7,8 @@
   "duplicate_prediction_ids":0,
   "unknown_labels":0,
   "label_counts":{
-    "neutral":180,
-    "positive":18,
-    "negative":10
+    "neutral":202,
+    "positive":4,
+    "negative":2
   }
 }
