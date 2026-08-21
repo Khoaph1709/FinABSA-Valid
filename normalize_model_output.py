@@ -6,14 +6,18 @@ from pathlib import Path
 
 import pandas as pd
 
-LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL|POS|NEG|NEU)\b", re.I)
+FULL_LABEL_RE = re.compile(r"(POSITIVE|NEGATIVE|NEUTRAL)", re.I)
+COMPACT_LABEL_RE = re.compile(r"\b(POS|NEG|NEU)\b", re.I)
 LABEL_ALIASES = {"positive": "positive", "negative": "negative", "neutral": "neutral", "pos": "positive", "neg": "negative", "neu": "neutral"}
 SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
-    matches = LABEL_RE.findall(str(text))
-    return LABEL_ALIASES.get(matches[-1].lower(), "unknown") if matches else "unknown"
+    full_matches = FULL_LABEL_RE.findall(str(text))
+    if full_matches:
+        return LABEL_ALIASES[full_matches[-1].lower()]
+    compact_matches = COMPACT_LABEL_RE.findall(str(text))
+    return LABEL_ALIASES.get(compact_matches[-1].lower(), "unknown") if compact_matches else "unknown"
 
 
 def main() -> None:
@@ -31,13 +35,13 @@ def main() -> None:
         raw = pd.DataFrame({"raw_model_output": raw_path.read_text(encoding="utf-8").splitlines()})
 
     if "sample_id" in raw.columns:
-        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output", "label", "sentiment", "predicted_label", "class"] if c in raw.columns), None)
+        raw_text_col = next((c for c in ["classification_output", "label", "sentiment", "predicted_label", "class", "raw_model_output", "sentence", "output", "prediction", "text"] if c in raw.columns), None)
         if raw_text_col is None:
             raise ValueError(f"Could not identify prediction text column. Columns: {list(raw.columns)}")
         pred = raw[["sample_id", raw_text_col]].rename(columns={raw_text_col: "raw_model_output"})
         merged = inputs.merge(pred, on="sample_id", how="left", validate="one_to_one")
     else:
-        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output", "label", "sentiment", "predicted_label", "class"] if c in raw.columns), raw.columns[0])
+        raw_text_col = next((c for c in ["classification_output", "label", "sentiment", "predicted_label", "class", "raw_model_output", "sentence", "output", "prediction", "text"] if c in raw.columns), raw.columns[0])
         if len(raw) != len(inputs):
             raise ValueError(f"Row-order adapter requires equal rows: inputs={len(inputs)} raw={len(raw)}")
         merged = inputs.copy()

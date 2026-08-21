@@ -375,11 +375,29 @@ def main() -> None:
                     "abnormal_return ~ sentiment_score + negative_share + positive_share + log_article_count + C(ticker) + C(target_date)",
                     data=reg,
                 ).fit(cov_type="HC3")
-                fh.write(model.summary().as_text())
+                covariance_type = "HC3"
+                if not np.isfinite(model.bse.to_numpy(dtype=float)).all():
+                    # HC3 is undefined for observations with leverage exactly one
+                    # in this sparse ticker-day fixed-effect design. Keep the
+                    # regression specification, but use HC1 as a documented
+                    # finite-SE fallback rather than emitting inf/NaN p-values.
+                    model = smf.ols(
+                        "abnormal_return ~ sentiment_score + negative_share + positive_share + log_article_count + C(ticker) + C(target_date)",
+                        data=reg,
+                    ).fit(cov_type="HC1")
+                    covariance_type = "HC1_fallback_from_HC3"
                 coef = model.params.to_frame("coef")
                 coef["std_err"] = model.bse
                 coef["p_value"] = model.pvalues
                 coef.to_csv(outdir / "tables/panel_regression_coefficients.csv")
+                fh.write(
+                    f"r_squared={model.rsquared}\n"
+                    f"adj_r_squared={model.rsquared_adj}\n"
+                    f"covariance_type={covariance_type}\n"
+                    "coefficients:\n"
+                )
+                fh.write(coef.to_string())
+                fh.write("\n")
             else:
                 fh.write("Not enough observations for fixed-effect regression.\n")
         except Exception as exc:

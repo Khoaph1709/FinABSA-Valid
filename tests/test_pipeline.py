@@ -29,6 +29,7 @@ class ContractTests(unittest.TestCase):
             "neg": "negative",
             "NEU": "neutral",
             "The answer is POS.": "positive",
+            "The sentiment isNEUTRAL .": "neutral",
             "not a label": "unknown",
         }
         for raw, expected in cases.items():
