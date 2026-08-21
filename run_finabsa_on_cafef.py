@@ -5,16 +5,17 @@ import re
 from pathlib import Path
 
 import pandas as pd
-import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
+LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL|POS|NEG|NEU)\b", re.I)
+LABEL_CANONICAL = {"positive": "positive", "pos": "positive", "negative": "negative", "neg": "negative", "neutral": "neutral", "neu": "neutral"}
 LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
     matches = LABEL_RE.findall(text or "")
-    return matches[-1].lower() if matches else "unknown"
+    if not matches:
+        return "unknown"
+    return LABEL_CANONICAL.get(matches[-1].lower(), "unknown")
 
 
 def main() -> None:
@@ -28,6 +29,9 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
     args = parser.parse_args()
+
+    import torch
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
     device = "cuda" if args.device == "auto" and torch.cuda.is_available() else args.device
     if device == "auto":

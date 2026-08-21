@@ -35,7 +35,7 @@ def main() -> None:
             run([py, "download_market_data.py"])
         run([py, "run_experiments.py"])
         run([py, "run_robustness.py"])
-    run([py, "build_report.py"])
+    run([py, "build_report.py", "--out", "report_generated.md", "--pdf", "report_generated.pdf"])
     print("Pipeline completed. See report_generated.md and data/cafef_oct2022/analysis/")
 
 

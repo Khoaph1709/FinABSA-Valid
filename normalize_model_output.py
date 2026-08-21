@@ -31,13 +31,13 @@ def main() -> None:
         raw = pd.DataFrame({"raw_model_output": raw_path.read_text(encoding="utf-8").splitlines()})
 
     if "sample_id" in raw.columns:
-        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output"] if c in raw.columns), None)
+        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output", "label", "sentiment", "predicted_label", "class"] if c in raw.columns), None)
         if raw_text_col is None:
             raise ValueError(f"Could not identify prediction text column. Columns: {list(raw.columns)}")
         pred = raw[["sample_id", raw_text_col]].rename(columns={raw_text_col: "raw_model_output"})
         merged = inputs.merge(pred, on="sample_id", how="left", validate="one_to_one")
     else:
-        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output"] if c in raw.columns), raw.columns[0])
+        raw_text_col = next((c for c in ["raw_model_output", "sentence", "output", "prediction", "text", "classification_output", "label", "sentiment", "predicted_label", "class"] if c in raw.columns), raw.columns[0])
         if len(raw) != len(inputs):
             raise ValueError(f"Row-order adapter requires equal rows: inputs={len(inputs)} raw={len(raw)}")
         merged = inputs.copy()

@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT))
 
 from normalize_model_output import parse_label  # noqa: E402
 from run_experiments import attach_day_aggregates, next_trading_day  # noqa: E402
+from run_finabsa_on_cafef import parse_label as parse_inference_label  # noqa: E402
 from run_robustness import attach_lag_returns  # noqa: E402
 
 
@@ -33,6 +34,12 @@ class ContractTests(unittest.TestCase):
         for raw, expected in cases.items():
             with self.subTest(raw=raw):
                 self.assertEqual(parse_label(raw), expected)
+
+    def test_inference_runner_accepts_compact_labels(self):
+        cases = {"POS": "positive", "neg": "negative", "NEU": "neutral", "The model says POS.": "positive", "unknown output": "unknown"}
+        for raw, expected in cases.items():
+            with self.subTest(raw=raw):
+                self.assertEqual(parse_inference_label(raw), expected)
 
     def test_aggregate_join_uses_keys_not_row_order(self):
         sentiment = pd.DataFrame(
@@ -94,6 +101,26 @@ class ContractTests(unittest.TestCase):
 
 
 class CliContractTests(unittest.TestCase):
+    def test_normalizer_accepts_label_column(self):
+        inputs_path = ROOT / "data/cafef_oct2022/model_inputs_strict.csv"
+        inputs = pd.read_csv(inputs_path)
+        with tempfile.TemporaryDirectory() as td:
+            td = Path(td)
+            raw_path = td / "raw.csv"
+            out_path = td / "normalized.csv"
+            compact = (["pos", "neg", "neu"] * ((len(inputs) + 2) // 3))[: len(inputs)]
+            pd.DataFrame({"sample_id": inputs["sample_id"], "label": compact}).to_csv(raw_path, index=False)
+            completed = subprocess.run(
+                [sys.executable, str(ROOT / "normalize_model_output.py"), "--raw", str(raw_path), "--inputs", str(inputs_path), "--out", str(out_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn("unparsed= 0", completed.stdout)
+            normalized = pd.read_csv(out_path)
+            self.assertEqual(normalized["classification_output"].tolist()[:3], ["positive", "negative", "neutral"])
+            self.assertTrue((normalized["inference_status"] == "ok").all())
+
     def test_validator_accepts_compact_labels_and_preserves_alignment(self):
         inputs_path = ROOT / "data/cafef_oct2022/model_inputs_strict.csv"
         inputs = pd.read_csv(inputs_path)
@@ -173,6 +200,27 @@ class CliContractTests(unittest.TestCase):
             self.assertTrue((analysis / "event_observations.csv").exists())
             self.assertTrue((analysis / "figures/sentiment_vs_abnormal_return.png").exists())
             self.assertTrue((analysis / "figures/abnormal_return_by_label.png").exists())
+            self.assertTrue((analysis / "tables/car_tests.csv").exists())
+            self.assertTrue((analysis / "tables/news_day_control_tests.csv").exists())
+            car_tests = pd.read_csv(analysis / "tables/car_tests.csv")
+            self.assertEqual(set(car_tests["window_key"].unique()), {"0_0", "0_1", "0_3"})
+            self.assertTrue({"t_p", "sign_flip_p", "bootstrap_ci_low", "bootstrap_ci_high"}.issubset(car_tests.columns))
+            control_tests = pd.read_csv(analysis / "tables/news_day_control_tests.csv")
+            self.assertIn("permutation_p", control_tests.columns)
+            report_md = td / "report_generated.md"
+            report_pdf = td / "report_generated.pdf"
+            subprocess.run(
+                [sys.executable, str(ROOT / "build_report.py"), "--analysis", str(analysis), "--out", str(report_md), "--pdf", str(report_pdf)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertTrue(report_md.exists() and report_md.stat().st_size > 0)
+            self.assertTrue(report_pdf.exists() and report_pdf.stat().st_size > 0)
+            report_text = report_md.read_text(encoding="utf-8")
+            self.assertIn("## 5. News-price reaction tests", report_text)
+            self.assertIn("## 6. Sentiment-group tests", report_text)
+            self.assertIn("## 8. Robustness and sensitivity", report_text)
 
 
 if __name__ == "__main__":
