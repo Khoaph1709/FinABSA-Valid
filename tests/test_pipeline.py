@@ -193,6 +193,13 @@ class CliContractTests(unittest.TestCase):
             self.assertTrue((analysis / "event_observations.csv").exists())
             self.assertTrue((analysis / "figures/sentiment_vs_abnormal_return.png").exists())
             self.assertTrue((analysis / "figures/abnormal_return_by_label.png").exists())
+            self.assertTrue((analysis / "tables/car_tests.csv").exists())
+            self.assertTrue((analysis / "tables/news_day_control_tests.csv").exists())
+            car_tests = pd.read_csv(analysis / "tables/car_tests.csv")
+            self.assertEqual(set(car_tests["window_key"].unique()), {"0_0", "0_1", "0_3"})
+            self.assertTrue({"t_p", "sign_flip_p", "bootstrap_ci_low", "bootstrap_ci_high"}.issubset(car_tests.columns))
+            control_tests = pd.read_csv(analysis / "tables/news_day_control_tests.csv")
+            self.assertIn("permutation_p", control_tests.columns)
             report_md = td / "report_generated.md"
             report_pdf = td / "report_generated.pdf"
             subprocess.run(
@@ -204,8 +211,9 @@ class CliContractTests(unittest.TestCase):
             self.assertTrue(report_md.exists() and report_md.stat().st_size > 0)
             self.assertTrue(report_pdf.exists() and report_pdf.stat().st_size > 0)
             report_text = report_md.read_text(encoding="utf-8")
-            self.assertIn("## 5. Statistical tests", report_text)
-            self.assertIn("## 7. Robustness and sensitivity", report_text)
+            self.assertIn("## 5. News-price reaction tests", report_text)
+            self.assertIn("## 6. Sentiment-group tests", report_text)
+            self.assertIn("## 8. Robustness and sensitivity", report_text)
 
 
 if __name__ == "__main__":

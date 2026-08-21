@@ -9,6 +9,9 @@ import pandas as pd
 import seaborn as sns
 
 
+LABEL_ORDER = ["negative", "neutral", "positive"]
+
+
 def fit_market_model(prices: pd.DataFrame, market: pd.DataFrame, crisis_start: pd.Timestamp) -> pd.DataFrame:
     market = market[["date", "return"]].rename(columns={"return": "market_return"})
     rows = []
@@ -93,7 +96,14 @@ def welch_permutation_bootstrap(panel: pd.DataFrame, outdir: Path) -> pd.DataFra
             rows.append(row)
             continue
         observed = float(a.mean() - b.mean())
-        welch = stats.ttest_ind(a, b, equal_var=False, nan_policy="omit")
+        std_a = float(np.std(a, ddof=1))
+        std_b = float(np.std(b, ddof=1))
+        if np.isclose(std_a, 0.0) and np.isclose(std_b, 0.0):
+            welch_t = 0.0 if np.isclose(observed, 0.0) else float(np.sign(observed) * np.inf)
+            welch_p = 1.0 if np.isclose(observed, 0.0) else 0.0
+        else:
+            welch = stats.ttest_ind(a, b, equal_var=False, nan_policy="omit")
+            welch_t, welch_p = float(welch.statistic), float(welch.pvalue)
         pooled = np.concatenate([a, b])
         n_a = len(a)
         perm_diffs = np.empty(5000, dtype=float)
@@ -105,11 +115,147 @@ def welch_permutation_bootstrap(panel: pd.DataFrame, outdir: Path) -> pd.DataFra
         for i in range(len(boot_diffs)):
             boot_diffs[i] = rng.choice(a, len(a), replace=True).mean() - rng.choice(b, len(b), replace=True).mean()
         ci_low, ci_high = np.percentile(boot_diffs, [2.5, 97.5])
-        row.update({"mean_a": float(a.mean()), "mean_b": float(b.mean()), "difference": observed, "welch_t": float(welch.statistic), "welch_p": float(welch.pvalue), "permutation_p": permutation_p, "bootstrap_ci_low": float(ci_low), "bootstrap_ci_high": float(ci_high)})
+        row.update({"mean_a": float(a.mean()), "mean_b": float(b.mean()), "difference": observed, "welch_t": welch_t, "welch_p": welch_p, "permutation_p": permutation_p, "bootstrap_ci_low": float(ci_low), "bootstrap_ci_high": float(ci_high)})
         rows.append(row)
     result = pd.DataFrame(rows)
     result.to_csv(outdir / "tables/sentiment_group_tests.csv", index=False)
     return result
+
+
+def _bootstrap_mean_ci(values: np.ndarray, rng: np.random.Generator, n_boot: int = 5000) -> tuple[float, float]:
+    if len(values) < 2:
+        return (np.nan, np.nan)
+    means = np.empty(n_boot, dtype=float)
+    for i in range(n_boot):
+        means[i] = rng.choice(values, len(values), replace=True).mean()
+    low, high = np.percentile(means, [2.5, 97.5])
+    return float(low), float(high)
+
+
+def _sign_flip_pvalue(values: np.ndarray, rng: np.random.Generator, n_perm: int = 5000) -> float:
+    if len(values) < 2:
+        return np.nan
+    observed = abs(float(values.mean()))
+    signs = rng.choice(np.array([-1.0, 1.0]), size=(n_perm, len(values)))
+    perm_means = (signs * values[None, :]).mean(axis=1)
+    return float((np.sum(np.abs(perm_means) >= observed) + 1) / (n_perm + 1))
+
+
+def build_car_analysis(events: pd.DataFrame, prices: pd.DataFrame, outdir: Path, crisis_start: pd.Timestamp, crisis_end: pd.Timestamp) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Build event-window CARs and tests using ticker-day abnormal returns."""
+    from scipy import stats
+
+    p = prices.copy()
+    p["date"] = pd.to_datetime(p["date"], errors="coerce").dt.normalize()
+    p["ticker"] = p["ticker"].astype(str).str.upper().str.strip()
+    p["abnormal_return"] = pd.to_numeric(p["abnormal_return"], errors="coerce")
+    p = p.dropna(subset=["ticker", "date", "abnormal_return"]).sort_values(["ticker", "date"])
+    windows = {"0_0": 0, "0_1": 1, "0_3": 3}
+    event_units = events.dropna(subset=["ticker", "target_date"]).copy()
+    event_units["ticker"] = event_units["ticker"].astype(str).str.upper().str.strip()
+    event_units["target_date"] = pd.to_datetime(event_units["target_date"], errors="coerce").dt.normalize()
+    event_units = event_units.groupby(["ticker", "target_date"], as_index=False).agg(
+        sample_id=("sample_id", "first"), article_count=("article_id", "nunique"),
+        label=("label", lambda x: x.value_counts().index[0] if len(x) else "unknown"),
+        sentiment_score=("sentiment_score", "mean"),
+    )
+    rows = []
+    for _, event in event_units.iterrows():
+        ticker = str(event["ticker"]).upper().strip()
+        target = pd.Timestamp(event["target_date"]).normalize()
+        grp = p[p["ticker"] == ticker].reset_index(drop=True)
+        dates = grp["date"].to_numpy(dtype="datetime64[ns]")
+        start = int(np.searchsorted(dates, np.datetime64(target), side="left"))
+        if start >= len(grp) or dates[start] != np.datetime64(target):
+            continue
+        ars = grp["abnormal_return"].to_numpy(dtype=float)
+        row = {"sample_id": event.get("sample_id", ""), "article_count": event.get("article_count", 1), "ticker": ticker, "target_date": target, "label": event.get("label", "unknown"), "sentiment_score": event.get("sentiment_score", np.nan)}
+        for window, end_offset in windows.items():
+            end = start + end_offset + 1
+            values = ars[start:end]
+            row[f"car_{window}"] = float(values.sum()) if len(values) == end_offset + 1 and np.isfinite(values).all() else np.nan
+        rows.append(row)
+    car_events = pd.DataFrame(rows)
+    car_events.to_csv(outdir / "car_event_rows.csv", index=False)
+
+    test_rows = []
+    rng = np.random.default_rng(2026)
+    groups = [("all", car_events)] + [(label, car_events[car_events["label"] == label]) for label in LABEL_ORDER]
+    for window in windows:
+        col = f"car_{window}"
+        for group, subset in groups:
+            values = pd.to_numeric(subset[col], errors="coerce").dropna().to_numpy(dtype=float) if col in subset else np.array([], dtype=float)
+            result = {"window": f"[0,+{windows[window]}]", "window_key": window, "group": group, "n": len(values), "mean_car": np.nan, "median_car": np.nan, "t_stat": np.nan, "t_p": np.nan, "sign_flip_p": np.nan, "bootstrap_ci_low": np.nan, "bootstrap_ci_high": np.nan}
+            if len(values) >= 2:
+                std = float(np.std(values, ddof=1))
+                if np.isclose(std, 0.0):
+                    t_stat = 0.0 if np.isclose(float(values.mean()), 0.0) else float(np.sign(values.mean()) * np.inf)
+                    t_p = 1.0 if np.isclose(float(values.mean()), 0.0) else 0.0
+                else:
+                    ttest = stats.ttest_1samp(values, 0.0, nan_policy="omit")
+                    t_stat, t_p = float(ttest.statistic), float(ttest.pvalue)
+                ci_low, ci_high = _bootstrap_mean_ci(values, rng)
+                result.update({"mean_car": float(values.mean()), "median_car": float(np.median(values)), "t_stat": t_stat, "t_p": t_p, "sign_flip_p": _sign_flip_pvalue(values, rng), "bootstrap_ci_low": ci_low, "bootstrap_ci_high": ci_high})
+            test_rows.append(result)
+    car_tests = pd.DataFrame(test_rows)
+    car_tests.to_csv(outdir / "tables/car_tests.csv", index=False)
+    return car_events, car_tests
+
+
+def build_news_day_control(events: pd.DataFrame, prices: pd.DataFrame, outdir: Path, crisis_start: pd.Timestamp, crisis_end: pd.Timestamp) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Compare abnormal returns on news days versus eligible non-news days."""
+    from scipy import stats
+
+    event_base = events.dropna(subset=["ticker", "target_date"]).copy()
+    event_base["ticker"] = event_base["ticker"].astype(str).str.upper().str.strip()
+    event_base["target_date"] = pd.to_datetime(event_base["target_date"], errors="coerce").dt.normalize()
+    event_base = event_base.dropna(subset=["target_date"])
+    panel = event_base.groupby(["ticker", "target_date"], as_index=False).agg(
+        sentiment_score=("sentiment_score", "mean"),
+        article_count=("article_id", "nunique"),
+        label=("label", lambda x: x.value_counts().index[0] if len(x) else "unknown"),
+    )
+    p = prices.copy()
+    p["ticker"] = p["ticker"].astype(str).str.upper().str.strip()
+    p["date"] = pd.to_datetime(p["date"], errors="coerce").dt.normalize()
+    p["abnormal_return"] = pd.to_numeric(p["abnormal_return"], errors="coerce")
+    eligible = set(event_base["ticker"].unique())
+    control = p[p["ticker"].isin(eligible) & p["date"].between(crisis_start, crisis_end)].copy()
+    control = control[["ticker", "date", "abnormal_return"]].rename(columns={"date": "target_date"})
+    control = control.merge(panel, on=["ticker", "target_date"], how="left", validate="one_to_one")
+    control["news_event"] = control["label"].notna().astype(int)
+    control["label"] = control["label"].fillna("no_news")
+    control["sentiment_score"] = pd.to_numeric(control["sentiment_score"], errors="coerce")
+    control["article_count"] = pd.to_numeric(control["article_count"], errors="coerce").fillna(0)
+    control.to_csv(outdir / "tables/news_day_control.csv", index=False)
+
+    news = control.loc[control["news_event"] == 1, "abnormal_return"].dropna().to_numpy(dtype=float)
+    no_news = control.loc[control["news_event"] == 0, "abnormal_return"].dropna().to_numpy(dtype=float)
+    row = {"comparison": "news_day_minus_no_news_day", "n_news": len(news), "n_no_news": len(no_news), "mean_news_ar": np.nan, "mean_no_news_ar": np.nan, "difference": np.nan, "welch_t": np.nan, "welch_p": np.nan, "permutation_p": np.nan, "bootstrap_ci_low": np.nan, "bootstrap_ci_high": np.nan}
+    if len(news) >= 2 and len(no_news) >= 2:
+        rng = np.random.default_rng(2027)
+        observed = float(news.mean() - no_news.mean())
+        std_news = float(np.std(news, ddof=1))
+        std_no_news = float(np.std(no_news, ddof=1))
+        if np.isclose(std_news, 0.0) and np.isclose(std_no_news, 0.0):
+            welch_t = 0.0 if np.isclose(observed, 0.0) else float(np.sign(observed) * np.inf)
+            welch_p = 1.0 if np.isclose(observed, 0.0) else 0.0
+        else:
+            welch = stats.ttest_ind(news, no_news, equal_var=False, nan_policy="omit")
+            welch_t, welch_p = float(welch.statistic), float(welch.pvalue)
+        pooled = np.concatenate([news, no_news])
+        perm = np.empty(5000, dtype=float)
+        for i in range(len(perm)):
+            shuffled = rng.permutation(pooled)
+            perm[i] = shuffled[: len(news)].mean() - shuffled[len(news):].mean()
+        boot = np.empty(5000, dtype=float)
+        for i in range(len(boot)):
+            boot[i] = rng.choice(news, len(news), replace=True).mean() - rng.choice(no_news, len(no_news), replace=True).mean()
+        ci_low, ci_high = np.percentile(boot, [2.5, 97.5])
+        row.update({"mean_news_ar": float(news.mean()), "mean_no_news_ar": float(no_news.mean()), "difference": observed, "welch_t": welch_t, "welch_p": welch_p, "permutation_p": float((np.sum(np.abs(perm) >= abs(observed)) + 1) / (len(perm) + 1)), "bootstrap_ci_low": float(ci_low), "bootstrap_ci_high": float(ci_high)})
+    tests = pd.DataFrame([row])
+    tests.to_csv(outdir / "tables/news_day_control_tests.csv", index=False)
+    return control, tests
 
 
 def main() -> None:
@@ -174,6 +320,10 @@ def main() -> None:
         mean_article_count=("article_count", "mean"),
     ).reset_index()
     summary.to_csv(outdir / "tables/event_summary_by_label.csv", index=False)
+    crisis_start = pd.Timestamp(args.crisis_start)
+    crisis_end = pd.Timestamp(args.crisis_end)
+    car_events, car_tests = build_car_analysis(events[events["in_crisis"]].copy(), ticker_prices, outdir, crisis_start, crisis_end)
+    control, control_tests = build_news_day_control(events, ticker_prices, outdir, crisis_start, crisis_end)
     # Build a genuine ticker-day panel before regression. The event table can
     # contain multiple articles for the same ticker-day, but the market outcome
     # is one return per ticker-day and must not be repeated in the regression.

@@ -53,7 +53,7 @@ def safe_float(value: Any) -> float | None:
         return None
 
 
-def generate_figures(analysis: Path, validation: dict[str, Any], summary: pd.DataFrame, daily: pd.DataFrame, group_tests: pd.DataFrame, robustness: pd.DataFrame, market_models: pd.DataFrame, panel: pd.DataFrame) -> dict[str, Path]:
+def generate_figures(analysis: Path, validation: dict[str, Any], summary: pd.DataFrame, daily: pd.DataFrame, group_tests: pd.DataFrame, car_tests: pd.DataFrame, control_tests: pd.DataFrame, robustness: pd.DataFrame, market_models: pd.DataFrame, panel: pd.DataFrame) -> dict[str, Path]:
     figures = analysis / "figures"
     figures.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"font.family": "DejaVu Sans", "axes.titlesize": 12, "axes.labelsize": 10})
@@ -132,6 +132,44 @@ def generate_figures(analysis: Path, validation: dict[str, Any], summary: pd.Dat
             plt.close(fig)
             output["group_tests"] = path
 
+    if not car_tests.empty and {"window_key", "group", "mean_car", "bootstrap_ci_low", "bootstrap_ci_high"}.issubset(car_tests.columns):
+        car_all = car_tests[car_tests["group"] == "all"].dropna(subset=["mean_car"]).copy()
+        if not car_all.empty:
+            fig, ax = plt.subplots(figsize=(8, 4.8))
+            x = np.arange(len(car_all))
+            means = car_all["mean_car"].to_numpy(dtype=float)
+            lower = means - car_all["bootstrap_ci_low"].to_numpy(dtype=float)
+            upper = car_all["bootstrap_ci_high"].to_numpy(dtype=float) - means
+            ax.errorbar(x, means, yerr=[lower, upper], fmt="o", capsize=5, color="#0f766e")
+            ax.axhline(0, color="#777", linewidth=0.8)
+            ax.set_xticks(x, car_all["window"])
+            ax.set_ylabel("Mean CAR (%)")
+            ax.set_xlabel("Event window")
+            ax.set_title("Cumulative abnormal return after news events")
+            fig.tight_layout()
+            path = figures / "car_by_window.png"
+            fig.savefig(path, dpi=220)
+            plt.close(fig)
+            output["car_by_window"] = path
+
+    if not control_tests.empty and {"comparison", "difference", "bootstrap_ci_low", "bootstrap_ci_high"}.issubset(control_tests.columns):
+        control = control_tests.dropna(subset=["difference"]).copy()
+        if not control.empty:
+            fig, ax = plt.subplots(figsize=(7, 4.5))
+            mean = float(control["difference"].iloc[0])
+            low = float(control["bootstrap_ci_low"].iloc[0])
+            high = float(control["bootstrap_ci_high"].iloc[0])
+            ax.errorbar([0], [mean], yerr=[[mean - low], [high - mean]], fmt="o", capsize=5, color="#b45309")
+            ax.axhline(0, color="#777", linewidth=0.8)
+            ax.set_xticks([0], ["News − no-news"])
+            ax.set_ylabel("Difference in mean AR (%)")
+            ax.set_title("News-day versus eligible no-news days")
+            fig.tight_layout()
+            path = figures / "news_day_control.png"
+            fig.savefig(path, dpi=220)
+            plt.close(fig)
+            output["news_day_control"] = path
+
     if not robustness.empty and {"lag", "mean_ar"}.issubset(robustness.columns):
         rb = robustness.dropna(subset=["lag", "mean_ar"]).sort_values("lag")
         if not rb.empty:
@@ -208,13 +246,15 @@ def main() -> None:
     summary = read_csv(tables / "event_summary_by_label.csv")
     daily = read_csv(tables / "daily_market_sentiment.csv")
     group_tests = read_csv(tables / "sentiment_group_tests.csv")
+    car_tests = read_csv(tables / "car_tests.csv")
+    control_tests = read_csv(tables / "news_day_control_tests.csv")
     panel_summary = read_csv(tables / "panel_summary_by_label.csv")
     robustness = read_csv(tables / "robustness_summary.csv")
     coef = read_csv(tables / "panel_regression_coefficients.csv")
     panel = read_csv(tables / "panel_regression_data.csv")
     market_models = read_csv(analysis / "market_models.csv")
     meta = parse_panel_meta(tables / "panel_regression.txt")
-    figures = generate_figures(analysis, validation, summary, daily, group_tests, robustness, market_models, panel)
+    figures = generate_figures(analysis, validation, summary, daily, group_tests, car_tests, control_tests, robustness, market_models, panel)
 
     if not coef.empty:
         term_col = "Unnamed: 0" if "Unnamed: 0" in coef.columns else coef.columns[0]
@@ -269,7 +309,16 @@ def main() -> None:
     if not panel_summary.empty:
         lines += ["### Panel-level summary", "", md_table(panel_summary), ""]
 
-    lines += ["## 5. Statistical tests", ""]
+    lines += ["## 5. News-price reaction tests", "", "Phần này kiểm tra trực tiếp liệu các event news có đi kèm phản ứng giá bất thường hay không. `CAR` là tổng abnormal return trong cửa sổ sau ngày event. Kiểm định t một mẫu và sign-flip permutation test kiểm tra CAR trung bình có khác 0; bootstrap cung cấp khoảng tin cậy 95% cho effect size.", ""]
+    lines += [md_table(car_tests), ""] if not car_tests.empty else ["_No CAR test output was available._", ""]
+    if "car_by_window" in figures:
+        lines += [f"![Cumulative abnormal return by window]({relative_image(figures['car_by_window'], out)})", ""]
+    if not control_tests.empty:
+        lines += ["### News-day versus no-news-day control", "", md_table(control_tests), ""]
+        if "news_day_control" in figures:
+            lines += [f"![News-day versus no-news-day control]({relative_image(figures['news_day_control'], out)})", ""]
+
+    lines += ["## 6. Sentiment-group tests", ""]
     if group_tests.empty:
         lines += ["_No group-test output was available._", ""]
     else:
@@ -277,9 +326,9 @@ def main() -> None:
         if "group_tests" in figures:
             lines += [f"![Sentiment group contrasts]({relative_image(figures['group_tests'], out)})", ""]
 
-    lines += ["## 6. Panel regression", "", f"Specification sử dụng ticker fixed effects và date fixed effects. Metadata: observations={panel_obs}, unique_tickers={panel_tickers}, unique_dates={panel_dates}.", "", md_table(coef), ""]
+    lines += ["## 7. Panel regression", "", f"Specification sử dụng ticker fixed effects và date fixed effects. Metadata: observations={panel_obs}, unique_tickers={panel_tickers}, unique_dates={panel_dates}.", "", md_table(coef), ""]
 
-    lines += ["## 7. Robustness and sensitivity", ""]
+    lines += ["## 8. Robustness and sensitivity", ""]
     if robustness.empty:
         lines += ["_No robustness output was available._", ""]
     else:
@@ -287,7 +336,7 @@ def main() -> None:
         if "robustness" in figures:
             lines += [f"![Lag robustness]({relative_image(figures['robustness'], out)})", ""]
 
-    lines += ["## 8. Figures overview", ""]
+    lines += ["## 9. Figures overview", ""]
     for title, key in [
         ("Prediction distribution", "prediction_distribution"),
         ("Daily sentiment and abnormal return", "daily_sentiment_ar"),
@@ -296,13 +345,13 @@ def main() -> None:
             lines += [f"### {title}", "", f"![{title}]({relative_image(figures[key], out)})", ""]
 
     lines += [
-        "## 9. Reproducibility and interpretation",
+        "## 10. Reproducibility and interpretation",
         "",
         "Các file trung gian quan trọng gồm `prediction_validation.json`, `article_ticker_sentiment.csv`, `article_ticker_day_sentiment.csv`, `event_observations.csv`, `panel_regression_data.csv`, `sentiment_group_tests.csv` và `robustness_summary.csv`. Không được ghép aggregate theo thứ tự dòng; pipeline dùng khóa `ticker + published_date`.",
         "",
         "Kết quả cần được diễn giải theo hướng: mô hình tạo ra một phân bố sentiment và các nhóm sentiment có abnormal return khác nhau trong mẫu quan sát. Nếu p-value hoặc confidence interval không ủng hộ effect, kết luận phù hợp là chưa có bằng chứng ổn định trong cửa sổ dữ liệu này. Kết quả không chứng minh tin tức gây ra biến động giá.",
         "",
-        "## 10. Limitations",
+        "## 11. Limitations",
         "",
         "CafeF chỉ là một nguồn tin; entity linking và timestamp có thể tạo measurement error. Phân bố nhãn có thể mất cân bằng. Market model phụ thuộc vào coverage và trạng thái adjusted/unadjusted của dữ liệu giá. Cửa sổ một tháng có statistical power hạn chế, nên các kiểm định bổ sung cần được xem là sensitivity analysis.",
         "",

@@ -58,7 +58,7 @@ python3 build_report.py
 
 The market downloader uses a per-ticker cache under `data/cafef_oct2022/market_cache/` and writes checkpoints after each ticker. The default delay is intentionally conservative because guest vnstock access can be rate-limited. If a request fails, it is recorded in `market_download_errors.json`; rerunning the same command resumes from cached tickers.
 
-Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, `article_ticker_sentiment.csv` ở cấp article–ticker, `article_ticker_day_sentiment.csv` aggregate ở cấp ticker–ngày, event observations, market model, event summary, regression coefficients, regression report, figures và `report_generated.md`.
+Kết quả nằm trong `data/cafef_oct2022/analysis/`, gồm validation JSON, `article_ticker_sentiment.csv` ở cấp article–ticker, `article_ticker_day_sentiment.csv` aggregate ở cấp ticker–ngày, event observations, market model, event summary, `car_event_rows.csv`, `car_tests.csv`, `news_day_control.csv`, `news_day_control_tests.csv`, regression coefficients, regression report, figures và unified report `report_generated.md`/`report_generated.pdf`.
 
 `run_experiments.py` không ghép hai file sentiment theo thứ tự dòng. Nó chuẩn hóa `published_date`, sau đó join `article_ticker_sentiment.csv` với `article_ticker_day_sentiment.csv` bằng khóa `ticker + published_date`. Vì vậy không được tự gán `sentiment["article_count"] = sentiment2["article_count"]` nếu hai file chưa được join theo khóa.
 
@@ -86,7 +86,7 @@ Test suite không tạo prediction giả cho nghiên cứu; các fixture nhỏ c
 
 Pipeline tính next-trading-day return, market return, expected return và abnormal return. Estimation window mặc định bắt đầu từ ngày đầu dữ liệu giá đến trước `2022-10-01`, còn crisis window là tháng 10/2022. Nếu đổi crisis month, truyền `--crisis-start` và `--crisis-end` cho `run_experiments.py`.
 
-Các bảng chính gồm kết quả theo nhãn sentiment, daily sentiment–market aggregate, market model theo ticker và hồi quy với sentiment score, negative share, positive share, log article count, ticker fixed effect và date fixed effect.
+Các bảng chính gồm kết quả theo nhãn sentiment, daily sentiment–market aggregate, CAR theo các cửa sổ `[0,0]`, `[0,+1]`, `[0,+3]`, kiểm định CAR khác 0, so sánh news-day với eligible no-news-day, market model theo ticker và hồi quy với sentiment score, negative share, positive share, log article count, ticker fixed effect và date fixed effect.
 
 ## Các kiểm định nên bổ sung trong report
 
