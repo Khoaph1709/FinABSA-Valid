@@ -30,8 +30,10 @@ def preprocess(examples):
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
-tokenized_dataset = dataset.map(preprocess, batched=True)
-tokenized_dataset = tokenized_dataset.train_test_split(test_size=0.1)
+split_dataset = dataset.train_test_split(test_size=0.2, seed=42)
+split_dataset["train"].to_csv("train_raw.csv", index=False)
+split_dataset["test"].to_csv("test_raw.csv", index=False)
+tokenized_dataset = split_dataset.map(preprocess, batched=True)
 
 data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
 
