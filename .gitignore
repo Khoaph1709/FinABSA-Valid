@@ -1,5 +1,7 @@
-__pycache__/
 *.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
 *.log
 *.tmp
 cafef_*_report*.txt
@@ -22,3 +24,10 @@ finabsa-*/
 MODEL/
 
 # Keep normalized analysis tables and input manifests under data/.
+
+# Local environments and submission archives.
+.venv/
+venv/
+.env
+.DS_Store
+*.zip
