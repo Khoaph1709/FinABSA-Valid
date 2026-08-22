@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 
-def attach_lag_returns(sentiment: pd.DataFrame, prices: pd.DataFrame, market_ticker: str) -> pd.DataFrame:
+def attach_lag_returns(sentiment: pd.DataFrame, prices: pd.DataFrame, market_ticker: str, crisis_start: str = "2022-10-01", crisis_end: str = "2022-10-31") -> pd.DataFrame:
     p = prices.copy()
     p["date"] = pd.to_datetime(p["date"], errors="coerce").dt.normalize()
     p["close"] = pd.to_numeric(p["close"], errors="coerce")
@@ -27,7 +27,7 @@ def attach_lag_returns(sentiment: pd.DataFrame, prices: pd.DataFrame, market_tic
         new_idx = idx + lag
         shifted["eval_date"] = [dates[i] if i < len(dates) else pd.NaT for i in new_idx]
         joined = shifted.merge(p[["ticker", "date", "return", "market_return", "ar"]], left_on=["ticker", "eval_date"], right_on=["ticker", "date"], how="left")
-        crisis = joined[joined["eval_date"].between(pd.Timestamp("2022-10-01"), pd.Timestamp("2022-10-31"))]
+        crisis = joined[joined["eval_date"].between(pd.Timestamp(crisis_start), pd.Timestamp(crisis_end))]
         rows.append({
             "design": f"lag_{lag}", "lag": lag, "n": len(crisis),
             "mean_ar": crisis["ar"].mean(), "median_ar": crisis["ar"].median(),
@@ -43,6 +43,8 @@ def main() -> None:
     parser.add_argument("--events", default="data/cafef_oct2022/analysis/event_observations.csv")
     parser.add_argument("--prices", default="data/cafef_oct2022/market_prices.csv")
     parser.add_argument("--out", default="data/cafef_oct2022/analysis/tables/robustness_summary.csv")
+    parser.add_argument("--crisis-start", default="2022-10-01")
+    parser.add_argument("--crisis-end", default="2022-10-31")
     args = parser.parse_args()
     events = pd.read_csv(args.events).fillna("")
     prices = pd.read_csv(args.prices).fillna("")
@@ -51,7 +53,7 @@ def main() -> None:
     if market_ticker is None:
         raise ValueError("Cannot find VN-Index ticker in prices")
     events["label"] = events["label"].astype(str).str.lower()
-    result = attach_lag_returns(events, prices, market_ticker)
+    result = attach_lag_returns(events, prices, market_ticker, args.crisis_start, args.crisis_end)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     result.to_csv(args.out, index=False)
     print(result.to_string(index=False))

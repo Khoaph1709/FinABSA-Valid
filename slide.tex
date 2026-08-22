@@ -1,0 +1,398 @@
+% Prism/pdfLaTeX-compatible Beamer deck.
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,array,ragged2e,xcolor}
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamersize{text margin left=0.55cm,text margin right=0.55cm}
+
+\definecolor{FinBlue}{RGB}{14,63,116}
+\definecolor{FinRed}{RGB}{162,47,47}
+\definecolor{FinGray}{RGB}{72,80,90}
+\setbeamercolor{structure}{fg=FinBlue}
+\setbeamercolor{frametitle}{fg=white,bg=FinBlue}
+\setbeamercolor{title}{fg=FinBlue}
+\setbeamercolor{block title}{fg=white,bg=FinBlue}
+\setbeamercolor{block body}{bg=FinBlue!5!white}
+\setbeamercolor{alerted text}{fg=FinRed}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\newcommand{\source}[1]{\par\vspace{0.04cm}{\scriptsize\color{FinGray}\textit{Nguồn: #1}}}
+\newcommand{\highlight}[1]{\textcolor{FinBlue}{\textbf{#1}}}
+\newcommand{\maybegraphic}[2][\linewidth]{%
+  \IfFileExists{#2}{\includegraphics[width=#1]{#2}}{%
+  \fbox{\parbox[c][0.18\textheight][c]{#1}{\centering\scriptsize Thiếu file\\\texttt{#2}}}}}
+\newcommand{\periodpanel}[2]{%
+  \begin{minipage}[t]{0.47\textwidth}\centering
+  {\scriptsize\textbf{#1}}\\[-0.04cm]
+  \maybegraphic[0.98\linewidth]{#2}
+  \end{minipage}}
+
+\title[FinABSA--CafeF]{Kiểm định FinABSA trên tin tức tài chính Việt Nam}
+\subtitle{Aspect-Based Sentiment Analysis, CafeF và phản ứng giá cổ phiếu 2019--2022}
+\author{\small Lê Khắc Quang Huy \quad | \quad Phùng Hữu Khoa \\[0.12cm]
+\small Nguyễn Nam Khánh \quad | \quad Lê Tuấn Duy}
+\institute{Natural Language Processing}
+\date{\today}
+
+\begin{document}
+
+% Slide 1
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Slide 2
+\begin{frame}{Bài toán: sentiment có liên hệ với phản ứng giá?}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Vấn đề NLP}
+Một headline có thể nhắc nhiều doanh nghiệp với sắc thái khác nhau. Sentiment cấp câu dễ gán sai tín hiệu cho từng cổ phiếu.
+\end{block}
+\begin{block}{Giải pháp ABSA}
+FinABSA dự đoán sentiment cho \highlight{một target đã xác định} bằng Target--Other masking.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Câu hỏi kiểm định}
+\begin{enumerate}
+\item Prediction có ghép đúng article--ticker pair không?
+\item Sentiment có liên hệ với abnormal return sau tin không?
+\item Kết quả có bền vững qua năm, event window và lag không?
+\end{enumerate}
+\end{block}
+\begin{alertblock}{Nguyên tắc diễn giải}
+Đánh giá \textbf{association quan sát được}, không khẳng định sentiment là nguyên nhân gây biến động giá.
+\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Slide 3
+\begin{frame}{Pipeline: entity linking, ABSA và market validation}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{block}{Model contract}
+\small
+\textbf{Headline:} ``HPG tăng mạnh, SSI điều chỉnh.''\\[0.08cm]
+\textbf{Input HPG:} ``\alert{Target} tăng mạnh, \textcolor{FinGray}{Other} điều chỉnh.''\\[0.08cm]
+\textbf{Output:} positive / neutral / negative
+\end{block}
+\begin{block}{Ba vai trò tách biệt}
+\begin{itemize}
+\item Entity linking: tên doanh nghiệp $\rightarrow$ ticker.
+\item FinABSA: sentiment của ticker mục tiêu.
+\item Market pipeline: ticker--day $\rightarrow$ abnormal return.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{block}{Luồng dữ liệu}
+\centering\small
+CafeF sitemap $\rightarrow$ parsing $\rightarrow$ entity linking\\
+$\rightarrow$ target masking $\rightarrow$ FinABSA\\
+$\rightarrow$ ticker--day aggregation $\rightarrow$ statistical tests
+\end{block}
+\begin{block}{Data contract}
+\small
+\begin{tabular}{>{\bfseries}p{0.31\linewidth}p{0.59\linewidth}}
+Đơn vị model & article--ticker pair \\
+Khóa nối & \texttt{sample\_id} ổn định \\
+Đơn vị tài chính & ticker--day \\
+Market proxy & VNINDEX \\
+\end{tabular}
+\end{block}
+\begin{alertblock}{Hệ quả}
+Model không tự dự đoán ticker; entity linking phải được kiểm soát độc lập.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{Thiết kế FinABSA--CafeF.}
+\end{frame}
+
+% Slide 4
+\begin{frame}{Mẫu đa năm: 5.133 bài và 839 strict predictions}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.65\textwidth}
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Kỳ} & \textbf{Bài} & \textbf{Full} & \textbf{Strict} & \textbf{Pred.} & \textbf{Strict + giá} \\
+\midrule
+2019-10 & 1,040 & 583 & 154 & 154 & 141 \\
+2020-10 & 1,115 & 657 & 182 & 182 & 168 \\
+2021-10 & 1,506 & 991 & 297 & 297 & 281 \\
+2022-10 & 1,472 & 509 & 206 & 206 & 206 \\
+\midrule
+\textbf{Tổng} & \textbf{5,133} & \textbf{2,740} & \textbf{839} & \textbf{839} & \textbf{796} \\
+\bottomrule
+\end{tabular}
+\vspace{0.15cm}
+\begin{block}{Validation kỹ thuật}
+839/839 prediction khớp bằng \texttt{sample\_id}; missing = 0, unexpected = 0, duplicate = 0, unknown = 0.
+\end{block}
+\end{column}
+\begin{column}{0.32\textwidth}
+\begin{block}{Strict vs. full}
+\small Strict giữ confidence $\geq0.95$, ưu tiên precision khi nối ticker với giá. Full giữ candidate rộng hơn cho sensitivity run riêng.
+\end{block}
+\begin{alertblock}{Class imbalance}
+\small 759 neutral, 54 positive và 26 negative. Nhóm nhỏ làm CI của group tests rộng.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{CafeF October 2019--2022; vnstock OHLCV; prediction validation.}
+\end{frame}
+
+% Slide 5
+\begin{frame}{Abnormal return theo nhãn không lặp lại đồng nhất qua năm}
+\centering
+\periodpanel{October 2019}{2019-10/analysis/figures/abnormal_return_by_label.png}\hfill
+\periodpanel{October 2020}{2020-10/analysis/figures/abnormal_return_by_label.png}\\[0.10cm]
+\periodpanel{October 2021}{2021-10/analysis/figures/abnormal_return_by_label.png}\hfill
+\periodpanel{October 2022}{2022-10/analysis/figures/abnormal_return_by_label.png}
+\vspace{0.05cm}
+\begin{alertblock}{Diễn giải}
+\small Không có thứ tự nhóm sentiment ổn định qua bốn năm. Một pattern trực quan trong một kỳ không đủ để kết luận predictive power tổng quát.
+\end{alertblock}
+\source{\texttt{abnormal\_return\_by\_label.png} theo từng kỳ.}
+\end{frame}
+
+% Slide 6
+\begin{frame}{Event study: loại trừ biến động thị trường chung}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Căn chỉnh thời gian}
+\small
+\begin{itemize}
+\item Giá là dữ liệu ngày, không có intraday timestamp đáng tin cậy.
+\item Bài báo map sang \highlight{phiên giao dịch đầu tiên sau ngày xuất bản}.
+\item $r_{i,t}=100[\log(P_{i,t})-\log(P_{i,t-1})]$.
+\end{itemize}
+\end{block}
+\begin{block}{Market model}
+\[
+R_{i,t}=\alpha_i+\beta_iR_{m,t}+\varepsilon_{i,t},\qquad
+AR_{i,t}=R_{i,t}-\widehat{E}(R_{i,t}).
+\]
+\small VNINDEX là market proxy; cần ít nhất 20 quan sát pre-event để fit market model.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Ba event windows}
+\small
+\begin{tabular}{p{0.25\linewidth}p{0.65\linewidth}}
+$[0,0]$ & phiên event \\
+$[0,+1]$ & event và một phiên sau \\
+$[0,+3]$ & event và ba phiên sau \\
+\end{tabular}
+\end{block}
+\begin{block}{Suy luận bổ sung}
+\small
+\begin{itemize}
+\item One-sample $t$-test, sign-flip permutation, bootstrap 95\% CI.
+\item News-day control; group contrasts; ticker/date fixed effects.
+\item Lag robustness tại 0, 1, 2, 3, 5 và 10 phiên.
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+\source{Brown and Warner (1985); pipeline implementation.}
+\end{frame}
+
+% Slide 7
+\begin{frame}{CAR: chỉ 2020 và 2021 có tín hiệu 3 phiên danh nghĩa}
+\centering\scriptsize
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{$[0,0]$} & \multicolumn{3}{c}{$[0,+3]$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+\textbf{Kỳ} & $N$ & Mean CAR & $p_{perm}$ & $N$ & Mean CAR & $p_{perm}$ \\
+\midrule
+2019-10 & 120 & -0.1323 & 0.5491 & 120 & 0.0020 & 0.9974 \\
+2020-10 & 134 & 0.0522 & 0.8072 & 133 & \alert{-0.9261} & \alert{0.0440} \\
+2021-10 & 212 & -0.2797 & 0.1096 & 212 & \alert{-1.0149} & \alert{0.0088} \\
+2022-10 & 150 & 0.1363 & 0.6091 & 150 & -0.2889 & 0.5615 \\
+\bottomrule
+\end{tabular}
+\vspace{0.22cm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{block}{Kết quả}
+\small Same-day CAR không khác 0 ở bốn kỳ. 2020 và 2021 có negative CAR ở $[0,+3]$ với bootstrap CI không chứa 0.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Không suy rộng quá mức}
+\small Đây là nhiều period--window tests, chưa multiple-testing adjusted và không tự chứng minh causal effect của sentiment.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{\texttt{car\_primary\_all.csv}; mean CAR tính bằng điểm phần trăm.}
+\end{frame}
+
+% Slide 8
+\begin{frame}{News-day control và sentiment-group tests: chưa ổn định}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.53\textwidth}
+\scriptsize\centering
+\textbf{News day $-$ no-news day abnormal return}\\[0.06cm]
+\begin{tabular}{lrrr}
+\toprule
+Kỳ & $\Delta$ & Welch $p$ & Perm. $p$ \\
+\midrule
+2019-10 & -0.1386 & 0.5383 & 0.4585 \\
+2020-10 & 0.2683 & 0.2240 & 0.1828 \\
+2021-10 & -0.1758 & 0.3553 & 0.3771 \\
+2022-10 & 0.4921 & 0.0804 & 0.0684 \\
+\bottomrule
+\end{tabular}
+\vspace{0.10cm}
+\begin{block}{Control conclusion}
+\small Không kỳ nào đạt 5\%; 2022 có điểm ước lượng dương nhưng CI vẫn chứa 0.
+\end{block}
+\end{column}
+\begin{column}{0.44\textwidth}
+\scriptsize\centering
+\textbf{Positive $-$ neutral contrast}\\[0.06cm]
+\begin{tabular}{lrrrr}
+\toprule
+Kỳ & $N_{pos}$ & Diff. & Welch $p$ & Perm. $p$ \\
+\midrule
+2019-10 & 6 & -1.5118 & 0.1196 & 0.1252 \\
+2020-10 & 10 & -0.8544 & 0.3380 & 0.2813 \\
+2021-10 & 12 & \alert{1.5693} & \alert{0.0267} & \alert{0.0388} \\
+2022-10 & 14 & 0.6990 & 0.4518 & 0.4271 \\
+\bottomrule
+\end{tabular}
+\vspace{0.10cm}
+\begin{alertblock}{Group conclusion}
+\small Positive--neutral chỉ có tín hiệu tại 2021; nhóm positive nhỏ nên đây là exploratory finding.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{\texttt{news\_day\_control\_tests.csv}; \texttt{sentiment\_group\_tests.csv}.}
+\end{frame}
+
+% Slide 9
+\begin{frame}{Fixed effects: hệ số sentiment chỉ có ý nghĩa tại 2020}
+\small
+\[
+AR_{i,t}=\alpha_i+\delta_t+\beta_1\mathrm{SentimentScore}_{i,t}
++\beta_2\mathrm{NegShare}_{i,t}+\beta_3\mathrm{PosShare}_{i,t}
++\gamma\log(1+\mathrm{ArticleCount}_{i,t})+\varepsilon_{i,t}.
+\]
+\vspace{-0.13cm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.62\textwidth}
+\centering\scriptsize
+\begin{tabular}{lrrr}
+\toprule
+Kỳ & Sentiment coefficient & SE & $p$ \\
+\midrule
+2019-10 & -0.4450 & 0.8508 & 0.6009 \\
+2020-10 & \alert{2.5056} & 0.8042 & \alert{0.0018} \\
+2021-10 & -0.9696 & 2.4681 & 0.6944 \\
+2022-10 & 6.5062 & 5.3763 & 0.2262 \\
+\bottomrule
+\end{tabular}
+\vspace{0.12cm}
+\scriptsize Ticker FE và date FE được ước lượng riêng theo từng kỳ.
+\end{column}
+\begin{column}{0.35\textwidth}
+\begin{alertblock}{Diễn giải}
+\small Dấu hệ số đổi giữa các năm. Kết quả 2020 không được lặp lại tại các kỳ khác; không có quan hệ stable.
+\end{alertblock}
+\begin{block}{Covariance}
+\small HC3 được kỳ vọng ban đầu; HC1 fallback được ghi nhận khi panel thưa tạo HC3 không hữu hạn.
+\end{block}
+\end{column}
+\end{columns}
+\source{\texttt{panel\_key\_coefficients.csv}; period-specific two-way fixed effects.}
+\end{frame}
+
+% Slide 10
+\begin{frame}{Lag robustness: không có delayed effect bền vững}
+\centering\scriptsize
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Lag (phiên)} & \textbf{2019-10} & \textbf{2020-10} & \textbf{2021-10} & \textbf{2022-10} \\
+\midrule
+0  & -0.1323 & 0.2261 & -0.0285 & -0.0936 \\
+1  & 0.3194 & -0.1520 & 0.2065 & -0.1797 \\
+2  & -0.0968 & -0.3772 & -0.3156 & -0.2007 \\
+3  & 0.0067 & 0.0687 & 0.0773 & -0.5972 \\
+5  & 0.1154 & -0.0997 & 0.1398 & -0.7243 \\
+10 & -0.1635 & -0.4924 & -0.0471 & -0.5183 \\
+\bottomrule
+\end{tabular}
+\vspace{0.18cm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{block}{Quan sát}
+\small Mean AR thay đổi dấu theo lag và khác nhau giữa các năm; $N$ giảm ở horizon dài vì cần giá sau event.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Kết luận}
+\small Không có monotonic delayed response hay delayed sentiment effect ổn định. Kết quả nhạy với timing convention và horizon.
+\end{alertblock}
+\end{column}
+\end{columns}
+\source{\texttt{robustness\_summary.csv}; đơn vị: điểm phần trăm.}
+\end{frame}
+
+% Slide 11
+\begin{frame}{Diagnostic theo kỳ: sentiment và abnormal return không tuyến tính rõ}
+\centering
+\periodpanel{October 2019}{2019-10/analysis/figures/sentiment_vs_abnormal_return.png}\hfill
+\periodpanel{October 2020}{2020-10/analysis/figures/sentiment_vs_abnormal_return.png}\\[0.10cm]
+\periodpanel{October 2021}{2021-10/analysis/figures/sentiment_vs_abnormal_return.png}\hfill
+\periodpanel{October 2022}{2022-10/analysis/figures/sentiment_vs_abnormal_return.png}
+\vspace{0.05cm}
+\begin{block}{Cách đọc figure}
+\small Đây là diagnostic ticker--day, không phải causal identification plot. Market-wide shocks và selection vào news coverage vẫn có thể chi phối mối liên hệ quan sát được.
+\end{block}
+\source{\texttt{sentiment\_vs\_abnormal\_return.png} theo từng kỳ.}
+\end{frame}
+
+% Slide 12
+\begin{frame}{Giới hạn, hướng phát triển và kết luận}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Limitations}
+\small
+\begin{itemize}
+\item Một tháng October cho mỗi năm; regime dependence còn cao.
+\item CafeF là nguồn đơn; news selection không ngẫu nhiên.
+\item Entity linking có false positive/negative; class imbalance mạnh.
+\item Daily prices không cho intraday timing; panel thưa cần HC1 fallback.
+\item Nhiều kiểm định nên nominal $p$-value cần đọc thận trọng.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Future work}
+\small
+\begin{enumerate}
+\item Gold labels độc lập, adjudication, F1/MCC/kappa và error analysis.
+\item Lưu logits/probabilities để calibration và uncertainty-aware aggregation.
+\item Mở rộng thời gian, broad linking, sector/regime interactions.
+\item Pre-register tests, placebo/factor models, multiple-testing correction, out-of-time forecasting.
+\end{enumerate}
+\end{block}
+\end{column}
+\end{columns}
+\vspace{0.06cm}
+\begin{alertblock}{Kết luận khoa học}
+\small Pipeline NLP-to-finance đã hoàn chỉnh và tái lập. Một vài period-specific estimates có nominal significance, nhưng dấu và độ lớn không ổn định qua năm, event window và lag. Kết quả không chứng minh causal effect, predictive power ổn định hay trading strategy.
+\end{alertblock}
+\vfill\centering\Large\textcolor{FinBlue}{Cảm ơn thầy/cô và các bạn đã lắng nghe.}
+\end{frame}
+
+\end{document}

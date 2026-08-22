@@ -12,10 +12,30 @@ LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
 def parse_label(text: str) -> str:
-    matches = LABEL_RE.findall(text or "")
-    if not matches:
+    """
+    Trích xuất nhãn sentiment (POSITIVE/NEGATIVE/NEUTRAL) từ câu văn bản.
+    Tìm kiếm không phân biệt hoa/thường, hỗ trợ nhiều định dạng.
+    """
+    # Chuyển về chữ thường để so sánh dễ dàng
+    text_lower = text.lower()
+
+    # Tìm từ khóa sentiment
+    if 'positive' in text_lower:
+        return "positive"
+    elif 'negative' in text_lower:
+        return "negative"
+    elif 'neutral' in text_lower:
+        return "neutral"
+    elif 'pos' in text_lower:
+        return "positive"
+    elif 'neg' in text_lower:
+        return "negative"
+    elif 'neu' in text_lower:
+        return "neutral"
+
+    else:
+        # Không ép output không hợp lệ thành một nhãn sentiment.
         return "unknown"
-    return LABEL_CANONICAL.get(matches[-1].lower(), "unknown")
 
 
 def main() -> None:
@@ -26,8 +46,8 @@ def main() -> None:
     parser.add_argument("--mask-style", choices=["Target", "[TGT]"], default="Target")
     parser.add_argument("--max-input-length", type=int, default=64)
     parser.add_argument("--max-output-length", type=int, default=20)
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
+    parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--device", default="cuda", choices=["auto", "cpu", "cuda"])
     args = parser.parse_args()
 
     import torch
@@ -42,6 +62,7 @@ def main() -> None:
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     model = AutoModelForSeq2SeqLM.from_pretrained(args.model).to(device)
+    # print(model)
     model.eval()
 
     records = []
@@ -59,9 +80,12 @@ def main() -> None:
         ).to(device)
         with torch.no_grad():
             generated = model.generate(**inputs, max_length=args.max_output_length)
-        decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            # print(f"Generated: {generated}")
+            decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            print(f"decoded: {decoded}")
         for (_, row), raw in zip(batch.iterrows(), decoded):
             label = parse_label(raw)
+            print(f"Parsed label: {label}")
             records.append({
                 "sample_id": row.get("sample_id", ""),
                 "article_id": row.get("article_id", ""),

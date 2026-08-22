@@ -14,20 +14,33 @@ AGENTS.md
 data/cafef_oct2022/raw_html/
 data/cafef_oct2022/market_cache/
 
+# Multi-year crawl and validation runtime data; regenerate from the scripts.
+data/cafef_multiyear/
+data/cafef_multiyear_test/
+
 # Model checkpoints and runtime outputs are local artifacts.
 finabsa-*/
 *.bin
 *.safetensors
 *.pt
 *.pth
-
 MODEL/
 
-# Keep normalized analysis tables and input manifests under data/.
-
-# Local environments and submission archives.
+# Local environments and OS files.
 .venv/
 venv/
 .env
 .DS_Store
+
+# Local presentation/report bundles and generated visual artifacts.
+artifacts/
+prism_slide_package/
+images/
 *.zip
+*.pdf
+
+# Temporary validation and local run summaries.
+analysis_visual_check.txt
+cafef_run_summary.md
+market_coverage_report_final.txt
+report_generated*.md
