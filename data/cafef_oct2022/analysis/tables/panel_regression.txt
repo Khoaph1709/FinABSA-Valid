@@ -1,3 +1,7 @@
 market_ticker=VNINDEX
-observations=182
+observations=152
+event_rows=200
+unique_tickers=51
+unique_dates=21
+unit=ticker-day
 Regression failed: ValueError: r_matrix performs f_test for using dimensions that are asymptotically non-normal

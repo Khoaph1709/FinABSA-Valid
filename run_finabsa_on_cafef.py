@@ -5,15 +5,13 @@ import re
 from pathlib import Path
 
 import pandas as pd
-import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
-LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL)\b", re.I)
-# LABEL_RE = re.compile(r"\b(isPOSITIVE|isNEGATIVE|isNEUTRAL)\b", re.I)
+LABEL_RE = re.compile(r"\b(POSITIVE|NEGATIVE|NEUTRAL|POS|NEG|NEU)\b", re.I)
+LABEL_CANONICAL = {"positive": "positive", "pos": "positive", "negative": "negative", "neg": "negative", "neutral": "neutral", "neu": "neutral"}
 LABEL_SCORE = {"positive": 1.0, "neutral": 0.0, "negative": -1.0}
 
 
-def extract_sentiment(text: str) -> str:
+def parse_label(text: str) -> str:
     """
     Trích xuất nhãn sentiment (POSITIVE/NEGATIVE/NEUTRAL) từ câu văn bản.
     Tìm kiếm không phân biệt hoa/thường, hỗ trợ nhiều định dạng.
@@ -28,6 +26,13 @@ def extract_sentiment(text: str) -> str:
         return "NEGATIVE"
     elif 'neutral' in text_lower:
         return "NEUTRAL"
+    elif 'pos' in text_lower:
+        return "POSITIVE"
+    elif 'neg' in text_lower:
+        return "NEGATIVE"
+    elif 'neu' in text_lower:
+        return "NEUTRAL"
+
     else:
         # Nếu không tìm thấy, trả về NEUTRAL
         return "UNKNOWN"
@@ -44,6 +49,9 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--device", default="cuda", choices=["auto", "cpu", "cuda"])
     args = parser.parse_args()
+
+    import torch
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
     device = "cuda" if args.device == "auto" and torch.cuda.is_available() else args.device
     if device == "auto":

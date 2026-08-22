@@ -101,18 +101,26 @@ AR_i,t = r_i,t − (alpha_hat_i + beta_hat_i × r_market,t)
 
 Bộ giá hiện có bao phủ khoảng tháng 5–12/2022, đủ để dùng một estimation window 60 phiên trước event. Với các ticker mới niêm yết hoặc VVS có ít phiên, phải báo cáo riêng và không coi chúng có cùng độ tin cậy với ticker có đầy đủ lịch sử.
 
-## 6. Event study
+## 6. Event study and news-price reaction
 
 ### 6.1. Câu hỏi và giả thuyết
 
-Giả thuyết chính là:
+Câu hỏi chính của downstream validation là liệu các ticker có xuất hiện trong news event có phản ứng bất thường so với ngày không có event hay không. Câu hỏi thứ hai là phản ứng có khác nhau theo sentiment hay không.
+
+Các giả thuyết chính là:
 
 ```text
-H0: Mean AR của nhóm positive, neutral và negative không khác nhau.
-H1: Ít nhất một nhóm có mean AR khác nhóm còn lại.
+H0a: Mean CAR trong các event window bằng 0.
+H1a: Mean CAR trong ít nhất một event window khác 0.
+
+H0b: Mean AR ở news-day không khác mean AR ở eligible no-news-day.
+H1b: Hai nhóm ngày có mean AR khác nhau.
+
+H0c: Mean CAR của các nhóm sentiment không khác nhau.
+H1c: Ít nhất một nhóm sentiment có mean CAR khác nhóm khác.
 ```
 
-Kết quả chính nên dùng cửa sổ `[0,+1]`, tức ngày công bố hoặc phiên giao dịch kế tiếp đến một phiên sau đó. Cửa sổ phụ gồm `[0,0]`, `[0,+3]` và `[0,+5]`.
+Kết quả chính nên dùng cửa sổ `[0,+1]`, tức ngày công bố hoặc phiên giao dịch kế tiếp đến một phiên sau đó. Các cửa sổ tự động gồm `[0,0]`, `[0,+1]` và `[0,+3]`. Kết quả được lưu tại `tables/car_tests.csv`; kiểm định một mẫu, sign-flip permutation và bootstrap 95% CI được tính cho toàn bộ event unit và từng nhóm sentiment. Kiểm định news-day so với eligible no-news-day được lưu tại `tables/news_day_control_tests.csv`.
 
 ### 6.2. Chỉ số phải báo cáo
 
@@ -186,18 +194,22 @@ Chỉ định trước một primary outcome: next-tradable-session AR, và mộ
 | Table 2 | Annotator agreement và entity-linking accuracy |
 | Table 3 | Intrinsic metrics: macro-F1, balanced accuracy, MCC, per-class F1 |
 | Table 4 | Confusion matrix và error categories |
-| Table 5 | Event study: N, mean return, mean AR, CAR, CI, p-value |
-| Table 6 | Panel regression coefficients và robust SE |
-| Table 7 | Robustness theo lag, strict/full, placebo, permutation |
+| Table 5 | CAR theo cửa sổ, kiểm định CAR khác 0 và bootstrap CI |
+| Table 6 | News-day so với eligible no-news-day |
+| Table 7 | Sentiment-group tests: Welch, permutation và bootstrap |
+| Table 8 | Panel regression coefficients và robust SE |
+| Table 9 | Robustness theo lag, strict/full, placebo, permutation |
 
 | Hình | Nội dung |
 |---|---|
 | Figure 1 | Số bài CafeF theo ngày |
 | Figure 2 | Phân bố positive/neutral/negative |
 | Figure 3 | VNINDEX và các mốc bài báo/event |
-| Figure 4 | Mean AR/CAAR theo sentiment |
-| Figure 5 | Confusion matrix |
-| Figure 6 | Kết quả lag và placebo |
+| Figure 4 | Mean AR theo sentiment |
+| Figure 5 | CAR theo event window với bootstrap CI |
+| Figure 6 | News-day so với no-news-day |
+| Figure 7 | Sentiment-group contrasts |
+| Figure 8 | Kết quả lag và placebo |
 
 ## 10. Quy trình chạy sau khi có model output
 
@@ -221,8 +233,9 @@ python3 validate_predictions.py
 python3 make_annotation_sample.py --n 208
 python3 evaluate_intrinsic.py
 
-# 5. Chạy downstream experiments
+# 5. Chạy downstream experiments và sinh unified report
 python3 run_pipeline.py
+# Kết quả gồm report_generated.md và report_generated.pdf
 ```
 
 Nếu chạy `run_pipeline.py` trước khi có model output, pipeline phải dừng với thông báo thiếu output. Đây là hành vi đúng vì không được tự tạo prediction giả.
