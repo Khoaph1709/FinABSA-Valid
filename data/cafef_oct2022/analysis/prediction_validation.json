@@ -1,0 +1,14 @@
+{
+  "input_rows":208,
+  "prediction_rows":208,
+  "missing_predictions":0,
+  "unexpected_predictions":0,
+  "duplicate_input_ids":0,
+  "duplicate_prediction_ids":0,
+  "unknown_labels":0,
+  "label_counts":{
+    "neutral":180,
+    "positive":18,
+    "negative":10
+  }
+}

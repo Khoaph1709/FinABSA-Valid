@@ -1,428 +1,523 @@
-Opec reduces estimate on [TGT] demand growth	true=negative	pred=neutral
-[TGT] ups marketing efforts with CMO appointment	true=neutral	pred=positive
-Cover up all positions for [TGT]: Mitesh Thacker	true=neutral	pred=positive
-[TGT], bourses weigh dollar delivery in futures trade	true=neutral	pred=negative
-[TGT] for short term: Deepak Mohoni	true=neutral	pred=positive
-Upside capped at 90 for [TGT]: Siddth Capital	true=neutral	pred=positive
-[TGT]: Asset quality improves but payout cut disturbing	true=neutral	pred=positive
-Britain [TGT] regains traction as oil steadies	true=neutral	pred=positive
-[TGT] spot turnover may reach Rs 7,000 crore	true=neutral	pred=positive
-[TGT] mixed, underpinned by solid 5-year auction results	true=neutral	pred=negative
-Why long-term investors should stay invested in [TGT]	true=neutral	pred=positive
-[TGT] is not too strong: Luc Coene	true=neutral	pred=negative
-Despite discount, [TGT] staff cool to IPO	true=neutral	pred=negative
-[TGT] IPO looks costlier than peers:Nirmal Bang	true=neutral	pred=positive
-Get ready to test 8,650-8,700 on [TGT]: Sandeep Wagle	true=neutral	pred=positive
-[TGT] ex-MD Nikhil Vora fund gets first mega investor	true=neutral	pred=positive
-[TGT] set to smoke out olive oil	true=positive	pred=negative
-[TGT] snaps two-day fall as exporters, corporates sell dollars	true=positive	pred=negative
-[TGT] is fairly valued at 71: Sudhir Nair	true=neutral	pred=positive
-CERC gives [TGT] more time for IEX stake sale	true=neutral	pred=positive
-[TGT]: Focus on exports critical to swing in future surprises	true=neutral	pred=negative
-[TGT] lists at 34% premium at Rs 1387 on BSE	true=neutral	pred=positive
-Near term outlook remains muted for [TGT]: Amit Khurana	true=neutral	pred=negative
-[TGT]: Iron ore policy, demand from China hold key	true=neutral	pred=positive
-Target of Rs 268 for [TGT]: Rajat Bose	true=neutral	pred=positive
-Currency Corner: [TGT] snaps 3-day gain as funds reduce equity exposure	true=neutral	pred=positive
-[TGT] gets NSE nod to merge Wadala Commodities with itself	true=neutral	pred=positive
-[TGT] levels of Rs 1000 look rich to me: Sudip Bandyopadhyay	true=neutral	pred=positive
-[TGT] levels beyond 7250 possible in next few days: Mitesh Thacker	true=neutral	pred=positive
-[TGT] will move sideways before next upside starts:  Ashwani Gujral	true=negative	pred=neutral
-Midcap mantra: [TGT] on a roll, to post solid earnings	true=neutral	pred=positive
-[TGT] may have to shell out more on perpetual bonds	true=neutral	pred=negative
-Expect [TGT] to be in 7350-7500 band on the upside: Mitesh Thacker	true=neutral	pred=positive
-Less than 50% chance of [TGT] falling below $20 a barrel: Goldman	true=neutral	pred=negative
-[TGT] is a 'BT/ST' call with a target of Rs 300: Mitesh Thacker	true=positive	pred=neutral
-Take to [TGT] only with a long term view : Sonam Udasi	true=neutral	pred=positive
-Looking at a target price of Rs 2080 for [TGT] over one-year perspective: Ajay Bodke	true=neutral	pred=positive
-Government will have to do a lot more to make new investors put money in [TGT] and not gold	true=neutral	pred=positive
-4,600 [TGT] investors claim refund from Sebi	true=negative	pred=neutral
-[TGT] are very capital intensive: Ajay Bagga	true=neutral	pred=positive
-[TGT] story is really intriguing: Deven Choksey	true=positive	pred=neutral
-TCS overtakes [TGT] as India's most valued firm	true=neutral	pred=negative
-Maran makes open offer for [TGT]	true=positive	pred=neutral
-[TGT] bracing for better nos in March quarter	true=positive	pred=negative
-Target of 1200-1255 possible for [TGT]: Rohit Shinde	true=positive	pred=neutral
-[TGT] clocks record profit in Q1	true=positive	pred=neutral
-PE entry to help [TGT] fund expansion	true=positive	pred=neutral
-[TGT] prices rise on fresh buying	true=positive	pred=negative
-Bullion dominates futures market, [TGT] at 10%	true=positive	pred=neutral
-[TGT] yields inch lower to 7.96%; seen range-bound	true=positive	pred=negative
-Take long trades over [TGT]: Mitesh Thacker	true=positive	pred=negative
-[TGT] might breakout above 8300: Mitesh Thacker	true=neutral	pred=positive
-Reforms bring investors back to [TGT]	true=positive	pred=neutral
-[TGT]: Good show in FY13, but far from best	true=neutral	pred=negative
-BSE to include [TGT] in S&P BSE 200	true=positive	pred=neutral
-FIIs returning to [TGT] as yields turn attractive	true=neutral	pred=positive
-Forex gains during August on hopes of [TGT] easing	true=neutral	pred=positive
-Global, local bidders bet on FTIL's purchase in [TGT]	true=neutral	pred=positive
-[TGT] to boost Tech Mahindra's global presence	true=neutral	pred=positive
-Tantis may hike stake in [TGT] via rights issue	true=neutral	pred=positive
-Tax free bonds outperform [TGT], strong performance to continue	true=neutral	pred=negative
-[TGT] hold at all-hit time after bumper week	true=positive	pred=neutral
-Credit Suisse raises target prices of [TGT], ACC upgraded	true=positive	pred=neutral
-[TGT] to raise over Rs 1,160 cr through rights issue	true=neutral	pred=positive
-Greece hopes keep euro near 3-week high vs stalling [TGT]	true=negative	pred=neutral
-[TGT]'s net loss shrinks to Rs 45 crore in Q3	true=positive	pred=negative
-[TGT] sees Sensex gains from H2 of 2012	true=neutral	pred=positive
-It is 'wait n watch' for [TGT]: IDBI Capital	true=positive	pred=neutral
-LIC likely to pick 5 per cent stake in [TGT]	true=positive	pred=neutral
-[TGT] axes 15,000 jobs, raises $5.1 billion in capital	true=positive	pred=negative
-A soaring [TGT] could set off a currency war with China	true=positive	pred=neutral
-Buying conviction will come at 4525-4540 levels on [TGT]: Vijay Bhambwani	true=positive	pred=neutral
-Competition Commission of India rules out allegations against [TGT]	true=positive	pred=neutral
-Danone deal expected to act as a trigger for 'troubled' [TGT]	true=positive	pred=neutral
-FII exit will not hurt [TGT] as retail investors take charge	true=positive	pred=negative
-Looking at target of 545-550 on [TGT]: Ambareesh Baliga, Karvy	true=positive	pred=neutral
-Looking forward to a target of 700 for [TGT]: Ashwani Gujral	true=positive	pred=neutral
-Markets make merry on Narendra Modi magic; [TGT] tops 25,000 mark	true=positive	pred=neutral
-[TGT] back in profit; posts Rs 23.02 crore net for Q3	true=positive	pred=neutral
-Nikkei rises after [TGT] gains; market awaits US jobs data	true=positive	pred=neutral
-[TGT]'s retreat lifts Asia FX; yuan up on central bank stabilisation moves	true=negative	pred=positive
-[TGT] upgrades Titan to Overweight, sees over 14% upside in 12 months	true=neutral	pred=positive
-Russia adds to [TGT] holdings for 5th month in a row: IMF	true=positive	pred=neutral
-Waiting for levels of around 310 to buy [TGT]: Ambareesh Baliga, Karvy	true=positive	pred=neutral
-[TGT] outclasses gold, realty; 10 stocks where MFs raised stake in June quarter	true=positive	pred=neutral
-Hindi daily [TGT] plans to raise Rs 300 via IPO next month	true=positive	pred=neutral
-Huge demand-supply gap in [TGT]; constraints in projects taking shape: K Ravi Kumar	true=neutral	pred=negative
-NBFCs rally as [TGT] likely to give bank licences in next 10-15 days	true=neutral	pred=positive
-CLSA cuts target price for [TGT] to Rs 1,150, but retains a 'buy' call	true=positive	pred=neutral
-Diageo makes $1.9 bn second open offer, [TGT] surges 15%: Should investors tender shares	true=positive	pred=neutral
-[TGT], RSWM top two stocks ideas for next 3 months: G Chokkalingam, Equinomics	true=positive	pred=neutral
-Heritage Food, [TGT] top two stocks ideas for next 3 months: G Chokkalingam, Equinomics	true=positive	pred=neutral
-Seeing a large delta swing favouring [TGT] in FY 2012: Avinash Gorakshekar, Anagram Capital	true=positive	pred=negative
-Relaxo more attractive than [TGT]: Amit Khurana, Co-Head Equites & Head of Research, Dolat Capital	true=neutral	pred=negative
-Cognizant posts its best figures in its 21 year history; shares surge over 8% on [TGT]	true=positive	pred=neutral
-FIPB approval would be a key trigger for [TGT]'s stock: Mayuresh Joshi of Angel Broking	true=positive	pred=neutral
-Tobacco companies bolster a bruised [TGT]	true=neutral	pred=negative
-Police probe allegation about [TGT]'s threat to investors	true=positive	pred=negative
-NRI company files criminal complaint against [TGT]	true=positive	pred=negative
-Import duty on [TGT] likely	true=negative	pred=neutral
-[TGT] will start falling slowly: Ashwani Gujral	true=negative	pred=neutral
-[TGT] imports to jump 10-15% on falling prices	true=negative	pred=positive
-Investors take cover amid [TGT] crisis, oil slide	true=negative	pred=positive
-Miners tumble as Citigroup sees bigger [TGT] losses	true=negative	pred=neutral
-[TGT] weighs on European shares after Jazztel deal	true=negative	pred=neutral
-Dr Reddy extends falls; [TGT], BofA downgrade	true=neutral	pred=negative
-Cairn India falls on [TGT] deal delay	true=negative	pred=neutral
-Senior [TGT] veterans head for exit	true=negative	pred=neutral
-Crunch time in [TGT] market this week	true=negative	pred=neutral
-3 [TGT] staff being probed in bribery, other cases	true=negative	pred=neutral
-Banks reduce lending to [TGT] as sugar prices fall	true=negative	pred=neutral
-Decline in China currency [TGT] could fan trade tensions	true=negative	pred=neutral
-Downside of 105-110 levels possible for [TGT]: Ashwani Gujral	true=negative	pred=positive
-Europe's low-rated bonds stutter on [TGT] nerves	true=negative	pred=neutral
-Overweight on [TGT] at current juncture: BP Singh	true=positive	pred=neutral
-Pulse prices dip by 4% -5% but [TGT] defiant	true=positive	pred=neutral
-[TGT] chairman Vladimir Yevtushenkov's house arrest sends stocks crashing	true=negative	pred=neutral
-[TGT]'s track record comes under review, Cairn India falls	true=negative	pred=neutral
-Yield of [TGT] plunges to a 9-year low	true=positive	pred=negative
-F&O Tracker: [TGT] likely to shift to a lower range	true=negative	pred=neutral
-Indonesian stock index falls 2 per cent as [TGT] depreciates	true=negative	pred=positive
-[TGT]' Q2 profit nearly halved at Rs 68 crore	true=negative	pred=neutral
-[TGT] Sept quarter net loss at Rs 528.79 cr	true=neutral	pred=negative
-[TGT] reports Rs 11.72 crore loss in December quarter	true=neutral	pred=negative
-Regulatory uncertainties holding the rally in [TGT]: BP Singh	true=positive	pred=negative
-[TGT] sees big sell-off post plans to merge Grindwell Norton	true=negative	pred=neutral
-[TGT] extends closure of IPO amid bank strike	true=negative	pred=neutral
-[TGT] David Bonderman says 'Narendra Modi euphoria' makes India overpriced	true=neutral	pred=negative
-Use rallies in [TGT] to book profits: Gaurang Shah	true=negative	pred=positive
-Yellow Fever: Up to 15-tonne [TGT] gone in three days	true=negative	pred=neutral
-[TGT] sells $1 billion debut "green bond" in London	true=negative	pred=neutral
-Citigroup sells shares worth Rs 480 cr of 35 [TGT]	true=negative	pred=neutral
-[TGT], bond yields dip as looser European Central Bank policy eyed	true=negative	pred=positive
-F & O Tracker: Short [TGT] around 6300, buy ATM Calls	true=negative	pred=neutral
-FIIs withdraw Rs 2,000 crore from [TGT] in a fortnight	true=negative	pred=neutral
-Hedge fund big bets on [TGT] pummeled in third quarter	true=negative	pred=positive
-Mexico "very unlikely" to reopen $1.1 billion [TGT] hedge program: Source	true=negative	pred=neutral
-[TGT] in a no-trade zone due to holiday-truncated week: Sandeep Wagle	true=negative	pred=neutral
-Q1 earnings: [TGT] net loss seen at Rs 65 cr	true=neutral	pred=negative
-[TGT] holds near $102, heads for weekly drop as firm dollar hurts	true=positive	pred=negative
-[TGT] a case of over-expectation, stock doesn't look cheap: Kunj Bansal	true=negative	pred=positive
-[TGT] sells nearly 7 pc stake in IEX for Rs 21.45 cr	true=negative	pred=neutral
-[TGT] posts Q3 net loss of Rs 22.25 cr; stock up	true=negative	pred=positive
-Is the damage over on [TGT]? Strategies to tide over weakness	true=negative	pred=neutral
-[TGT] is still to make a comeback: Deepak Mohoni, trendwatchindia.com	true=negative	pred=positive
-Market can see a fall post [TGT] IPO: Ambareesh Baliga, Karvy	true=negative	pred=neutral
-Minority shareholders challenge Bombay High Court order on [TGT]'s buyback offer	true=negative	pred=neutral
-[TGT] to brief on abnormal deployment of Takata air bag, shares sink	true=negative	pred=neutral
-[TGT] likely to witness profit booking in short term: Deven Choksey	true=negative	pred=positive
-Can't pay Rs 580 crore due to financial crunch: [TGT] to Supreme Court	true=negative	pred=neutral
-HC refuses to stay FMC order asking [TGT] to cut stake in MCX	true=negative	pred=neutral
-I would not like to participate low-volume stock like [TGT]: Ashwani Gujral	true=negative	pred=neutral
-[TGT] Q2 results cast shadow on D-St; top 10 stocks to bet on	true=negative	pred=neutral
-Over 1,000 entities under scanner as [TGT] widens tax evasion, money laundering probe	true=neutral	pred=negative
-Spike in [TGT] prices may cause sell off in oil stocks: Mayuresh Joshi	true=positive	pred=negative
-[TGT] outflows at 15-week high as investors seek bond safety: Bank of America Merrill Lynch	true=negative	pred=positive
-[TGT] may sell 91-day  treasury bills at 8.60 per cent: poll	true=negative	pred=neutral
-Diwali only hope for [TGT] traders as demand at two-decade low after yellow metal hits record prices	true=negative	pred=positive
-CARE 'A+' to [TGT] perpetual bonds	true=positive	pred=neutral
-Difficult for Bank Nifty to get past 15,300; action seen in [TGT], small cap stocks: Ashwani Gujral	true=positive	pred=neutral
-Difficult for Bank Nifty to get past 15,300; action seen in midcap, [TGT]: Ashwani Gujral	true=positive	pred=neutral
-IPOs fail to live up to their price; power, realty fare badly and [TGT] the best	true=positive	pred=negative
-Q1 earnings take a toll on Street: Biocon down 8%; Indian Bank slips 8%; [TGT] 2%	true=negative	pred=neutral
-Investor should focus on [TGT] rather than telecom players: Avinash Gorakshekar, Anagram Capital Ltd	true=positive	pred=neutral
-HPCL, BPCL, IOC rally even as [TGT] prices on the boil, rupee declines	true=positive	pred=negative
-Coalgate verdict: [TGT], Hindalco lose big; Tata Steel, SAIL unlikely to be hit	true=negative	pred=neutral
-[TGT] may do well, sell on PSU banks: Centrum Wealth Management	true=positive	pred=negative
-China stocks drop as yuan falls further; [TGT], property in the crosshairs	true=negative	pred=neutral
-Diageo Plc, United Spirits open offer for [TGT] from August 28	true=positive	pred=neutral
-Lok Sabha elections 2014: [TGT] closes at 24,121.74, Nifty ends at 7,203	true=neutral	pred=positive
-Bearish on United Phosphorous and [TGT]: Seshadri Bharathan, KSEMA Fincon Ltd.	true=positive	pred=negative
-S.Korean shares up as [TGT] counters rally on oil rebound; won slips	true=positive	pred=neutral
-[TGT], JSPL top Nifty losers, sink over Goa mining ban uncertainty	true=negative	pred=neutral
-Tata Steel, [TGT] top Nifty losers, sink over Goa mining ban uncertainty	true=negative	pred=neutral
-[TGT], four banks likely to invest Rs 161 cr in Videocon	true=neutral	pred=positive
-Pound hits 4-month low after BoE's dovish shift, [TGT] eyes GDP	true=neutral	pred=negative
-Do not prefer [TGT], Idea; exit at current levels: Ambareesh Baliga	true=positive	pred=negative
-Do not prefer Bharti, [TGT]; exit at current levels: Ambareesh Baliga	true=positive	pred=negative
-Neutral on [TGT] space, prefer ITC within the pack: Pankaj Pandey	true=neutral	pred=positive
-Watch out for ICICI Bank, [TGT] next week : Technical Trends	true=negative	pred=positive
-[TGT] on defensive after ECB bond buying report, yen soft	true=neutral	pred=positive
-[TGT] wobbles on chance of more ECB action, Aussie perkier	true=neutral	pred=negative
-[TGT] stall after Wall Street slips, dollar holds gains	true=neutral	pred=negative
-Valentine Day lifts stocks of Hanung Toys, Archies on [TGT]	true=neutral	pred=positive
-Yen rises after Japan PM comments, German data hurts [TGT]	true=neutral	pred=negative
-Irda stops IGE, J&K Bank from subscribing to [TGT] issue	true=negative	pred=neutral
-Euro shaky on ECB and Greece, [TGT] keeps edge	true=neutral	pred=positive
-MMTC-PAMP [TGT], silver coins stock sold out on Dhanteras	true=positive	pred=negative
-MMTC-PAMP gold, [TGT] coins stock sold out on Dhanteras	true=positive	pred=negative
-[TGT], Nasdaq break 3-day slide but Dow dips	true=positive	pred=negative
-S&P 500, [TGT] break 3-day slide but Dow dips	true=positive	pred=negative
-Sensex rangebound, [TGT] holds 8500 levels; Infosys top loser	true=neutral	pred=negative
-Tech leads [TGT], S&P 500; Disney sparks media selloff	true=neutral	pred=positive
-PSU banks join party; [TGT] hits all-time high	true=neutral	pred=positive
-[TGT] debt restructuring positive for financial, power sectors: Analysts	true=neutral	pred=positive
-[TGT] sees copper, aluminum sliding amid 'cost deflation'	true=neutral	pred=negative
-Profit-booking hits auto stocks, M&M top [TGT] loser	true=neutral	pred=negative
-Russia's rouble weaker on Monday, [TGT] outweighs taxes	true=negative	pred=positive
-Sensex rangebound; L&T, ICICI Bank, [TGT] top losers	true=neutral	pred=negative
-Sensex turns choppy, [TGT] trades near 7950 levels	true=neutral	pred=negative
-Wall Street climbs on Procter & Gamble, [TGT]	true=positive	pred=neutral
-European shares steady, pegged back by [TGT]	true=negative	pred=neutral
-Indians prefer [TGT], mutual funds for investments	true=neutral	pred=positive
-Indians prefer gold, [TGT] for investments	true=neutral	pred=positive
-Copper, [TGT] rise on global cues	true=positive	pred=negative
-[TGT] hold near record levels	true=neutral	pred=positive
-[TGT] head steps down	true=neutral	pred=negative
-[TGT] revive expansion plans	true=neutral	pred=positive
-[TGT] investors renew interest in emerging markets	true=neutral	pred=positive
-[TGT] IPO: What experts say	true=neutral	pred=positive
-[TGT] agility helps tame money market volatility	true=neutral	pred=positive
-[TGT] IPO subscribed by 2.24 times	true=neutral	pred=positive
-Are firms with high [TGT] exposure in trouble?	true=neutral	pred=negative
-[TGT] stake sale subscribed 30% till afternoon trade	true=neutral	pred=positive
-Five reasons why [TGT] may not appreciate much	true=neutral	pred=negative
-[TGT] 1-gram gold jewellery is to go places	true=neutral	pred=positive
-No curbs, but [TGT] royalty payouts under scanner	true=neutral	pred=negative
-NSE takes Renuka Sugars' 5% stake in [TGT]	true=neutral	pred=positive
-Yogesh Munjal to quit Hero stake for [TGT]	true=positive	pred=negative
-[TGT] tread water ahead of US jobs data	true=neutral	pred=negative
-Central Bank sells entire stake in [TGT] to Transunion	true=negative	pred=neutral
-[TGT] gets Board approval for raising Rs 500 crore	true=neutral	pred=positive
-[TGT] eye dollar bond market for capital boost	true=neutral	pred=positive
-Europeans banks eye [TGT] bond market for capital boost	true=neutral	pred=positive
-[TGT] dips but Malaysian plane downing seen aiding sentiment	true=neutral	pred=negative
-Kenneth Andrade exits [TGT] leaving investors jittery	true=neutral	pred=negative
-[TGT] gets Sebi approval for IRF; launch this month	true=neutral	pred=positive
-[TGT] to reach 8600-8700 at some point: Ashwani Gujral	true=neutral	pred=positive
-[TGT] investors forum to appeal against High Court Order	true=neutral	pred=negative
-[TGT] languishing in valuations, but offer pockets of hope	true=neutral	pred=negative
-[TGT] gets shareholder nod for Rs 11,500 crore QIP	true=neutral	pred=positive
-2010 could well be the year of midcaps: [TGT]	true=neutral	pred=positive
-Carl Icahn says his firm sold remainder of [TGT] stake	true=neutral	pred=negative
-[TGT] snaps 6-day gaining streak on weak PMI, midpoint	true=neutral	pred=negative
-Continue to buy till [TGT] breaks 8090-8100 levels: Mitesh Thacker	true=neutral	pred=positive
-Dollar holds firm as markets sniff risks of [TGT] hawkishness	true=neutral	pred=negative
-[TGT]: Transfer of pricing pressure is the key	true=neutral	pred=negative
-[TGT]: High costs mar show, but future prospects bright	true=neutral	pred=positive
-[TGT] an interesing prospect in the coming days: Ajay Bagga	true=neutral	pred=positive
-Bengaluru-based builder [TGT] raises Rs 126 crore through issue of NCDs	true=neutral	pred=positive
-Cheaper inputs help, but weak demand a drag on [TGT]	true=neutral	pred=negative
-[TGT] too boards infra bond wagon, to raise Rs 1,200 cr	true=neutral	pred=positive
-[TGT] overbought, hence there could be momentum loss: Mitesh Thacker, miteshthacker.com	true=neutral	pred=negative
-[TGT] rally on petrol price hike, but end day in red	true=neutral	pred=positive
-Reduction in [TGT] prices will not be taken negatively: Ajay Bodke	true=neutral	pred=negative
-[TGT] most higher; Philippines retreats after May export drop	true=neutral	pred=positive
-[TGT] holds steady above $105 on geopolitical tension ahead of inventory data	true=neutral	pred=positive
-[TGT] net profit for 2012-13 stands at Rs 82 crore	true=neutral	pred=positive
-Grey IPO market shows signs of revival with [TGT] scaling new peaks	true=neutral	pred=positive
-[TGT] looks set to touch 6420 in next few days: Mitesh Thacker	true=neutral	pred=positive
-[TGT] posts marginal growth in Q1 net profit at Rs 14.81 crore	true=neutral	pred=positive
-Bharti Airtel plans to sell [TGT] shares; to raise over Rs 2,500 crore	true=neutral	pred=negative
-Once 955 is broken off, [TGT] may head towards 920: Amit Harchekar, IIFL	true=neutral	pred=positive
-Difficult decision for [TGT]: What should it do with proceeds from Alibaba share sale?	true=neutral	pred=negative
-FIIs Rs 6,000 crore [TGT] shorts may fire up markets again after dousing it	true=neutral	pred=positive
-Reforms planned by the government will have a strong bearing on the [TGT]: Vinay Khattar	true=neutral	pred=positive
-7800 is the worst we can see on [TGT] at this stage: Sudip Bandyopadhyay President, Destimoney Securities Pvt Ltd	true=neutral	pred=negative
-[TGT] attachment proceedings cross 1,500-mark	true=positive	pred=neutral
-[TGT] bond sees record subscription	true=positive	pred=neutral
-4900-4930 support level for [TGT]: Devang Visaria	true=positive	pred=neutral
-Earnings preview: [TGT] biggies earnings belies expectations	true=positive	pred=neutral
-[TGT] pain has an upside for India	true=neutral	pred=positive
-Futures segment of [TGT] witnessing steady growth	true=positive	pred=neutral
-Hold [TGT] in current scenario: Deepak Mohoni	true=positive	pred=neutral
-[TGT] Rs 2,500-crore IPO gets Sebi nod	true=positive	pred=neutral
-Overall [TGT] remains compelling: Taher Badshah	true=positive	pred=neutral
-[TGT] plans China's first Green bond	true=positive	pred=neutral
-[TGT] IPO subscribed 47% on Day 2	true=positive	pred=neutral
-[TGT] to invest in Ace Tours, Liverpool	true=neutral	pred=positive
-[TGT] picks up minority stake in Dee Development	true=positive	pred=neutral
-[TGT] upgrades Glenmark to 'buy'; ends up nearly 2%	true=neutral	pred=positive
-Dollar gains on uptick in [TGT], euro banking concerns	true=positive	pred=negative
-FCCBs weigh on [TGT] as new orders raise hopes	true=positive	pred=negative
-[TGT] has held on: Ashwani Gujral, Market Strategist	true=positive	pred=neutral
-LIC stake in [TGT] crosses 10 per cent	true=neutral	pred=positive
-[TGT] increases stake in BHEL to 9%	true=positive	pred=neutral
-Miners help [TGT] bounce, but weak results cap gains	true=positive	pred=negative
-[TGT] to operate GAILs nine LNG ships; stock rallies	true=positive	pred=neutral
-Short term upside likely: Sandeep J Shah, [TGT]	true=neutral	pred=positive
-[TGT]: Input costs, TN show key to profitability	true=positive	pred=neutral
-Best performing stocks of 2015: [TGT] shone through pharma headwinds	true=positive	pred=negative
-BNP Paribas to buy [TGT] stake in Fortis unit	true=neutral	pred=positive
-[TGT] recovers above $85 after biggest fall in three years	true=positive	pred=negative
-BT/ST [TGT] with a target of Rs 2560: Mitesh Thacker	true=positive	pred=neutral
-[TGT], Reliance Group stocks in focus ahead of UP results	true=positive	pred=neutral
-Jaypee, [TGT] in focus ahead of UP results	true=positive	pred=neutral
-[TGT] buys 4.66% stake in BHEL for Rs 1,889 crore	true=positive	pred=neutral
-Local cos eye [TGT] listing to gain from India craze	true=positive	pred=neutral
-[TGT] net profit at Rs 138 crore in Q1	true=positive	pred=neutral
-Reforms push will hold good for the [TGT]: Dhiraj Sachdev	true=neutral	pred=positive
-[TGT] may raise upto Rs 350-cr through QIP route	true=positive	pred=neutral
-[TGT] is heading to levels closer to 1595: Prakash Gaba	true=positive	pred=neutral
-[TGT] bullish on energy sector as oil price steadies	true=neutral	pred=positive
-[TGT]: Shares up after report it will split in two	true=positive	pred=neutral
-Large move is on way for [TGT]: CK Narayan, Sharyans Resources	true=positive	pred=neutral
-[TGT] order booking is picking up substantially:  Sandip Sabharwal	true=positive	pred=neutral
-[TGT] heading to 200, JP stuck at 90: Ashwani Gujral	true=positive	pred=neutral
-[TGT]'s interest in markets leads to rise in midcap stocks: David Pezarkar	true=neutral	pred=positive
-Inox raises stake in [TGT] to 68.35% for Rs 89 cr	true=neutral	pred=positive
-[TGT] seeks shareholder permission to allow lenders convert debt into equity	true=positive	pred=neutral
-[TGT] Housing raises Rs 810 cr by issuing preference shares to LIC	true=neutral	pred=positive
-OIJIF ups stake in [TGT], buys more shares from Jaypee Capital Services	true=positive	pred=neutral
-[TGT] price plan may be the first step towards $70 oil floor	true=positive	pred=neutral
-[TGT] launches open offer to buy up to 25% in Cimmco	true=positive	pred=neutral
-Worst seems to be over for [TGT]: Jagdish Malkani, Member, NSE	true=positive	pred=neutral
-NMDC shares up over 4 per cent on hike in [TGT] prices	true=positive	pred=neutral
-Worst is behind for [TGT]; all eyes on management activity: Deven Choksey	true=positive	pred=neutral
-Acceleration in [TGT], fall in interest rates to boost CV space: Deven Choksey	true=positive	pred=negative
-Ajay Piramal to strengthen role in [TGT], takes over as Chairman of Shriram Capital	true=positive	pred=neutral
-[TGT]'s attractive valuation post 8% fall in a month makes it a good long-term buy	true=positive	pred=negative
-Spike in [TGT] price may be result of Burger King tie up talks: Dipan Mehta	true=positive	pred=neutral
-[TGT]: Implied volatilty hits 5-year high as buyers queue up to puchase options ahead of results	true=positive	pred=neutral
-[TGT] and mining companies will now have to operate more efficiently to generate profits: Pramod Gubbi	true=positive	pred=neutral
-Metals and [TGT] will now have to operate more efficiently to generate profits: Pramod Gubbi	true=positive	pred=negative
-[TGT] believes in India blockbuster, to invest over $2 billion in India over the next 5-6 years	true=positive	pred=neutral
-Singapore-based hedge fund Tree Line Asia Master Fund sells [TGT] shares worth Rs 20 crore	true=neutral	pred=negative
-[TGT] mis-stated facts in Sebi filings	true=negative	pred=neutral
-Trade [TGT] today: Deepak Mohoni	true=negative	pred=neutral
-CBI probes [TGT]s market debut	true=negative	pred=neutral
-Panel to monitor [TGT] futures	true=negative	pred=neutral
-BSE expels [TGT] as trading member	true=negative	pred=neutral
-[TGT] indulged in IPO irregularities: Sebi	true=negative	pred=neutral
-[TGT] face Sebi heat on public-holding norms	true=negative	pred=neutral
-[TGT] on verge of breakout: Emkay	true=negative	pred=positive
-[TGT] edges up on retailers demand	true=negative	pred=positive
-Allahabad Bank may sell stake in [TGT]	true=negative	pred=neutral
-[TGT] flat as investors digest Greek deal	true=negative	pred=neutral
-[TGT] could add to pressure on cane	true=neutral	pred=negative
-[TGT] downgrades Ipca Labs; stock plunges 15%	true=neutral	pred=negative
-[TGT]: Reviewing $8.4 million penalty slapped by SEBI	true=negative	pred=neutral
-[TGT] faces talent exodus as key officials quit	true=negative	pred=neutral
-Flat [TGT] OI data hints at trend reversal	true=negative	pred=neutral
-[TGT] good for short selling: Deepak Mohoni, trendwatchindia.com	true=negative	pred=positive
-[TGT] Land Rover CEO David Smith steps down	true=negative	pred=neutral
-[TGT] on edge ahead of Janet Yellen testimony	true=negative	pred=positive
-[TGT] climbs towards $101, pulls away from 16-month low	true=negative	pred=positive
-Call for minimum farmgate price for [TGT]	true=negative	pred=neutral
-Gains in [TGT] limited, investors weigh QE3 impact	true=negative	pred=neutral
-[TGT] withdraws IPO a day before its closing	true=negative	pred=neutral
-Investor sentiment on [TGT] goes from giddy to glum	true=negative	pred=neutral
-Mavi Investment moves [TGT] to sell shares, repatriate funds	true=neutral	pred=negative
-[TGT] Q4 net loss at Rs 311 crore	true=negative	pred=neutral
-Profit booking grips [TGT], top ten stocks in focus	true=negative	pred=neutral
-[TGT] trims initial losses, trades at 62.35 vs dlr	true=negative	pred=positive
-[TGT]: Recovery on track; costs, competition may hurt company	true=negative	pred=positive
-Tobacco stocks weigh on UK FTSE after [TGT] fine	true=negative	pred=neutral
-[TGT] suspends trading after just an year	true=negative	pred=neutral
-CBI examines ex-[TGT] chairman C B Bhave in MCX case	true=negative	pred=neutral
-Court may soon appoint liquidator in [TGT] case: Police officials	true=negative	pred=neutral
-[TGT] reports Q3 net loss at Rs 2.47 crore	true=negative	pred=neutral
-[TGT] Q1 net loss at Rs 8 crore	true=negative	pred=neutral
-[TGT] on disinvestment radar this fiscal, SAIL FPO next month	true=negative	pred=neutral
-Nikkei extends losses into fourth day on [TGT]'s sudden revival	true=positive	pred=neutral
-No relief for [TGT] in the near term: Five facts	true=negative	pred=neutral
-[TGT] gains; Q1 net profit falls 16%	true=negative	pred=positive
-[TGT] off highs on suspected Reserve Bank of India intervention	true=negative	pred=neutral
-[TGT] announces top management changes, Shiv Sethuraman moves out	true=negative	pred=neutral
-All action on 30 stocks in [TGT], small- and mid-caps ignored	true=negative	pred=neutral
-[TGT] effect: Investor confidence dampens, corporate bond yields go up	true=negative	pred=positive
-[TGT] hits 4-1/2-month high, spot rate set to cross midpoint	true=negative	pred=positive
-[TGT] banned from demanding repayment from brokerages ahead of deadline	true=negative	pred=neutral
-[TGT] nearing 9200 could put pressure on Nifty: Mitesh Thacker	true=neutral	pred=negative
-[TGT] pare $40 billion of hedge funds' wealth since 2008: Report	true=negative	pred=neutral
-[TGT] posts net loss of Rs 23 crore in Q4	true=negative	pred=neutral
-Funds in a bind as Sebi acts tough on [TGT]	true=negative	pred=neutral
-ICRA places [TGT] on ratings watch, cites management control dispute	true=negative	pred=neutral
-India love affair with [TGT] may be over, as prices slide	true=negative	pred=neutral
-[TGT]'s net profit up at Rs 228.46 cr; stock down	true=negative	pred=positive
-[TGT] in no-trade zone, be stock-specific in the market: Sandeep Wagle	true=negative	pred=neutral
-Oct jinx: [TGT] issue sucks out liquidity, sensex stays in range	true=negative	pred=neutral
-Unseasonal rains, hailstorms affect rural demand for [TGT] in wedding season	true=negative	pred=positive
-[TGT] posts Q1 net loss of Rs 281.34 crore	true=negative	pred=neutral
-Hedge funds give up betting on [TGT] as prices continue to tumble	true=negative	pred=positive
-[TGT] posts net loss of Rs 26 cr in Q1	true=negative	pred=neutral
-8,056 on [TGT] could be an invitation to initiate fresh shorts: Ashwani Gujral	true=negative	pred=neutral
-[TGT] raises $115 million through Hero share sale; exits with 2x return	true=neutral	pred=negative
-[TGT] sitting on big losses; hopefully it just a one-time loss: Hemindra Hazari	true=negative	pred=neutral
-Lot of money cannot be put in [TGT]: Rajan Malik, Philip Capital PCG	true=negative	pred=neutral
-PVR down on sale of [TGT] property for over Rs 100 crore	true=neutral	pred=negative
-Doubt on Dalal Street: [TGT] sheds 518 points as fast as a bullet train	true=negative	pred=positive
-[TGT] withdraws draft IPO prospectus; to resubmit again in next 4-6 weeks	true=negative	pred=neutral
-From 30K to 27K; top 5 reasons why there is more pain ahead for [TGT]	true=negative	pred=positive
-UBS sceptical about [TGT] Vision 2020 - companys growth plan over the next five years	true=negative	pred=neutral
-Lenders including Bank of India ask [TGT] to sell assets or equity to repay debt	true=negative	pred=neutral
-[TGT] becoming dreaded word in Dalal Street; pharma companies need to keep Street in the loop	true=neutral	pred=negative
-[TGT] takes on Pepsi, woos IPL fans outside stadium venues at Rs 10-15 per bottle	true=positive	pred=negative
-[TGT] small and midcap stocks shine; over 100 stocks hit fresh 52-week high on BSE	true=neutral	pred=positive
-Need to be patient while investing in [TGT]: IV Subramaniam, Quantum AMC	true=positive	pred=neutral
-8200 holds the key for [TGT]; Sensex likely to climb to 27,375: Mitesh Thacker	true=neutral	pred=positive
-Overweight on the [TGT] and underweight on the auto at this point: BP Singh	true=positive	pred=negative
-[TGT] hits 19-mth low as supply overwhelms, Shanghai rebar down 3rd day	true=positive	pred=negative
-Keep holding long positions; [TGT] to outperform CNX IT, CNX Bank: Ashwani Gujral	true=positive	pred=neutral
-Stay neutral to negative on [TGT] and banking stocks: Harendra Kumar, Elara Capital	true=neutral	pred=negative
-Stay neutral to negative on auto and [TGT]: Harendra Kumar, Elara Capital	true=neutral	pred=negative
-Defensives like pharma, FMCG perform better than all [TGT] stocks: Ashwani Gujral	true=neutral	pred=negative
-[TGT] reverse early gains to close flat; won edges lower	true=neutral	pred=negative
-Banking, energy and FMCG stocks may push [TGT] towards 6650-6700: Mitesh Thacker	true=neutral	pred=positive
-[TGT] eyes comeback; buy UltraTech with a target of Rs 3,282:	true=positive	pred=neutral
-M&M, Tata Group eyeing [TGT] for long-term growth opportunities: Vikas Khemani	true=positive	pred=neutral
-Orix Corp in talks to buy [TGT] stake; Shriram Transport up	true=neutral	pred=positive
-Exit Ipca Labs; it's the next [TGT] in making: Dipan Mehta	true=negative	pred=neutral
-Book profits with [TGT], stay with Hindustan Zinc: Deven Choksey	true=negative	pred=positive
-China, East Asian stocks to extend rally on [TGT]'s easing: Poll	true=neutral	pred=positive
-Dollar sits tight ahead of Fed meeting and data; [TGT] sags	true=negative	pred=neutral
-[TGT] ends past 27,000-mark for first time; Nifty closes at 8,083	true=positive	pred=neutral
-Sensex ends past 27,000-mark for first time; [TGT] closes at 8,083	true=neutral	pred=positive
-Sensex under pressure, [TGT] holds 8500; top 20 intraday trading bets	true=neutral	pred=negative
-[TGT] rebounds with small-caps; Dow, S&P 500 dip for week	true=positive	pred=negative
-China Yuan edges lower on [TGT] demand for dividend payments	true=positive	pred=neutral
-[TGT] out of PSU ETF; FinMin files offer document	true=negative	pred=neutral
-[TGT], Markit finalists for $1 billion-plus Barclays index unit: Sources	true=positive	pred=neutral
-S&P, [TGT] finalists for $1 billion-plus Barclays index unit: Sources	true=positive	pred=neutral
-South Korea stocks reach fresh 3-year high, [TGT] trads water	true=negative	pred=positive
-Citi downgrades Reliance Industries to neutral; prefers [TGT]	true=positive	pred=neutral
-European stock slip at open; [TGT] down 0.21%	true=positive	pred=negative
-Fitch ratings raise outlook on [TGT]; ringgit, stocks jump	true=positive	pred=neutral
-Gold climbs to fresh two-week high on softer [TGT]	true=negative	pred=neutral
-MphasiS, ACC, [TGT]- trades for the week: Deepak Mohoni	true=positive	pred=neutral
-NSE, BSE to exclude [TGT] from F&O segment	true=negative	pred=neutral
-Prefer HDFC Bank over ICICI, [TGT]: Sonam Udasi	true=negative	pred=positive
-Prefer Infosys over [TGT] in IT sector: Prashastha Seth	true=negative	pred=neutral
-Prefer LIC Housing Finance from [TGT]: Gaurav Mehta	true=neutral	pred=negative
-[TGT]@1,00,000 by 2020, says Karvy; but is it possible?	true=positive	pred=neutral
-Maruti, BoB may be among [TGT] index picks	true=neutral	pred=positive
-[TGT] slip at open; FTSE down 0.12%	true=negative	pred=positive
-Vedanta, Hindalco to exit [TGT] on December 21	true=neutral	pred=negative
-[TGT] steady, Vodafone down after results	true=neutral	pred=negative
-Southeast Asia stocks-mostly weak; [TGT] bucks trend	true=positive	pred=negative
+Other adds Other to Target	true=neutral	pred=positive
+Target IPO subscribed 42% on Day 1	true=neutral	pred=positive
+Target IPO subscribed 98% on second day	true=neutral	pred=positive
+Promoters raise stake to 46.72 pc in Target	true=neutral	pred=positive
+Stay with Target: Deven Choksey	true=neutral	pred=positive
+Target: Asset quality improves but payout cut disturbing	true=neutral	pred=negative
+Britain Target regains traction as Other steadies	true=neutral	pred=positive
+Target may get re-rated post Diwali: Prakash Diwan	true=neutral	pred=positive
+US Generic launches are key to Target growth	true=neutral	pred=positive
+Target decision unlikely to calm markets: Fund managers	true=neutral	pred=negative
+Other looks to raise stake in Target	true=neutral	pred=positive
+Target now move in tandem with stocks	true=neutral	pred=positive
+Too early to buy Target: Deepak Mohoni	true=neutral	pred=negative
+Arcil to pick stake in Target, come on board	true=neutral	pred=positive
+Target fairly priced at the current levels: Nitin Raheja	true=neutral	pred=positive
+Choose Target which have muliple products including insurance:Prateek Agarwal	true=neutral	pred=positive
+Government plans to curb Target role in financial markets	true=neutral	pred=negative
+Immediate support for Target is placed at 55.10: Bonanza	true=negative	pred=neutral
+Target IPO oversubscribed 1.22 times on day 2	true=neutral	pred=positive
+Target will participate in a bigger way: Kunj Bansal	true=neutral	pred=positive
+Soaring Target prices may become Other's latest bugbear	true=neutral	pred=positive
+Target Q4 numbers justify its valuations: Prakash Diwan	true=neutral	pred=positive
+Why Hemang Jani is not bullish on Target	true=neutral	pred=negative
+Other posts 13% growth; market leader Target slips 11%	true=neutral	pred=negative
+Crackdown on Ponzi schemes: Ordinance empowering Target set to lapse	true=neutral	pred=negative
+Target, now Other, plans to enter new markets	true=positive	pred=neutral
+Other, now Target, plans to enter new markets	true=positive	pred=neutral
+Target can hit 12,000 in five years, says Raamdeo Agrawal	true=neutral	pred=positive
+Options signal limited upside for Target at around 7500 levels	true=neutral	pred=negative
+Target announces to buyback shares of Rs 62.07 lakh	true=positive	pred=neutral
+Target Rs 1,200cr IPO subscribed 1.75 times till 2pm	true=neutral	pred=positive
+Top brokers recommend 'subscribe' to Target IPO; here why	true=neutral	pred=positive
+Target buys record Rs 16,000-crore government securities in a day	true=neutral	pred=positive
+Target gets Other nod to merge Other with itself	true=neutral	pred=positive
+Target levels beyond 7250 possible in next few days: Mitesh Thacker	true=neutral	pred=positive
+Midcap mantra: Target on a roll, to post solid earnings	true=neutral	pred=positive
+Need to be patient while investing in Target: Mayuresh Joshi	true=neutral	pred=positive
+Target in a no-trade zone due to holiday-truncated week: Sandeep Wagle	true=neutral	pred=negative
+Three reasons why Targets credit scores are on the mend	true=neutral	pred=positive
+Target struggles to comply with new US sanctions on Russia	true=neutral	pred=negative
+Beaten down counters aid Target; Top ten stocks to watch this week	true=neutral	pred=negative
+Target, book on high-frequency trading, becomes the talk of Wall Street	true=neutral	pred=positive
+Market might see breakout if Target gets past 15,550: Mitesh Thacker	true=neutral	pred=positive
+Target go up during downtrends & fall during uptrends: Deepak Mohoni	true=neutral	pred=positive
+See positivity around Target at this point of time: Nandkumar Surti	true=neutral	pred=positive
+Target: Healthy order book, smart execution to help beat slump blues	true=neutral	pred=positive
+Target have to participate in rally to take market higher: Ashwani Gujral	true=neutral	pred=positive
+Correction on the cards; can build long positions on Target: Mitesh Thacker	true=neutral	pred=positive
+Target Q3 PAT seen up 8% at Rs 871 crore; stock down	true=neutral	pred=negative
+Once competitive pressure eases, get into Target for long term: Paras Adenwala	true=neutral	pred=positive
+Secular rally in Target coming to an end: Prateek Agarwal, ASK Investment Manager	true=neutral	pred=negative
+Take to Target only with a long term view : Sonam Udasi	true=neutral	pred=positive
+Other expects Target to get re-rated on policy reforms & favorable macro trends	true=neutral	pred=positive
+Target has a history of taking stress assets and turning them around: Harendra Kumar	true=neutral	pred=positive
+Targets still holding the momentum: Nirmal Bang	true=neutral	pred=positive
+Target has become extremely flat: Ashwani Gujral	true=neutral	pred=negative
+Jhunjhunwala's Target buys Rs 11.50-crore Other shares	true=positive	pred=neutral
+Risks factored in; Target to remain upwardly-bound	true=positive	pred=neutral
+Top nine trading strategies in a rising Target	true=positive	pred=neutral
+Other better than Target: Prateek Agarwal	true=negative	pred=neutral
+Target submits offer to acquire control of Other	true=positive	pred=neutral
+Other submits offer to acquire control of Target	true=positive	pred=neutral
+Target buy a profit venture for Other	true=positive	pred=neutral
+Target should head towards 75-76 levels: Ashwani Gujral	true=positive	pred=neutral
+Germany's Other outperforms Target after strong data	true=negative	pred=neutral
+Players can borrow against Target	true=positive	pred=neutral
+Other dominates futures market, Target at 10%	true=positive	pred=neutral
+Target yields inch lower to 7.96%; seen range-bound	true=positive	pred=negative
+Other gains 11% on merger with Target	true=positive	pred=neutral
+Catch-up game: Target trails bigger peers	true=positive	pred=negative
+Target prices stay firm on robust demand	true=neutral	pred=positive
+Target might breakout above 8300: Mitesh Thacker	true=neutral	pred=positive
+Target bears emboldened by China data, others calmer	true=positive	pred=negative
+Target: Good show in FY13, but far from best	true=neutral	pred=negative
+Target yields hit over 3-month high; auction outcome eyed	true=negative	pred=positive
+Target firm near 3-week high on China rate cut	true=neutral	pred=positive
+Target Q2 net profit at Rs 942 crore	true=positive	pred=neutral
+Other approves merger with Target; stock gains	true=neutral	pred=positive
+Other outperform Target, strong performance to continue	true=neutral	pred=positive
+8330 should act as immediate support for Target: Mitesh Thacker	true=neutral	pred=positive
+Other acquires 96.48% stake in Target; open offer ends	true=neutral	pred=positive
+At Rs 22 lakh, Target is most costly futures contract	true=neutral	pred=negative
+Target pares gains after rallying nearly 6% post Q3 results	true=positive	pred=negative
+Other raises target prices of Other, Target upgraded	true=positive	pred=neutral
+Target to raise over Rs 1,160 cr through rights issue	true=neutral	pred=positive
+Target posts Rs 19.7 crore profit in December quarter	true=positive	pred=neutral
+Other to buy stake in Target; stock gains	true=neutral	pred=positive
+Target could be the next big trigger for Other	true=neutral	pred=positive
+Other orders to defreeze bank, demat accounts of Target	true=positive	pred=neutral
+Target gets Other approval to merge subsidiaries with itself	true=positive	pred=neutral
+5850-5860 should be a good support level for Target: Ashwani Gujral	true=neutral	pred=positive
+Other rules out allegations against Target	true=positive	pred=neutral
+Other deal expected to act as a trigger for 'troubled' Target	true=positive	pred=negative
+Target successfully uses Other spot e-auction trading platform	true=neutral	pred=positive
+Target net profit at Rs 20.10 cr for March quarter	true=positive	pred=neutral
+Share sale proceeds to help Target cut debt component	true=neutral	pred=positive
+Target places shares at 191 euros each, raises 2 billion euros	true=positive	pred=neutral
+Target to buy 1.74% SKS stake, to emerge second largest holder	true=positive	pred=neutral
+8,400 level should provide a strong support to Target:  Gaurav Mehta	true=neutral	pred=positive
+Target September-qtr Net jumps 72 pc to Rs 79 crore	true=neutral	pred=positive
+Target pare gains after 7% gains; here's why rally couldn't sustain	true=positive	pred=negative
+Target plans to garner up to Rs 200 cr via NCDs	true=positive	pred=neutral
+Target seeks Sebi nod to raise Rs 300 cr via IPO	true=positive	pred=neutral
+Target pares gains after hitting record highs; top ten stocks in focus	true=positive	pred=negative
+Target clocks Rs 66 cr profit in Q2, total income up by 44%	true=neutral	pred=positive
+Targets offer great value even at prevailing levels; prefer Other: Vinay Khattar	true=neutral	pred=positive
+Hindi daily Target plans to raise Rs 300 via IPO next month	true=positive	pred=neutral
+Huge demand-supply gap in Target; constraints in projects taking shape: K Ravi Kumar	true=neutral	pred=negative
+Target lags forecast, Q4 net up 6.4% at Rs 606.5 cr	true=positive	pred=negative
+Risk-averse investors should prefer Other over Target: Daljeet Singh Kohli, Other	true=neutral	pred=negative
+Other ends 13.3% higher on buzz Target plans to buy stake in firm	true=positive	pred=neutral
+Other sells stake in Target for Rs 300 crore, say sources; stock surges 14%	true=neutral	pred=negative
+Other outbids Target to pay sky-high $10 billion for land in South Korea's Gangnam	true=neutral	pred=negative
+Targets can offer a CAGR return of 25% over the next few years: Deven Choksey	true=neutral	pred=positive
+Other posts its best figures in its 21 year history; shares surge over 8% on Target	true=positive	pred=neutral
+Current rally is just one of many to come in 2-3 years: Neeraj Deewan, Target	true=positive	pred=neutral
+Target aims raising $300 million via ECB, set to launch mutual fund business	true=positive	pred=neutral
+Other another Target in making, can be a multibagger in 5 years: Vikas Sethi, Other	true=neutral	pred=positive
+Stellar debut: Target lists at Rs 222, a 23% premium to issue price of Rs 180	true=positive	pred=neutral
+Other bolster a bruised Target	true=neutral	pred=positive
+Police probe allegation about Target's threat to investors	true=positive	pred=negative
+Spurt in Target prices, under-utilisation, to hurt Other	true=positive	pred=negative
+NRI company files criminal complaint against Target	true=positive	pred=negative
+Target Q4 loss at Rs 9.68 crore	true=negative	pred=neutral
+Target promoter pledges 23 lakh shares	true=negative	pred=neutral
+Target to de-list shares from Other	true=negative	pred=neutral
+Target's real estate scheme not a CIS: Sebi	true=negative	pred=neutral
+Target weighs on Other after Other deal	true=negative	pred=neutral
+Target turns defensive on Other sales disappointment	true=negative	pred=neutral
+Over 5.6% stake in Target pledged	true=negative	pred=neutral
+Target defers announcement of financial results	true=negative	pred=neutral
+Target to wind down commodities trading	true=negative	pred=neutral
+Target pegs back Britain's Other after takeover snub	true=negative	pred=neutral
+Target slip 0.13% by break	true=neutral	pred=negative
+Pre-market: Target seen opening lower; inflation data eyed	true=neutral	pred=negative
+GO short on Target: Ashwani Gujral	true=neutral	pred=negative
+Consumers wont benefit from Target price dip	true=neutral	pred=negative
+Recommend to hold Target: Mayuresh Joshi	true=neutral	pred=positive
+Target reports Rs 25 crore loss in Q2	true=neutral	pred=negative
+Target investors factor in rate cut, yields head lower	true=positive	pred=neutral
+Other may extend gains; more earnings misses in Target	true=negative	pred=neutral
+Target posts Rs 593-crore consolidated loss for June quarter	true=neutral	pred=negative
+Target reports Rs 961-crore net loss in December quarter	true=neutral	pred=negative
+Known parties manipulated trades on Target, says Other audit	true=neutral	pred=negative
+Target languishing in valuations, but offer pockets of hope	true=negative	pred=neutral
+Other prices dip by 4% -5% but Target defiant	true=positive	pred=neutral
+Other upholds Other ruling against Target on stake sales	true=neutral	pred=negative
+Target Q2 net loss narrows at Rs 400.4 crore	true=negative	pred=positive
+Valuations in Target look stretched: Sandip Sabharwal	true=negative	pred=neutral
+Yield of Target plunges to a 9-year low	true=positive	pred=negative
+Target's winning streak broken by Swiss central bank move	true=neutral	pred=negative
+Target promoters stake to come down by 5%, post-Dec QIP	true=neutral	pred=negative
+Education body accuses Target's arm of conflict of interest, plagiarism	true=neutral	pred=negative
+Target yields bounce after Fed officials play down minutes	true=negative	pred=positive
+Target (India) posts Rs 5.65 crore net loss in Q1	true=neutral	pred=negative
+Target reports Rs 11.72 crore loss in December quarter	true=neutral	pred=negative
+Target's rebound could take a detour in 2016: Other	true=neutral	pred=negative
+Target turnaround hits other supermarkets as Other hold steady	true=neutral	pred=positive
+Target posts a loss of Rs 5,000 crore in 2013-14	true=neutral	pred=negative
+Target registers Rs 7.58 crore  loss in third quarter	true=neutral	pred=negative
+Other, Target to shift scrips to restricted group from November 29	true=neutral	pred=negative
+Did Target offer for sale prevent Other from hitting 9,000?	true=negative	pred=neutral
+Did Other offer for sale prevent Target from hitting 9,000?	true=negative	pred=neutral
+Target rebounds in Asia after drop on ECB easing plan reports	true=negative	pred=positive
+Other, Target yields dip as looser European Central Bank policy eyed	true=positive	pred=negative
+Target expect a market correction, say positive poll outcome factored	true=negative	pred=neutral
+Target's loss will test Basel III aproach: Other	true=neutral	pred=negative
+Target holds near $102, heads for weekly drop as firm dollar hurts	true=positive	pred=negative
+Target sells nearly 7 pc stake in IEX for Rs 21.45 cr	true=negative	pred=neutral
+Difficult for Other to breach valuation in long term; prefer Target: Pankaj Pandey	true=neutral	pred=positive
+Target sells 74% in city property to Other for Rs 575 crore	true=negative	pred=neutral
+I do not see too much of a downside for Target: Sandeep Wagle	true=negative	pred=neutral
+Target net loss at Rs 31 crore; hit by slump in demand	true=neutral	pred=negative
+Target posts Rs 171 crore loss in Q3 on forex loss, ATF spike	true=neutral	pred=negative
+Buyers waiting for better times ahead for Target: Deven Choksey, Other	true=negative	pred=positive
+Target may be able to offset cut in prices of Bt cotton seeds	true=negative	pred=neutral
+Other outflows at 15-week high as investors seek Target safety: Other	true=positive	pred=neutral
+Other 'A+' to Target perpetual bonds	true=positive	pred=neutral
+Target 'A+' to Other perpetual bonds	true=neutral	pred=positive
+Food ministry hikes Target production estimates	true=neutral	pred=positive
+Difficult for Target to get past 15,300; action seen in Other, Other: Ashwani Gujral	true=negative	pred=positive
+Target, Bangladesh to sign MoU for 2 new projects of 1320 mw each: R S Sharma	true=positive	pred=neutral
+Fall in order inflows shows more pain ahead for industrial stocks such as Target, Other, Other	true=positive	pred=negative
+Fall in order inflows shows more pain ahead for industrial stocks such as Other, Target, Other	true=positive	pred=negative
+Exposure increased to Target; look at Other more favourably: David Pezarkar	true=negative	pred=positive
+Solid stocks support Other; Target up after South Korea inflation at 11-month high	true=negative	pred=positive
+Solid stocks support Target; Other up after South Korea inflation at 11-month high	true=negative	pred=positive
+Momentum stocks like Target, Other are in correction mode: Mitesh Thacker	true=neutral	pred=positive
+Momentum stocks like Other, Target are in correction mode: Mitesh Thacker	true=neutral	pred=positive
+Target inches away from 2-1/2-month lows, fall in US yields hurts Other	true=neutral	pred=positive
+Bearish on Target and Other: Seshadri Bharathan, Other	true=positive	pred=negative
+Bearish on Other and Target: Seshadri Bharathan, Other	true=positive	pred=negative
+Target pares losses after falling over 100 points; Other, Other lead	true=neutral	pred=positive
+After the Q2 show, should you shift from Other to Target?	true=positive	pred=neutral
+Target available at compelling valuations, prefer Other: Harendra Kumar	true=negative	pred=positive
+Do not prefer Target, Other at current valuation: Deven Choksey	true=positive	pred=negative
+Prefer Other over Target in media space: P Phani Sekhar	true=neutral	pred=negative
+Target trades near 25,300, Other holds 7550; top 15 trading bets	true=neutral	pred=positive
+Other@22,339, fresh closing high; Target seen at 6,900 in 30 days	true=neutral	pred=positive
+Watch out for Other, Target next week : Technical Trends	true=negative	pred=positive
+Target wobbles on chance of more ECB action, Other perkier	true=neutral	pred=negative
+Target, Other to shift Other, Other to restricted group	true=neutral	pred=negative
+Other, Target to shift Other, Other to restricted group	true=neutral	pred=negative
+Other rises after Japan PM comments, German data hurts Target	true=neutral	pred=negative
+Go for Other than Target or Other: Jagannadham Thunuguntla	true=neutral	pred=negative
+Go for Other than Other or Target: Jagannadham Thunuguntla	true=neutral	pred=negative
+Other, Other gain; to replace Target, Other in NSE index	true=negative	pred=neutral
+Target, Other crack over 2% each on the Other	true=positive	pred=negative
+Other, Target crack over 2% each on the Other	true=positive	pred=negative
+Other strengthens, premium over Target at 19-month high	true=neutral	pred=positive
+Rally will be led by Target, Other: Ashwani Gujral	true=positive	pred=neutral
+Iraq fears hit Other, Target yields fall	true=positive	pred=negative
+Iraq jitters hit Other, Target yields slip	true=positive	pred=negative
+Other leads Target, Other; Other sparks media selloff	true=neutral	pred=positive
+Other leads Other, Target; Other sparks media selloff	true=neutral	pred=positive
+Now, you can own shares of Target, Other	true=neutral	pred=positive
+Now, you can own shares of Other, Target	true=neutral	pred=positive
+PSU banks join party; Target hits all-time high	true=neutral	pred=positive
+Other slips against Other, Target as risk sentiment improves	true=neutral	pred=positive
+Dealing room buzz: Other, Other, Other, Target	true=neutral	pred=positive
+Dealing room: Target, Other, Other, Other	true=neutral	pred=positive
+Dealing room: Other, Target, Other, Other	true=neutral	pred=positive
+Dealing room: Other, Other, Target, Other	true=neutral	pred=positive
+Dealing room: Other, Other, Other, Target	true=neutral	pred=positive
+Dealing room: Target, Other, Other, Other	true=neutral	pred=positive
+Dealing room: Other, Target, Other, Other	true=neutral	pred=positive
+Dealing room: Other, Other, Target, Other	true=neutral	pred=positive
+Dealing room: Other, Other, Other, Target	true=neutral	pred=positive
+Dealing room: Other; Target, Other, Other	true=neutral	pred=positive
+Dealing room: Other; Other, Target, Other	true=neutral	pred=positive
+Dealing room: Other; Other, Other, Target	true=neutral	pred=positive
+Target rally stalls; Other eyes record high	true=neutral	pred=negative
+Russia's Other weaker on Monday, Target outweighs taxes	true=negative	pred=positive
+Brokers' call: Target, Other, Other, Other	true=neutral	pred=positive
+Brokers' call: Other, Target, Other, Other	true=neutral	pred=positive
+Brokers' call: Other, Other, Target, Other	true=neutral	pred=positive
+Brokers' call: Other, Other, Other, Target	true=neutral	pred=positive
+Target, Other prices rise on fresh buying	true=negative	pred=positive
+Other, Target prices rise on fresh buying	true=negative	pred=positive
+Other steady, pegged back by Target	true=negative	pred=neutral
+Indians prefer Target, Other for investments	true=neutral	pred=positive
+Target, Other rise on global cues	true=negative	pred=positive
+Other, Target rise on global cues	true=negative	pred=positive
+Other, Other drive Target higher	true=neutral	pred=positive
+Other disapproves Vijayan's extension in Target	true=neutral	pred=negative
+Initiate trade on Target: Mitesh Thacker	true=neutral	pred=positive
+Maharashtra allows Target export	true=neutral	pred=positive
+Overweight on Target: BP Singh	true=neutral	pred=positive
+Retain big Target: Mehraboon Irani	true=neutral	pred=negative
+Target waver in Other shadow	true=neutral	pred=negative
+Target, supply gains turn it on	true=neutral	pred=positive
+F&O: Target may face resistance at 5370-5400	true=neutral	pred=negative
+Targets August selloff biggest since January 2008	true=neutral	pred=negative
+Target raises $500 million from bonds	true=neutral	pred=positive
+Investors see growth in stocks, shunning Target	true=neutral	pred=negative
+Target promoter hikes stake in company	true=neutral	pred=positive
+Target likely to drift sideways: Ashwani Gujral	true=neutral	pred=negative
+Watch out for Target: Other	true=neutral	pred=positive
+What's stopping Target from appreciating beyond 60?	true=neutral	pred=negative
+Target broken out of large falling channel:Other	true=neutral	pred=positive
+Be cautious before going long on Target	true=neutral	pred=negative
+Target turnover tops Rs 4,000 crore	true=neutral	pred=positive
+Target stake sale subscribed 30% till afternoon trade	true=neutral	pred=positive
+Target price may rise on low production	true=neutral	pred=positive
+Other restrains Target from holding EGM	true=neutral	pred=negative
+Five reasons why Target may not appreciate much	true=neutral	pred=negative
+Flat Target OI data hints at trend reversal	true=neutral	pred=negative
+Target raises Rs 1,000 crore via Masala Bonds	true=neutral	pred=positive
+Target scam: Investors want action against brokers, defaulters	true=neutral	pred=negative
+Proposed changes will further strengthen Target: Arun Jaitley	true=neutral	pred=positive
+Traders make a killing by selling Target options	true=neutral	pred=negative
+Why investors should not eagerly await Target results	true=neutral	pred=negative
+Target can go upto Rs 425: Prakash Gaba	true=neutral	pred=positive
+Target on the lenders for superb returns in 2016	true=neutral	pred=positive
+Target continues to face exodus of top executives	true=neutral	pred=negative
+Target keeps investors on edge: Is it 2008 again?	true=neutral	pred=negative
+Target gets Board approval for raising Rs 500 crore	true=neutral	pred=positive
+FIIs put $1.3 bn in Target in April	true=neutral	pred=positive
+FIIs trim stake in Target during Jan-Mar quarter	true=neutral	pred=negative
+Target dips but Malaysian plane downing seen aiding sentiment	true=neutral	pred=negative
+Guruvayur temple to buy 10 kg Target every month	true=neutral	pred=positive
+Target: Orders help, but margins hurt its revenue	true=neutral	pred=negative
+Kenneth Andrade exits Target leaving investors jittery	true=neutral	pred=negative
+Maintain limited investment in Target: Neeraj Deewan	true=neutral	pred=negative
+Target showing some signs of life: Ajay Bodke	true=neutral	pred=positive
+Recent correction should bring back foreign investors to Target'	true=neutral	pred=positive
+Target gets shareholder nod for Rs 11,500 crore QIP	true=neutral	pred=positive
+Technicals point to increasing probability of 7,000 on Target	true=neutral	pred=positive
+Ten market-linked insurance funds beat Target on fiscal returns	true=neutral	pred=negative
+Things edgy for Target: Pankaj Pandey, Other	true=neutral	pred=positive
+Target slips on Other guidance, but little change expected	true=neutral	pred=negative
+Carl Icahn says his firm sold remainder of Target stake	true=neutral	pred=negative
+Continue to buy till Target breaks 8090-8100 levels: Mitesh Thacker	true=neutral	pred=positive
+Corrections in Target will be shorter than rallies: Ashwani Gujral	true=neutral	pred=negative
+It should pay to stay with Target: Ashwani Gujral	true=negative	pred=positive
+Jim Rogers may buy Target if price drops to $1,300	true=neutral	pred=positive
+Target unlikely to get past the 7550-7560 mark: Ashwani Gujral	true=neutral	pred=negative
+Remain invested in Target despite key management exits: Mehraboon Irani	true=neutral	pred=positive
+Revival in sight for Target after poor quarterly numbers	true=neutral	pred=positive
+Why long-term investors should believe in Target CEO Vishal Sikka	true=neutral	pred=positive
+Will avoid Target until Other intervention: Prateek Agarwal	true=neutral	pred=negative
+With unique business model, Target to benefit from economic recovery	true=neutral	pred=positive
+Another 200-300 points downside is possible on Target: Ashwani Gujral	true=neutral	pred=negative
+Cheaper inputs help, but weak demand a drag on Target	true=neutral	pred=negative
+Continue to hold on to long positions in Target: Mitesh Thacker	true=neutral	pred=positive
+Target buys record Rs 16,000-crore government securities in a day	true=neutral	pred=positive
+Global happenings likely to affect Target in the short-term: Prateek Agarwal	true=neutral	pred=negative
+Target: Rising input costs a worry, but buoyant demand may help	true=neutral	pred=positive
+Target continues to be enduring story of India: Jagdish Malkani	true=neutral	pred=positive
+Other likely to take Target to 8000-8100 levels: Sandeep Wagle	true=neutral	pred=positive
+Other downgrades Target to 'neutral'; raises target price to Rs 1100	true=neutral	pred=negative
+Target overbought, hence there could be momentum loss: Mitesh Thacker, Other	true=neutral	pred=positive
+Other sells 4.8% in Target for Rs 50 crore	true=neutral	pred=negative
+Target can reach 8000 levels in six months, says Ajay Bagga	true=neutral	pred=positive
+Target could go upto 8400-8450 in the near future: Deven Choksey	true=neutral	pred=positive
+Target rally on Other price hike, but end day in red	true=neutral	pred=negative
+Target are quite a hit with investors in rate-cut season	true=neutral	pred=positive
+Target will rise beyond current levels before declining earnestly: Deepak Mohoni	true=neutral	pred=negative
+Other buys 50 pc in Target for Rs 45 crore	true=neutral	pred=positive
+Target most higher; Other retreats after May export drop	true=neutral	pred=positive
+Other most higher; Target retreats after May export drop	true=neutral	pred=negative
+Stay invested in Target, but don't add anymore: Neeraj Deewan	true=neutral	pred=negative
+Too early to say consensus has cut Target's overweight rating: Other	true=neutral	pred=negative
+Will add Target to portfolio on Other deregulation prospects: Deepak Shenoy	true=neutral	pred=positive
+Asset rejig tightening will have big impact on Target: UR Bhat	true=neutral	pred=negative
+Don't see much of an upside for Target going forward: Harendra Kumar	true=neutral	pred=negative
+Drug firm Target reports Q4 net profit at Rs 69.66 crore	true=positive	pred=neutral
+Exchange-traded funds make an exit of Rs 4,300 crore from Target	true=neutral	pred=negative
+Target won't reap immediate benefits from shift to cleaner fuel: Deven Choksey	true=neutral	pred=negative
+Target are in pretty decent shape despite challenging environs: Dipan Mehta	true=neutral	pred=positive
+Not in a hurry to recommend Target on fundamental basis: Mehraboon Irani	true=neutral	pred=negative
+Proxy firms want Target to block appointment of 6 independent directors	true=neutral	pred=negative
+Target posts marginal growth in Q1 net profit at Rs 14.81 crore	true=neutral	pred=positive
+Risk premium narrows between Target and state-backed securities on lower supply	true=neutral	pred=positive
+With investors steering clear, Target by banks may see early death	true=neutral	pred=negative
+Gujarat govt buys shares of Target to take on Other aggressive intentions	true=neutral	pred=positive
+Other downgrades Target rating  to 'Neutral', raises target price to Rs 1,100	true=neutral	pred=negative
+Pre-budget rally could take Target to 8600, roll-out of key reforms eyed: Experts	true=neutral	pred=positive
+Do not expect Target to give you great returns in short term: UR Bhat	true=neutral	pred=negative
+Be careful in finding value in Target as bounce back will not last: Ashwani Gujral	true=neutral	pred=negative
+Other to benefit if investment cycle in Other, Target happen: Dhiraj Sachdev	true=neutral	pred=positive
+Short Target with stoploss of Rs 287 for target of Rs 280: Vijay Bhambwani	true=neutral	pred=negative
+7800 is the worst we can see on Target at this stage: Sudip Bandyopadhyay President, Other	true=neutral	pred=negative
+Target to pay 18% interim dividend	true=positive	pred=neutral
+Target makes $1 billion bond payment	true=positive	pred=neutral
+Target declared 30% dividend	true=negative	pred=neutral
+Target investors should wait and watch: Analysts	true=positive	pred=neutral
+Target holds firm ahead of Fed meeting	true=positive	pred=neutral
+Target pain has an upside for Other	true=neutral	pred=negative
+Hold Target in current scenario: Deepak Mohoni	true=positive	pred=neutral
+Others may outperform Target: BP Singh	true=negative	pred=neutral
+Other continues gains as Target price firms	true=positive	pred=neutral
+Target may get costlier this fiscal year	true=positive	pred=negative
+Target posts Rs 284 crore profit for Q3	true=positive	pred=neutral
+Other acquires Target black pigment portfolio; stock up	true=positive	pred=neutral
+Target to list on Other platform	true=positive	pred=neutral
+Other gains as Target buys 4 million shares	true=positive	pred=neutral
+Other shareholders approve preferential issue to Govt, Target	true=positive	pred=neutral
+Subdued Ifo takes M&A shine off Target	true=positive	pred=negative
+Target initiates coverage on Other, expects 22% upside	true=positive	pred=neutral
+Other gains on uptick in Other, Target banking concerns	true=negative	pred=neutral
+FCCBs weigh on Target as new orders raise hopes	true=positive	pred=negative
+Target can touch Rs 306: Ashwani Gujral	true=positive	pred=neutral
+Other earns big notional gain in Target futures	true=neutral	pred=positive
+Target stake in Other crosses 10 per cent	true=positive	pred=neutral
+Other increases stake in Target to 9%	true=neutral	pred=positive
+Target IPO opens today; here's what experts say	true=positive	pred=neutral
+Target to raise Rs 29 cr via rights issue	true=positive	pred=neutral
+Target reports operating profit of Rs 672 crore for FY15	true=positive	pred=neutral
+ECB stimulus flows may help Target to build forex reserves	true=neutral	pred=positive
+Target buys 4.66% stake in Other for Rs 1,889 crore	true=positive	pred=neutral
+Target net profit at Rs 138 crore in Q1	true=positive	pred=neutral
+Promoters have full faith, Target says, warding off rumours	true=positive	pred=neutral
+Target bullish on Other as oil price steadies	true=neutral	pred=positive
+Target plans to export fertilizers due to drop in domestic demand	true=positive	pred=negative
+Target promoters plan to hike stake to avoid take over	true=positive	pred=neutral
+Target to raise up to Rs 100 crore via securities	true=positive	pred=neutral
+Media report on Target led Other to surge: Jagdish Malkani	true=neutral	pred=positive
+Target heading to 200, Other stuck at 90: Ashwani Gujral	true=positive	pred=neutral
+Other ups stake in Target,buys 14.2 lakh shares for Rs 81 cr	true=neutral	pred=positive
+Target: The S&P 500 will hit another all-time high before year-end	true=neutral	pred=positive
+Other jumps 20% on Other's open offer;Target swells by Rs 318 crore	true=neutral	pred=positive
+Target sells Masala Re Bonds; raises Rs 1,000 cr for Other	true=positive	pred=neutral
+Other raises stake in Target to 68.35% for Rs 89 cr	true=neutral	pred=positive
+Target seeks Other's nod to raise upto Rs 1,000 cr via bonds	true=positive	pred=neutral
+Target seeks shareholder permission to allow lenders convert debt into equity	true=positive	pred=neutral
+Target likely to remain volatile; top five trading strategies for Budget week	true=neutral	pred=negative
+Target's revamp of PSX exchange to put focus back on order size	true=positive	pred=neutral
+Target price plan may be the first step towards $70 oil floor	true=positive	pred=neutral
+Target to make open offer for additional 20 pc in Other	true=positive	pred=neutral
+Target launches open offer to buy up to 25% in Other	true=positive	pred=neutral
+Other launches open offer to buy up to 25% in Target	true=neutral	pred=positive
+Valuations of banking stocks looking decent: Dhiraj Agarwal, Target	true=positive	pred=neutral
+Other hits turnover of Target, Other by up to 50% on first day	true=positive	pred=neutral
+Fading monsoon concerns may lift Target; positive on Other: Pankaj Pandey	true=negative	pred=positive
+It's safe ride for Target so far, but miles to go still	true=positive	pred=neutral
+Target makes 17.66 billion roubles worth of forex interventions on October 7	true=positive	pred=neutral
+Target seeks Other nod to raise up to Rs 200 cr via NCDs	true=positive	pred=neutral
+Singapore-based hedge fund Target Fund sells Other shares worth Rs 20 crore	true=positive	pred=neutral
+Singapore-based hedge fund Other Fund sells Target shares worth Rs 20 crore	true=neutral	pred=negative
+SUUTI stake sale won't have a significant impact on the long term profile of Target: Vijai Mantri	true=positive	pred=neutral
+Target mis-stated facts in Other filings	true=negative	pred=neutral
+Trade Target today: Deepak Mohoni	true=negative	pred=positive
+CBI probes Targets market debut	true=negative	pred=neutral
+Panel to monitor Target futures	true=negative	pred=neutral
+Target underperforms flat Others	true=neutral	pred=negative
+Target nerves send Other lower	true=neutral	pred=negative
+Target rout hits Other shares	true=neutral	pred=positive
+Target approaches SAT against Other order	true=negative	pred=neutral
+Day traders raise bearish bets on Target	true=neutral	pred=negative
+Target may get a rerating, stocks rally	true=negative	pred=positive
+Other down after Target crash	true=neutral	pred=negative
+Target edges up on retailers demand	true=negative	pred=positive
+Other falls after surprise Target output dip	true=neutral	pred=negative
+Target flat as investors digest Greek deal	true=negative	pred=neutral
+Target recoup losses on power producers, carmakers	true=negative	pred=positive
+Target futures gain 0.79% on upsurge in demand	true=negative	pred=positive
+Target benchmark off 5-month high, Other drags	true=negative	pred=positive
+Target Land Rover CEO David Smith steps down	true=negative	pred=neutral
+Target shareholders allege fraud, company dismisses the charges	true=negative	pred=neutral
+Target Q2 net loss at Rs 25.90 crore	true=negative	pred=neutral
+Target Q4 net loss at Rs 23.74 crore	true=negative	pred=neutral
+Target plans to sell 5% in tower business	true=negative	pred=neutral
+Target Q1 net loss at Rs 316 cr	true=negative	pred=neutral
+Target's SIM move chips away at Other's share price	true=negative	pred=neutral
+Target Q2 net loss at Rs 14.21 crore	true=negative	pred=neutral
+Balance sheet oriented news driving Target: Nitin Raheja	true=negative	pred=neutral
+Target climbs towards $101, pulls away from 16-month low	true=negative	pred=positive
+Target Q1 net loss at Rs 46.8 crore	true=negative	pred=neutral
+Targets little changed as rebounding stocks temper safe-haven appeal	true=negative	pred=neutral
+Other moves Target to sell shares, repatriate funds	true=neutral	pred=negative
+Target Q4 net loss at Rs 311 crore	true=negative	pred=neutral
+Target trims initial losses, trades at 62.35 vs dlr	true=negative	pred=positive
+Other probes Target chief Bill Gross ETF bond fund	true=negative	pred=neutral
+Target Q3 net loss narrows at Rs 437.9 crore	true=negative	pred=positive
+Target Q2 net loss at Rs 91.63 crore	true=negative	pred=neutral
+CBI examines ex-Target chairman C B Bhave in Other case	true=negative	pred=neutral
+Target sales in domestic market remains flat despite regulatory measures	true=negative	pred=neutral
+Target reports Q3 net loss at Rs 2.47 crore	true=negative	pred=neutral
+Target Q1 net loss shrinks to Rs 429 crore	true=negative	pred=positive
+Target Q1 net loss at Rs 8 crore	true=negative	pred=neutral
+Other replaces Target as Other top stock to avoid	true=positive	pred=negative
+Target replaces Other as Other top stock to avoid	true=negative	pred=neutral
+Target investors oppose stake sale in US based company	true=negative	pred=neutral
+Target posts Q4 net loss at Rs 13.47 cr	true=negative	pred=neutral
+Target Q2 consolidated net loss at Rs Rs 15.26 crore	true=negative	pred=neutral
+Target net loss at Rs 73.6 crore in Jan-Mar quarter	true=negative	pred=neutral
+Target Q4 net loss significantly narrows at Rs 445 cr	true=negative	pred=positive
+Target rallies 14%, hits 52-week high on stake sale reports	true=negative	pred=positive
+Target announces top management changes, Shiv Sethuraman moves out	true=negative	pred=neutral
+Target Q2 operating loss narrows to Rs 47 crore	true=negative	pred=positive
+2G auction: Target seen correcting, call charges may get higher	true=negative	pred=neutral
+Target hits 4-1/2-month high, spot rate set to cross midpoint	true=negative	pred=positive
+Target urges Other to cut rates, reserve requirements	true=negative	pred=neutral
+Other's $3.6 billion exit from Target hits Other, stocks	true=negative	pred=neutral
+Target posts net loss of Rs 23 crore in Q4	true=negative	pred=neutral
+Other profits suffer decline in FY14; Target bucks the trend	true=negative	pred=positive
+Target reports net loss of Rs 7.98 crore in Q2	true=negative	pred=neutral
+Other tells Other's institutional holders to oppose Targets's proposed Gujarat plant	true=negative	pred=neutral
+Target to shift stocks of 47 firms to restricted trading segment	true=negative	pred=neutral
+Target narrows operating loss to Rs 107 cr in Apr-Jun quarter	true=negative	pred=positive
+Target import may touch new record at 12.3 milllion tonnes	true=negative	pred=neutral
+Target yield may not go below 8.70 per cent: Other	true=negative	pred=neutral
+Dollar stands tall as Target hit by economic gloom, yen also wilts	true=negative	pred=neutral
+Improvement required in balance sheets of Target: Other	true=negative	pred=neutral
+Target pare losses after dipping to 2-month low; won firmer	true=negative	pred=positive
+Other raises $115 million through Target share sale; exits with 2x return	true=negative	pred=neutral
+Raw material to cost ratio a key determinant for Target's performance: Amit Khurana	true=negative	pred=neutral
+Target withdraws draft IPO prospectus; to resubmit again in next 4-6 weeks	true=negative	pred=neutral
+Target Q2 seen flat at Rs 1,430 crore, forex loss pegged at $23 million	true=negative	pred=neutral
+Other becoming dreaded word in Dalal Street; Target need to keep Street in the loop	true=negative	pred=neutral
+Target becoming dreaded word in Dalal Street; Other need to keep Street in the loop	true=neutral	pred=negative
+Target, Other slip as Oil Ministry proposes higher gas price on extra output only	true=positive	pred=negative
+Other, Target slip as Oil Ministry proposes higher gas price on extra output only	true=positive	pred=negative
+Target small and midcap stocks shine; over 100 stocks hit fresh 52-week high on BSE	true=neutral	pred=positive
+Unlike Target, Other is not eligible for membership in the S&P 500: David Blitzer	true=positive	pred=neutral
+Other hits 19-mth low as supply overwhelms, Target down 3rd day	true=positive	pred=negative
+Yellen or Rajan? Five reasons why Other gained 350 points, Target hit 63	true=positive	pred=neutral
+Other, Other and Other may push Target towards 6650-6700: Mitesh Thacker	true=neutral	pred=positive
+Target, Other among six companies that hit their 52-week lows today	true=positive	pred=negative
+Other, Target among six companies that hit their 52-week lows today	true=positive	pred=negative
+Target, Other eye returns of over 2.5 times on their investments	true=neutral	pred=positive
+Move over Target, Other, say experts; stocks that can return upto 46%	true=neutral	pred=negative
+Move over Other, Target, say experts; stocks that can return upto 46%	true=neutral	pred=positive
+Mutual funds favour IT stocks like Other over Target and Other	true=neutral	pred=negative
+Prefer Other over Target in Telecom space: Ajay Bodke	true=neutral	pred=negative
+Target, Other nurse losses as China concerns weighs	true=neutral	pred=negative
+Other, Target nurse losses as China concerns weighs	true=neutral	pred=negative
+Other edges lower on Target demand for dividend payments	true=positive	pred=neutral
+Target, Other recover from lows post RBI policy review	true=neutral	pred=positive
+Other, Target recover from lows post RBI policy review	true=neutral	pred=positive
+Other, Other, 6 others added to Target	true=neutral	pred=positive
+Target should test 8,450-8500; Other eyes 18,900: Mitesh Thacker	true=positive	pred=neutral
+Other should test 8,450-8500; Target eyes 18,900: Mitesh Thacker	true=positive	pred=neutral
+Other rises to fresh 2-month high as Target supports sentiment	true=negative	pred=positive
+Other rangebound, Target flirts with 6800; top 20 trading bets	true=negative	pred=neutral
+Other starts on a cautious note; Target tests 6500 levels	true=positive	pred=neutral
+Target end up; Other firmer on exporter demand	true=negative	pred=neutral
+Target, Other merger deal gets Other, Other nod	true=neutral	pred=positive
+Other, Target merger deal gets Other, Other nod	true=neutral	pred=positive
+Target, Other and Other plan to sell Other shares	true=positive	pred=neutral
+Other, Target and Other plan to sell Other shares	true=positive	pred=neutral
+Other, Other and Target plan to sell Other shares	true=positive	pred=neutral
+Other jumps on Target, gives Other a lift	true=negative	pred=neutral
+Target down, Other slumps on possible fine	true=positive	pred=negative
+Other down, Target slumps on possible fine	true=positive	pred=negative
+Target slip at open; Other down 0.21%	true=positive	pred=negative
+Other slip at open; Target down 0.21%	true=positive	pred=negative
+German data brings relief to Other, Target rise stalls	true=negative	pred=positive
+Prefer Other over Other in Target: Prashastha Seth	true=neutral	pred=negative
+Prefer Other from Target: Gaurav Mehta	true=neutral	pred=negative
+Reduce overdependence on Other and Target: Dhiraj Sachdev	true=negative	pred=neutral
+Other drops against Target as Other price slumps again	true=positive	pred=neutral
+Target to list first on Other, Other, Other	true=positive	pred=neutral
+Other dip early; Target up on drug results	true=neutral	pred=positive
+Target, Other turn choppy; Other lead the decline	true=neutral	pred=negative
+Other, Target turn choppy; Other lead the decline	true=neutral	pred=negative
+Other ends above 26,000-mark; Target closes at 7,767.85	true=positive	pred=neutral
+Target ends flat, Other climbs to fresh high	true=positive	pred=neutral
+Target, Other will remain closed on Friday	true=negative	pred=neutral
+Other, global markets may weigh on Target	true=neutral	pred=negative
+Target, Other to exit Nifty from Monday	true=neutral	pred=negative
+Other, Target to exit Nifty from Monday	true=neutral	pred=negative

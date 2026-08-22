@@ -25,7 +25,7 @@ Model chính nên chạy trên cột `input_text`, không chạy trực tiếp t
 Nếu dùng checkpoint Hugging Face/local checkpoint:
 
 ```bash
-python3 run_finabsa_on_cafef.py \
+python run_finabsa_on_cafef.py \
   --model ./finabsa-other-masked-final \
   --input data/cafef_oct2022/model_inputs_strict.csv \
   --output data/cafef_oct2022/model_predictions.csv
@@ -34,7 +34,7 @@ python3 run_finabsa_on_cafef.py \
 Đường chạy chính dùng `model_inputs_strict.csv`; `model_inputs.csv` là bộ full để chạy robustness sau. Format input có thể khác nhau tùy model/script, nhưng output đưa vào pipeline chỉ cần một prediction cho mỗi input. Adapter chấp nhận `positive/negative/neutral` hoặc viết tắt `pos/neg/neu`, rồi canonicalize về ba nhãn chuẩn. Nếu bạn có script model riêng, yêu cầu tối thiểu là output phải giữ `sample_id` và một cột chứa raw output. Nếu output chỉ có một prediction trên mỗi dòng theo đúng thứ tự input, adapter vẫn hỗ trợ:
 
 ```bash
-python3 normalize_model_output.py \
+python normalize_model_output.py \
   --raw your_model_output.csv \
   --inputs data/cafef_oct2022/model_inputs.csv \
   --out data/cafef_oct2022/model_predictions.csv
@@ -45,15 +45,15 @@ Khuyến nghị giữ `sample_id`. Không nên chỉ giữ label vì cần raw o
 ## Chạy kiểm tra và ghép dữ liệu
 
 ```bash
-python3 validate_predictions.py
-python3 download_market_data.py \
+python validate_predictions.py
+python download_market_data.py \
   --inputs data/cafef_oct2022/model_inputs_strict.csv \
   --start 2022-05-01 \
   --end 2022-12-31 \
   --sleep 8.0
-python3 run_experiments.py
-python3 run_robustness.py
-python3 build_report.py
+python run_experiments.py
+python run_robustness.py
+python build_report.py
 ```
 
 The market downloader uses a per-ticker cache under `data/cafef_oct2022/market_cache/` and writes checkpoints after each ticker. The default delay is intentionally conservative because guest vnstock access can be rate-limited. If a request fails, it is recorded in `market_download_errors.json`; rerunning the same command resumes from cached tickers.
