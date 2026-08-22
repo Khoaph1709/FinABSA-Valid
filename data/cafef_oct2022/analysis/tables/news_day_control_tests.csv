@@ -1,0 +1,2 @@
+comparison,n_news,n_no_news,mean_news_ar,mean_no_news_ar,difference,welch_t,welch_p,permutation_p,bootstrap_ci_low,bootstrap_ci_high
+news_day_minus_no_news_day,152,934,0.09899487925126046,-0.35088355285824846,0.44987843210950895,1.6170349014237761,0.10744216222442754,0.09878024395120975,-0.09010467303805271,1.0039916068308792

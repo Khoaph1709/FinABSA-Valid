@@ -19,4 +19,6 @@ finabsa-*/
 *.pt
 *.pth
 
+MODEL/
+
 # Keep normalized analysis tables and input manifests under data/.
