@@ -21,21 +21,21 @@ def parse_label(text: str) -> str:
     
     # Tìm từ khóa sentiment
     if 'positive' in text_lower:
-        return "POSITIVE"
+        return "positive"
     elif 'negative' in text_lower:
-        return "NEGATIVE"
+        return "negative"
     elif 'neutral' in text_lower:
-        return "NEUTRAL"
+        return "neutral"
     elif 'pos' in text_lower:
-        return "POSITIVE"
+        return "positive"
     elif 'neg' in text_lower:
-        return "NEGATIVE"
+        return "negative"
     elif 'neu' in text_lower:
-        return "NEUTRAL"
+        return "neutral"
 
     else:
-        # Nếu không tìm thấy, trả về NEUTRAL
-        return "UNKNOWN"
+        # Không ép output không hợp lệ thành một nhãn sentiment.
+        return "unknown"
 
 
 def main() -> None:

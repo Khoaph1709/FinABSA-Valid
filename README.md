@@ -1,94 +1,242 @@
-# FinABSA
-[FinABSA](https://huggingface.co/amphora/FinABSA) is a T5-Large model trained for Aspect-Based Sentiment Analysis specifically for financial domains. The model was trained on the [SEntFiN 1.0](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24634?af=R) and with several data augmentation tricks. Unlike traditional sentiment analysis models which predict a single sentiment label for each sentence, FinABSA has been trained to disambiguate sentences containing multiple aspects. By replacing the target aspect with a [TGT] token the model predicts the sentiment concentrating to the aspect.
+# FinABSA--CafeF: NLP-to-Finance Validation Pipeline
 
-## Comparision with FinBERT
-In this sector, we compare FinABSA againset [FinBERT](https://github.com/ProsusAI/finBERT), the most widely used pretrained language model in the finance domain. As shown in the table below due to the structual limitations of the task itself FinBERT fails to correctly classify sentences with contradicting sentiments.
+Đây là repository của bài tập lớn môn **Natural Language Processing**, xây dựng và kiểm định một pipeline từ tin tức tài chính tiếng Việt đến phân tích phản ứng giá cổ phiếu. Dự án kết hợp **target-masked Aspect-Based Sentiment Analysis (ABSA)** với dữ liệu bài báo CafeF và giá cổ phiếu Việt Nam lấy qua vnstock.
 
-| SRC                                                | Model     | Prediction      |
-| -------------------------------------------------- | --------- | --------------- |
-| Tesla stocks dropped 42% while Samsung rallied.    | FinBERT   |  NEGATIVE       |
-| [TGT] stocks dropped 42% while Samsung rallied.    | FinABSA   |  NEGATIVE       |
-| Tesla stocks dropped 42% while [TGT] rallied.      | FinASBA   |  POSITIVE       |
+> **Kết luận quan trọng:** FinABSA trong pipeline này không tự nhận diện ticker. Entity linking được thực hiện trước; model chỉ dự đoán sentiment của target đã được mask. Các kết quả tài chính là association quan sát được, không phải bằng chứng rằng tin tức hoặc sentiment gây ra biến động giá.
 
-## Supported Models
-FinABSA is supported in two models, [T5-Large](https://huggingface.co/t5-large) and [DeBERTa-v3-Base](https://huggingface.co/microsoft/deberta-v3-base). T5 was trained using a prompt generation method similar to that of [Aspect Sentiment Quad Prediction as Paraphrase Generation](https://arxiv.org/abs/2110.00796). DeBERTa was trained using a conventional sequence classification objective. We observe that the DeBERTa model achieves a slightly higher accuracy compared to the T5 model. All models are available at [huggingface](https://huggingface.co/amphora).
+## 1. Mục tiêu và câu hỏi nghiên cứu
 
-## How To Use
+Pipeline được thiết kế để trả lời ba câu hỏi. Thứ nhất, output của model có được nối đúng với từng article--ticker pair hay không. Thứ hai, sentiment dự đoán có liên hệ với abnormal return sau ngày công bố tin hay không. Thứ ba, mối liên hệ này có bền vững qua các năm, event windows, nhóm sentiment, phương pháp suy luận và độ trễ hay không.
 
-### 1. Install Dependencies
-```python
-!git clone https://github.com/guijinSON/FinABSA.git
-!pip install transformers
-!pip install flair
+Đóng góp chính của dự án nằm ở việc xây dựng một **data contract có khóa nối ổn định**, kiểm soát entity linking bằng confidence threshold, chuẩn hóa output sentiment, và đưa các prediction vào một bộ financial validation có thể tái lập.
+
+## 2. Model contract
+
+Một dòng input của FinABSA tương ứng với **một article--ticker pair**, không nhất thiết là một bài báo duy nhất. Với headline có nhiều doanh nghiệp, target được giữ lại dưới token `Target` còn các entity khác được thay bằng `Other`.
+
+```text
+Headline gốc:  HPG tăng mạnh, trong khi SSI điều chỉnh.
+Input cho HPG: Target tăng mạnh, trong khi Other điều chỉnh.
+Output:        positive / neutral / negative
 ```
 
-### 2. Import & Run ABSA
-```python
-from FinABSA.FinABSA import ABSA
-import pprint
+Entity linking, ABSA và market analysis là ba bước độc lập:
 
-absa = ABSA()
-o = absa.run_absa(
-                input_str = "Economic headwinds also add to uncertainties. Major companies, including Alphabet, Apple, Microsoft, and Meta, have indicated a \
-                slowing pace of hiring for the rest of the year, suggesting mega-tech firms are bracing for a more uncertain economic outlook. \
-                Tougher macroeconomic conditions are likely to lead to cuts in advertising budgets, while the squeeze on household disposable income through \
-                inflation should weigh on discretionary consumer spending—both factors will hurt e-commerce and digital media companies. Meanwhile, reduced capital \
-                expenditure and elevated inventories will likely weigh on semiconductor and hardware companies.."
-                )
-pprint.pprint(o)
+| Bước | Đầu vào | Đầu ra |
+|---|---|---|
+| Entity linking | Tên doanh nghiệp trong bài | Ticker, phương pháp và confidence |
+| Target masking + FinABSA | Headline đã mask target | Nhãn positive, neutral hoặc negative |
+| Financial validation | Ticker--day và OHLCV | Return, abnormal return, CAR và regression features |
 
-# {'Alphabet': {'classification_output': 'NEGATIVE',
-#              'logits': {'negative': 0.9970308542251587,
-#                         'neutral': 0.0018199979094788432,
-#                         'positive': 0.0011491376208141446}},
-# 'Apple': {'classification_output': 'NEGATIVE',
-#           'logits': {'negative': 0.9980792999267578,
-#                      'neutral': 0.0013628738233819604,
-#                     'positive': 0.000557745574042201}},
-# 'Meta': {'classification_output': 'NEGATIVE',
-#          'logits': {'negative': 0.9947644472122192,
-#                     'neutral': 0.004664959851652384,
-#                     'positive': 0.0005706017836928368}},
-# 'Microsoft': {'classification_output': 'NEGATIVE',
-#               'logits': {'negative': 0.9938719272613525,
-#                          'neutral': 0.005691188853234053,
-#                          'positive': 0.00043679968803189695}}}
+## 3. Kết quả dữ liệu đã chuẩn bị
+
+Dữ liệu chính gồm cùng một tháng October trong bốn năm 2019--2022. Strict sample giữ các entity link có confidence tối thiểu 0.95 để ưu tiên precision khi nối prediction với dữ liệu giá.
+
+| Kỳ | Bài CafeF | Article--ticker full | Strict pairs | Predictions | Strict pairs có giá |
+|---|---:|---:|---:|---:|---:|
+| 2019-10 | 1,040 | 583 | 154 | 154 | 141 |
+| 2020-10 | 1,115 | 657 | 182 | 182 | 168 |
+| 2021-10 | 1,506 | 991 | 297 | 297 | 281 |
+| 2022-10 | 1,472 | 509 | 206 | 206 | 206 |
+| **Tổng** | **5,133** | **2,740** | **839** | **839** | **796** |
+
+Toàn bộ 839 strict predictions đã được kiểm tra theo `sample_id`: missing ID = 0, unexpected ID = 0, duplicate ID = 0 và unknown label = 0. Trong strict sample, nhãn gồm 759 neutral, 54 positive và 26 negative; class imbalance này được báo cáo như một giới hạn thống kê thay vì bị che giấu.
+
+## 4. Cấu trúc repository
+
+```text
+.
+├── README.md                         # Tài liệu chính của repository
+├── requirements_cafef.txt            # Python dependencies cho pipeline CafeF
+├── data/
+│   ├── model_contract.json           # Quy ước input/output của model
+│   ├── entity_aliases.csv            # Alias doanh nghiệp--ticker
+│   └── cafef_oct2022/                # Run gốc October 2022 và output đã kiểm tra
+├── 2019-10/analysis/figures/         # Hai figure dùng trong report/slide
+├── 2020-10/analysis/figures/
+├── 2021-10/analysis/figures/
+├── 2022-10/analysis/figures/
+├── main.tex                          # Report LaTeX đa năm hoàn chỉnh
+├── slide.tex                         # Beamer deck tiếng Việt, tương thích pdfLaTeX
+├── statistical_validation_multiyear.tex # Section kiểm định đa năm
+├── validation_section.tex            # Section cũ October 2022, tham khảo
+├── tests/test_pipeline.py            # Unit tests cho parser và join logic
+├── docs/                             # Hướng dẫn dữ liệu, pipeline, thống kê và LaTeX
+└── scripts ở root                    # Crawler, data preparation, inference và validation runners
 ```
 
-#### OR
+Raw HTML, cache vnstock, toàn bộ dữ liệu crawl đa năm, model checkpoints, file ZIP/PDF sinh tự động và artifact tạm không nên version-control. Các file này được ignore bởi `.gitignore`; chúng có thể được tái tạo bằng các script tương ứng.
 
-### 1. Directly import from HuggingFace
-```python
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+## 5. Cài đặt môi trường
 
-model = AutoModelForSeq2SeqLM.from_pretrained("amphora/FinABSA")
-tokenizer = AutoTokenizer.from_pretrained("amphora/FinABSA")
+Khuyến nghị dùng Python 3.10 trở lên và một virtual environment riêng.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements_cafef.txt
 ```
 
-### 2. Generate your output
-```python
-input_str = "[TGT] stocks dropped 42% while Samsung rallied."
-input = tokenizer(input_str, return_tensors='pt')
-output = model.generate(**input, max_length=20)
-print(tokenizer.decode(output[0]))
+Các thành phần chính gồm pandas/numpy cho xử lý dữ liệu, requests/BeautifulSoup cho crawl, transformers cho inference, matplotlib/seaborn cho figure, và scipy/statsmodels/scikit-learn cho kiểm định và regression.
 
-# The sentiment for [TGT] in the given sentence is NEGATIVE.
+## 6. Workflow tái lập
+
+### 6.1. Crawl và chuẩn bị CafeF đa năm
+
+Lệnh sau tạo sitemap manifest cho October 2019--2022. Thêm `--fetch` khi muốn tải và parse các candidate article.
+
+```bash
+python3 prepare_cafef_multiyear.py \
+  --years 2019,2020,2021,2022 \
+  --month 10 \
+  --out-root data/cafef_multiyear \
+  --fetch
 ```
 
-## Limitations
-The model shows lower performance as the input sentence gets longer, mostly because the dataset used to train the model consists of source sentences with short sequences. To apply the model on longer sequences try [amphora/FinABSA-Longer](https://huggingface.co/amphora/FinABSA-Longer).
+Crawler có checkpoint theo từng period. `--max-fetch-per-period` có thể dùng cho dry run nhỏ; khi chạy bộ dữ liệu nghiên cứu chính, để mặc định `0` để lấy toàn bộ candidate.
 
-## Citation
-If you use this work, please consider citing:
-```
-@article{son2023removing,
-  title={Removing non-stationary knowledge from pre-trained language models for entity-level sentiment classification in finance},
-  author={Son, Guijin and Lee, Hanwool and Kang, Nahyeon and Hahm, Moonjeong},
-  journal={arXiv preprint arXiv:2301.03136},
-  year={2023}
-}
+### 6.2. Tạo article--ticker model inputs
+
+```bash
+python3 prepare_multiyear_inputs.py \
+  --data-root data/cafef_multiyear \
+  --years 2019,2020,2021,2022 \
+  --month 10 \
+  --aliases data/entity_aliases.csv
 ```
 
-## Contact
+Mỗi period sẽ có `model_inputs.csv` và `model_inputs_strict.csv`. Bộ strict là input chính của phân tích; bộ full dành cho sensitivity analysis khi inference đã hoàn tất.
 
-Feel free to reach me at spthsrbwls123@yonsei.ac.kr
+### 6.3. Chạy model inference
+
+Model không dự đoán ticker. Checkpoint FinABSA/FinSenKH phải nhận input đã có target mask và trả về một output cho mỗi `sample_id`.
+
+Với một period:
+
+```bash
+python3 run_finabsa_on_cafef.py \
+  --model ./finabsa-other-masked-final \
+  --input data/cafef_multiyear/2022-10/model_inputs_strict.csv \
+  --output data/cafef_multiyear/2022-10/model_predictions.csv
+```
+
+Nếu model riêng chỉ xuất raw label theo thứ tự dòng, hãy giữ input order và chuẩn hóa qua adapter:
+
+```bash
+python3 normalize_model_output.py \
+  --raw your_model_output.csv \
+  --inputs data/cafef_multiyear/2022-10/model_inputs_strict.csv \
+  --out data/cafef_multiyear/2022-10/model_predictions.csv
+```
+
+Output nên giữ `sample_id`, `classification_output` và `raw_model_output`. Parser chấp nhận dạng đầy đủ hoặc viết tắt `positive/negative/neutral` và `pos/neg/neu`, sau đó canonicalize về ba nhãn chuẩn.
+
+### 6.4. Ghép giá và chạy validation đa năm
+
+Sau khi có predictions hợp lệ, có thể chạy runner đa năm:
+
+```bash
+python3 run_multiyear_pipeline.py \
+  --repo . \
+  --data-root data/cafef_multiyear \
+  --predictions data/cafef_multiyear/model_predictions.csv
+```
+
+Runner kiểm tra alignment theo `sample_id`, tách prediction theo bốn period, chạy validation, event study, robustness và tổng hợp output vào `data/cafef_multiyear/analysis_multiyear/`.
+
+Nếu cần tải market data từ đầu cho một period, dùng downloader tương ứng:
+
+```bash
+python3 download_market_data.py \
+  --inputs data/cafef_multiyear/2022-10/model_inputs_strict.csv \
+  --start 2022-05-01 \
+  --end 2022-12-31
+```
+
+Market window dùng May--December của từng năm. Crawler/downloader có cache và checkpoint; không commit cache hoặc raw HTML lên GitHub.
+
+## 7. Các kiểm định tài chính
+
+Pipeline dùng phiên giao dịch đầu tiên sau ngày xuất bản làm event day vì dữ liệu giá là daily OHLCV, không có timestamp intraday đáng tin cậy. Abnormal return được tính từ market model với VNINDEX làm market proxy và estimation window trước October của từng năm.
+
+| Nhóm kiểm định | Nội dung |
+|---|---|
+| Event study | CAR tại `[0,0]`, `[0,+1]` và `[0,+3]` |
+| One-sample inference | t-test, sign-flip permutation 5.000 lần, bootstrap 95% CI 5.000 lần |
+| Control | News-day so với eligible no-news-day |
+| Sentiment contrasts | Welch, permutation và bootstrap giữa positive/neutral/negative |
+| Panel | Ticker fixed effects + date fixed effects, HC3 và HC1 fallback khi cần |
+| Robustness | Lag 0, 1, 2, 3, 5 và 10 phiên |
+
+Các output chính nằm trong thư mục `data/cafef_multiyear/analysis_multiyear/` sau khi chạy pipeline. Bảng Excel 15 sheet và Markdown report đầy đủ là artifact sinh tự động, không phải input bắt buộc để chạy lại pipeline.
+
+## 8. Tóm tắt kết quả thực tế
+
+Kết quả đa năm không cho thấy một quan hệ ổn định giữa sentiment và abnormal return. CAR cùng ngày không khác 0 một cách có ý nghĩa ở bốn period. CAR `[0,+3]` âm và nominally significant tại 2020 với mean = -0.9261 và tại 2021 với mean = -1.0149, nhưng pattern này không lặp lại ở 2019 hoặc 2022.
+
+Positive-minus-neutral có kết quả nominally significant tại 2021 với difference = 1.5693 và Welch p = 0.0267, nhưng nhóm positive nhỏ. Fixed-effects sentiment coefficient cũng chỉ nominally significant tại 2020 với coefficient = 2.5056 và p = 0.0018; dấu và độ lớn thay đổi giữa các năm. Vì vậy, các kết quả này phải được trình bày là **period-specific exploratory findings**, không phải bằng chứng causal hay chiến lược giao dịch.
+
+## 9. Report và slide
+
+`main.tex` là report LaTeX hoàn chỉnh, gồm phần giới thiệu/model/related work, section kiểm định đa năm, limitations, future work và conclusion. Tám figure mà report/slide sử dụng nằm trong bốn thư mục:
+
+```text
+2019-10/analysis/figures/
+2020-10/analysis/figures/
+2021-10/analysis/figures/
+2022-10/analysis/figures/
+```
+
+Mỗi thư mục cần có:
+
+```text
+abnormal_return_by_label.png
+sentiment_vs_abnormal_return.png
+```
+
+`slide.tex` là Beamer deck tiếng Việt gồm 12 slide. Deck đã được viết cho **pdfLaTeX**, phù hợp với Prism chỉ có một engine mặc định; không dùng `fontspec`, `polyglossia`, XeLaTeX hoặc LuaLaTeX.
+
+Để compile report/slide trên Prism, upload toàn bộ file `.tex` cùng các thư mục figure, chọn file tương ứng làm main file và giữ nguyên đường dẫn tương đối. Xem thêm [docs/STATISTICAL_SECTION_USAGE.md](docs/STATISTICAL_SECTION_USAGE.md) và [docs/PRISM_SLIDE_README.md](docs/PRISM_SLIDE_README.md).
+
+## 10. Kiểm tra phần mềm
+
+Chạy unit tests trước khi chạy inference hoặc financial validation:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Các test kiểm tra label parser, alignment theo `sample_id`, aggregate theo `ticker + published_date`, next-trading-day mapping, panel uniqueness và các hàm robustness. `check_slide.py` kiểm tra riêng cấu trúc 12 frame, engine dependency và tám đường dẫn figure của slide.
+
+## 11. Giới hạn và hướng phát triển
+
+Dữ liệu hiện tại chỉ lấy một tháng October cho mỗi năm, dùng một nguồn tin và daily prices. Entity linking vẫn có thể có false positive/negative; strict threshold đổi coverage lấy precision. Class imbalance làm giảm power của group comparisons, còn daily timestamp không cho phép xác định phản ứng intraday. Ngoài ra, nhiều period/window tests khiến nominal p-values cần được đọc thận trọng.
+
+Hướng phát triển gồm xây dựng gold labels có adjudication, báo cáo F1/MCC/kappa, lưu logits để calibration, mở rộng nhiều tháng và nhiều nguồn, thêm placebo/factor models, multiple-testing correction, pre-registration và out-of-time forecasting.
+
+## 12. Tài liệu trong `docs/`
+
+| Tài liệu | Nội dung |
+|---|---|
+| [`README_CAFEF_PIPELINE.md`](docs/README_CAFEF_PIPELINE.md) | Workflow CafeF October 2022 và model contract chi tiết |
+| [`MULTIYEAR_DATA_README.md`](docs/MULTIYEAR_DATA_README.md) | Đặc tả dữ liệu mở rộng 2019--2022 |
+| [`STATISTICS_AND_TESTS.md`](docs/STATISTICS_AND_TESTS.md) | Thiết kế kiểm định và diễn giải thống kê |
+| [`STATISTICAL_SECTION_USAGE.md`](docs/STATISTICAL_SECTION_USAGE.md) | Cách tích hợp section kiểm định vào report LaTeX |
+| [`PRISM_SLIDE_README.md`](docs/PRISM_SLIDE_README.md) | Cách compile slide bằng engine pdfLaTeX của Prism |
+| [`DATASET_CARD.md`](docs/DATASET_CARD.md) | Mô tả dữ liệu, nguồn và giới hạn |
+| [`EXPERIMENTS.md`](docs/EXPERIMENTS.md) | Danh sách thí nghiệm và convention |
+| [`PROJECT_EVALUATION.md`](docs/PROJECT_EVALUATION.md) | Đánh giá ý tưởng và pipeline của dự án |
+
+## 13. Tài liệu tham khảo
+
+1. [FinABSA trên Hugging Face](https://huggingface.co/amphora/FinABSA) — mô hình ABSA tài chính dựa trên target masking.
+2. [SEntFiN dataset](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24634) — dữ liệu sentiment tài chính được sử dụng trong hệ sinh thái FinABSA.
+3. [FinABSA paper](https://arxiv.org/abs/2301.03136) — Son, Lee, Kang và Hahm, *Removing non-stationary knowledge from pre-trained language models for entity-level sentiment classification in finance*.
+4. [Brown and Warner (1985)](https://www.jstor.org/stable/2327805) — event-study methodology.
+5. [CafeF](https://cafef.vn/) — nguồn bài báo tài chính Việt Nam.
+6. [vnstock](https://github.com/thinh-vu/vnstock) — thư viện truy xuất dữ liệu thị trường Việt Nam.
+
+## 14. License và nhóm thực hiện
+
+Repository phục vụ mục đích học thuật. Nhóm thực hiện gồm **Lê Khắc Quang Huy, Phùng Hữu Khoa, Nguyễn Nam Khánh và Lê Tuấn Duy**. Xem [LICENSE](LICENSE) để biết điều khoản của mã nguồn gốc và từng thành phần được sử dụng.
